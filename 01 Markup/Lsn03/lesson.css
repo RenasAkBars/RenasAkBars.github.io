@@ -1,0 +1,7 @@
+h1 { color: orangered;
+font-size: 40px}
+body { background: gray url("fonovyie-risunki4.jpg") ;
+    width: 80%;
+    border: dotted black 3px;
+    border-radius: 3px 12px 30px 5px;
+}
