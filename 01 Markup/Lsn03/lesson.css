@@ -5,3 +5,10 @@ body { background: gray url("fonovyie-risunki4.jpg") ;
     border: dotted black 3px;
     border-radius: 3px 12px 30px 5px;
 }
+
+.c1 {font-weight: bold;}
+.c2 {background-color: navajowhite;}
+.c3 {color: orangered;}
+#i1 {font-style: italic;}
+#i2 {text-decoration: underline;}
+#i3 {font-size: 50px;}
