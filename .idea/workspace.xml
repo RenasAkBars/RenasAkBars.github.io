@@ -58,8 +58,8 @@
       <file leaf-file-name="lesson.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01 Markup/Lsn03/lesson.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+            <state relative-caret-position="-532">
+              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -102,8 +102,8 @@
         <option value="$PROJECT_DIR$/Projects/Aircraft list/My Flights p1.html" />
         <option value="$PROJECT_DIR$/Projects/Aircraft list/My Flights p3.html" />
         <option value="$PROJECT_DIR$/Projects/Aircraft list/My Flights p4.html" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn03/lesson.html" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn03/lesson.css" />
+        <option value="$PROJECT_DIR$/01 Markup/Lsn03/lesson.html" />
       </list>
     </option>
   </component>
@@ -306,12 +306,12 @@
       <workItem from="1497106615176" duration="60000" />
       <workItem from="1497106687387" duration="194000" />
       <workItem from="1497106974448" duration="1440000" />
-      <workItem from="1497126342262" duration="17435000" />
+      <workItem from="1497126342262" duration="17775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19129000" />
+    <option name="totallyTimeSpent" value="19469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -412,8 +412,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn03/lesson.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+        <state relative-caret-position="-532">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
