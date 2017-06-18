@@ -1,0 +1,19 @@
+body
+{width: 44%;}
+h1
+{text-align: right;
+color: orange;}
+#allotment h2
+{color: orange;}
+#warehouse h2
+{color: blue;}
+p:first-letter {font-size: 30px; color: red; font-weight: bold;}
+em {background-color: green; color: white; font-weight: bold;}
+ul li {font-weight: bold;}
+ol li {font-weight: normal;}
+ol.vegetables-list {color: red;}
+ol.fruits-list {color: green;}
+#allotment ol.fruits-list {color: gray;}
+thead {font-weight: bold; text-align: center;}
+tbody tr {color: orange; font-weight: bold;}
+tbody tr td ~ td {background-color: green; text-align: center; color: white;}

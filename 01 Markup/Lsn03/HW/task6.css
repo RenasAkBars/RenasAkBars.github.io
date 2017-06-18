@@ -1,0 +1,15 @@
+input {display: none;}
+label {text-decoration: underline; margin-right: 15px;}
+label[for='red'] {color: red;}
+label[for='green'] {color: green;}
+label[for='blue'] {color: blue;}
+#red:checked ~ .red,
+#green:checked ~ .green,
+#blue:checked ~ .blue
+{display: none;}
+.red {background-color: red;}
+.green {background-color: green;}
+.blue {background-color: blue;}
+span {color: white;
+padding: 1px 3px;
+border-radius: 0.3em;}
