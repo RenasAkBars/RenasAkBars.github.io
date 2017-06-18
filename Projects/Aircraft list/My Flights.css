@@ -1,0 +1,30 @@
+table
+{
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+}
+thead
+{
+    font-weight: bold;
+    text-align: center;
+}
+tr:nth-of-type(even)
+{
+    background-color: #cccccc;
+}
+tr:nth-of-type(odd)
+{
+    background-color: #ddebf7;
+}
+p:nth-last-of-type(1)
+{
+    font-size: 25px;
+}
+thead tr:nth-of-type(1)
+{
+    background-color: #cccccc;
+}
+img {
+    height: 75px;
+}

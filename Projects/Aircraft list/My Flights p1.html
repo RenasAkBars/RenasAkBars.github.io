@@ -2,37 +2,44 @@
 <html>
 <head>
     <title>My Flights</title>
+    <link rel="stylesheet" type="text/css" href="My%20Flights.css"/>
+    <meta charset="utf-8"/>
 </head>
 <body>
+<div>
+    <article>
 <table border="1">
+    <thead>
     <tr>
-        <th>Num</th>
-        <th>Date</th>
-        <th>Airline</th>
-        <th>Aircraft</th>
-        <th>Flight number</th>
-        <th>Origin</th>
-        <th>Destination</th>
-        <th>Seat</th>
-        <th>Aircraft<br/>registration</th>
-        <th>c/n</th>
-        <th>Picture,<br/>Name</th>
+        <td>Num</td>
+        <td>Date</td>
+        <td>Airline</td>
+        <td>Aircraft</td>
+        <td>Flight number</td>
+        <td>Origin</td>
+        <td>Destination</td>
+        <td>Seat</td>
+        <td>Aircraft<br/>registration</td>
+        <td>c/n</td>
+        <td>Picture,<br/>Name</td>
     </tr>
+    </thead>
+    <tbody>
     <tr>
         <td>1</td>
         <td>28 May<br/>2002</td>
         <td>AJT Air<br/>International</td>
         <td>Ilyushin Il-86</td>
         <td>-</td>
-        <td>SVO</td>
-        <td>AYT</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td title="Анталья">AYT</td>
         <td>- I</td>
         <td>-</td>
         <td>-</td>
         <td><a href="https://russianplanes.net/images/to181000/180554.jpg"
                target="_blank">
             <img src="https://russianplanes.net/images/to181000/180554.jpg"
-                 height="75" alt="IL86"/> </a></td>
+                 alt="IL86"/> </a></td>
     </tr>
     <tr>
         <td>2</td>
@@ -40,15 +47,15 @@
         <td>AJT Air<br/>International</td>
         <td>Ilyushin Il-86</td>
         <td>-</td>
-        <td>AYT</td>
-        <td>SVO</td>
+        <td title="Анталья">AYT</td>
+        <td title="Москва, Шереметьево">SVO</td>
         <td>- I</td>
         <td>-</td>
         <td>-</td>
         <td><a href="https://russianplanes.net/images/to53000/052951.jpg"
                target="_blank">
             <img src="https://russianplanes.net/images/to53000/052951.jpg"
-                 height="75" alt="IL86"/> </a> </td>
+                alt="IL86"/> </a> </td>
     </tr>
     <tr>
         <td>3</td>
@@ -56,15 +63,15 @@
         <td>S7 Airlines</td>
         <td>Airbus A321</td>
         <td>S7 1005</td>
-        <td>DME</td>
-        <td>AER</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td title="Сочи">AER</td>
         <td>8F</td>
         <td>-</td>
         <td>-</td>
         <td><a href="https://img.planespotters.net/photo/689000/original/vq-bqi-s7-siberia-airlines-airbus-a321-211_PlanespottersNet_689135.jpg"
                target="_blank">
             <img src="https://img.planespotters.net/photo/689000/original/vq-bqi-s7-siberia-airlines-airbus-a321-211_PlanespottersNet_689135.jpg"
-                 height="75" alt="A321"/> </a> </td>
+                alt="A321"/> </a> </td>
     </tr>
     <tr>
        <td>4</td>
@@ -72,15 +79,15 @@
        <td>S7 Airlines<br/>(Globus)</td>
        <td>Boeing 737-800</td>
        <td>S7 1024</td>
-       <td>AER</td>
-       <td>DME</td>
+       <td title="Сочи">AER</td>
+       <td title="Москва, Домодедово">DME</td>
        <td>- A</td>
        <td>-</td>
        <td>-</td>
        <td><a href="https://img.planespotters.net/photo/354000/original/vp-bqd-s7-siberia-airlines-boeing-737-83nwl_PlanespottersNet_354957.jpg"
               target="_blank">
            <img src="https://img.planespotters.net/photo/354000/original/vp-bqd-s7-siberia-airlines-boeing-737-83nwl_PlanespottersNet_354957.jpg"
-                height="75" alt="737-800"/></a></td>
+               alt="737-800"/></a></td>
     </tr>
     <tr>
        <td>5</td>
@@ -88,15 +95,15 @@
        <td>Aeroflot<br/>Russian Airlines</td>
        <td>Airbus A321</td>
        <td>SU 1251</td>
-       <td>NBC</td>
-       <td>SVO</td>
+       <td title="Набережные Челны, Бегишево">NBC</td>
+       <td title="Москва, Шереметьево">SVO</td>
        <td>-</td>
        <td><a href="https://www.planespotters.net/airframe/Airbus/A321/2957" target="_blank">VP-BQX</a></td>
        <td>2957</td>
        <td><a href="https://img.planespotters.net/photo/267000/original/vp-bqx-aeroflot-russian-airlines-airbus-a321-211_PlanespottersNet_267368.jpg"
               target="_blank">
            <img src="https://img.planespotters.net/photo/267000/original/vp-bqx-aeroflot-russian-airlines-airbus-a321-211_PlanespottersNet_267368.jpg"
-                height="75" alt="A321"/></a><br/>I. Ayvazovsky</td>
+                alt="A321"/></a><br/>I. Ayvazovsky</td>
     </tr>
     <tr>
        <td>6</td>
@@ -104,15 +111,15 @@
        <td>Aeroflot<br/>Russian Airlines</td>
        <td>Airbus A320</td>
        <td>SU 2452</td>
-       <td>SVO</td>
-       <td>CDG</td>
+       <td title="Москва, Шереметьево">SVO</td>
+       <td title="Париж, Шарль-Де-Голль">CDG</td>
        <td>20F</td>
        <td>-</td>
        <td>-</td>
        <td><a href="https://img.planespotters.net/photo/121000/original/vp-brx-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_121025.jpg"
               target="_blank">
            <img src="https://img.planespotters.net/photo/121000/original/vp-brx-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_121025.jpg"
-                height="75" alt="A320"/></a></td>
+                alt="A320"/></a></td>
     </tr>
     <tr>
        <td>7</td>
@@ -120,15 +127,15 @@
        <td>Aeroflot<br/>Russian Airlines</td>
        <td>Airbus A320</td>
        <td>SU 2461</td>
-       <td>CDG</td>
-       <td>SVO</td>
+       <td title="Париж, Шарль-Де-Голль">CDG</td>
+       <td title="Москва, Шереметьево">SVO</td>
        <td>11F</td>
        <td>-</td>
        <td>-</td>
        <td><a href="https://img.planespotters.net/photo/401000/original/vq-baz-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_401111.jpg"
               target="_blank">
            <img src="https://img.planespotters.net/photo/401000/original/vq-baz-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_401111.jpg"
-                height="75" alt="A320"/></a></td>
+                alt="A320"/></a></td>
     </tr>
     <tr>
         <td>8</td>
@@ -136,15 +143,15 @@
         <td>Aeroflot<br/>Russian Airlines</td>
         <td>Airbus A320</td>
         <td>SU 1254</td>
-        <td>SVO</td>
-        <td>NBC</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td title="Набережные Челны, Бегишево">NBC</td>
         <td>7A</td>
         <td><a href="https://www.planespotters.net/airframe/Airbus/A320/3052" target="_blank">VP-BRY</a></td>
         <td>3052</td>
         <td><a href="https://img.planespotters.net/photo/372000/original/vp-bry-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_372545.jpg"
                target="_blank">
             <img src="https://img.planespotters.net/photo/372000/original/vp-bry-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_372545.jpg"
-                 height="75" alt=""/></a><br/>K. Brulloff
+                 alt=""/></a><br/>K. Brulloff
         </td>
     </tr>
     <tr>
@@ -153,15 +160,15 @@
         <td>S7 Airlines</td>
         <td>Airbus A319</td>
         <td>S7 066</td>
-        <td>KZN</td>
-        <td>DME</td>
+        <td title="Казань">KZN</td>
+        <td title="Москва, Домодедово">DME</td>
         <td>-</td>
         <td><a href="https://www.planespotters.net/airframe/Airbus/A319/1078" target="_blank">VP-BTV</a></td>
         <td>1078</td>
         <td><a href="https://img.planespotters.net/photo/313000/original/vp-btv-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_313223.jpg"
                target="_blank">
             <img src="https://img.planespotters.net/photo/313000/original/vp-btv-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_313223.jpg"
-                 height="75" alt="A319"/></a></td>
+                 alt="A319"/></a></td>
     </tr>
     <tr>
         <td>10</td>
@@ -169,15 +176,15 @@
         <td>Aeroflot<br/>Russian Airlines</td>
         <td>Airbus A320</td>
         <td>SU 1190</td>
-        <td>SVO</td>
-        <td>KZN</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td title="Казань">KZN</td>
         <td>- A</td>
         <td>-</td>
         <td>-</td>
         <td><a href="https://img.planespotters.net/photo/471000/original/vp-bqv-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_471753.jpg"
                target="_blank">
             <img src="https://img.planespotters.net/photo/471000/original/vp-bqv-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_471753.jpg"
-                 height="75" alt="A320"/></a>
+                 alt="A320"/></a>
         </td>
     </tr>
     <tr>
@@ -186,15 +193,15 @@
         <td>Turkish Airlines</td>
         <td>Boeing 737-700</td>
         <td>TK 0428</td>
-        <td>KZN</td>
-        <td>IST</td>
+        <td title="Казань">KZN</td>
+        <td title="Стамбул, им. Ататюрка">IST</td>
         <td>7F</td>
         <td>-</td>
         <td>-</td>
         <td><a href="https://img.planespotters.net/photo/487000/original/tc-jkj-turkish-airlines-boeing-737-752wl_PlanespottersNet_487267.jpg"
                target="_blank">
             <img src="https://img.planespotters.net/photo/487000/original/tc-jkj-turkish-airlines-boeing-737-752wl_PlanespottersNet_487267.jpg"
-                 height="75" alt="737-700"/></a>
+                 alt="737-700"/></a>
         </td>
     </tr>
     <tr>
@@ -203,18 +210,21 @@
         <td>Turkish Airlines</td>
         <td>Boeing 737-700</td>
         <td>TK 0427</td>
-        <td>IST</td>
-        <td>KZN</td>
+        <td title="Стамбул, им. Ататюрка">IST</td>
+        <td title="Казань">KZN</td>
         <td>9F</td>
         <td>-</td>
         <td>-</td>
         <td><a href="https://img.planespotters.net/photo/207000/original/tc-jkk-turkish-airlines-boeing-737-752wl_PlanespottersNet_207738.jpg"
                target="_blank">
             <img src="https://img.planespotters.net/photo/207000/original/tc-jkk-turkish-airlines-boeing-737-752wl_PlanespottersNet_207738.jpg"
-                 height="75" alt="737-700"/></a>
+                alt="737-700"/></a>
         </td>
     </tr>
+    </tbody>
 </table><br/>
+    </article>
+</div>
 <p align="right" >Pages: <a href="My%20Flights%20p1.html">1</a>
     <a href="My%20Flights%20p2.html">2</a>
     <a href="My%20Flights%20p3.html">3</a>
