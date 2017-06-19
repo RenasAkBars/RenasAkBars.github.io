@@ -28,3 +28,44 @@ thead tr:nth-of-type(1)
 img {
     height: 75px;
 }
+.pic
+{
+    width: 9%;
+    font-size: smaller;
+}
+thead tr td.pic
+{
+    font-size: inherit;
+}
+.num {
+    width: 4%;
+    font-weight: bold;
+}
+.date {
+    width: 6%;
+}
+.airct {
+    width: 16%;
+}
+.dest, .orig {
+    width: 8%;
+}
+.st {
+    width: 4%;
+}
+.cn {
+    width: 6%;
+}
+.fnum {
+    width: 10%;
+}
+.reg {
+    width: 9%;
+}
+article {
+    width: 100%;
+}
+.airln
+{
+    width: 20%;
+}
