@@ -1,0 +1,43 @@
+div {
+    background-color: rgb(166,77,255);
+    width: 100%;
+}
+span {
+    display: inline-block;
+    box-sizing: border-box;
+}
+a {
+    display: inline-block;
+    box-sizing: border-box;
+
+    height: 38px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    font-family: Economica;
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+:link {
+    text-decoration: none;
+
+}
+:visited {
+    text-decoration: none;
+}
+span:hover
+{
+    background-color: white;
+    color: rgb(160,160,160);
+}
+a:hover
+{
+    background-color: white;
+    color: rgb(160,160,160)
+}
+span:first-of-type
+{
+    margin-left: 59px;
+}
