@@ -1,14 +1,25 @@
 .cont
 {
+
+    width: 900px;
+    background-color: rgb(166,77,255);
+}
+.cont2
+{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: rgb(166,77,255);
 }
-span {
-    display: inline-block;
+.but {
+    float: left;
     box-sizing: border-box;
+}
+.but:last-of-type
+{
+    float: right;
+    margin-right: 59px;
 }
 a {
     display: inline-block;
@@ -36,7 +47,7 @@ a:hover
     background-color: white;
     color: rgb(160,160,160)
 }
-span:first-of-type
+.but:first-of-type
 {
     margin-left: 59px;
 }
