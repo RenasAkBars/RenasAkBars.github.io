@@ -1,28 +1,35 @@
-.cont
-{
+.cont {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(166,77,255);
+    background-color: rgb(26,164,255);
+}
+.ghost {
+    top: 38px;
+    background-color: rgb(238,238,238);
 }
 span {
     display: inline-block;
     box-sizing: border-box;
 }
-.main {
+.main, .gh {
     display: inline-block;
     box-sizing: border-box;
-
     height: 38px;
     text-transform: uppercase;
     color: white;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 19px;
     font-family: Economica;
     padding-top: 8px;
     padding-left: 16px;
     padding-right: 16px;
+}
+.gh {
+    text-transform: capitalize;
+    color: rgb(160,160,160);
+    font-weight: normal;
 }
 :link {
     text-decoration: none;
@@ -31,12 +38,20 @@ span {
 :visited {
     text-decoration: none;
 }
-a:hover
+.main:hover
 {
-    background-color: white;
-    color: rgb(160,160,160)
+    background-color: rgb(238,238,238);
+    color: rgb(160,160,160);
+}
+.gh:hover {
+    background-color: rgb(26,164,255);
+    color: white;
 }
 span:first-of-type
 {
     margin-left: 59px;
+}
+.main:hover ._travels
+{
+    background-color: white !important;
 }

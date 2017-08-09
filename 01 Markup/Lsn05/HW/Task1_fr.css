@@ -1,0 +1,62 @@
+.menu{
+    display:block;
+}
+.menu li{
+    display: inline-block;
+    position: relative;
+    z-index:100;
+}
+.menu li a {
+    font-weight:600;
+    text-decoration:none;
+    padding:11px;
+    display:block;
+    color:#ffffff;
+
+}
+.menu li a:hover,
+.menu li:hover > a{
+    color:#ffffff;
+    background:#9CA3DA;
+}
+/* скрываем меню второго уровеня */
+.menu ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    position: absolute;
+    top: 43px;
+    left: 0px;
+    background: #ffffff;
+}
+/* показываем меню второго уровня при наведении */
+.menu li:hover > ul{
+    display: block;
+}
+.menu ul li {
+    display:block;
+    float: none;
+    background:none;
+    margin:0;
+    padding:0;
+}
+.menu ul li a {
+    font-size:12px;
+    font-weight:normal;
+    display:block;
+    color:#797979;
+    border-left:3px solid #ffffff;
+    background:#ffffff;
+}
+.menu ul li a:hover,
+.menu ul li:hover > a{
+    background:#f0f0f0;
+    border-left:3px solid #9CA3DA;
+    color:#797979;
+}
+/* Изменение позиций для меню третьего уровня */
+.menu ul ul {
+    left: 149px;
+    top: 0px;
+}

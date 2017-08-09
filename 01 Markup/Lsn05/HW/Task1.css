@@ -1,0 +1,80 @@
+.cont{
+    aposition: fixed;
+    adisplay: block;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(26,164,255);
+}
+ul {
+    adisplay: block;
+}
+.ghost{
+    display: none;
+}
+li {
+    adisplay: inline-block;
+}
+:link {
+    text-decoration: none;
+
+}
+:visited {
+    text-decoration: none;
+}
+div.cont ul.menu li a.news:hover ~ ul.ghost li a.gh{
+    display: inline-block;
+    z-index: 2;
+}
+
+/*
+.cont {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(26,164,255);
+}
+.ghost {
+    top: 38px;
+    background-color: rgb(238,238,238);
+}
+ul {
+    display: inline-block;
+    box-sizing: border-box;
+    list-style: none;
+}
+.main, .gh {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 38px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    font-size: 19px;
+    font-family: Economica;
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.gh {
+    text-transform: none;
+    color: rgb(160,160,160);
+    font-weight: normal;
+}
+
+.main:hover
+{
+    background-color: rgb(238,238,238);
+    color: rgb(160,160,160);
+}
+.gh:hover {
+    background-color: rgb(26,164,255);
+    color: white;
+}
+.main:hover ._travels
+{
+    background-color: white !important;
+}
+*/
