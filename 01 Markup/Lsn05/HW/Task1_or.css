@@ -13,7 +13,7 @@ span {
     display: inline-block;
     box-sizing: border-box;
 }
-.main, .gh {
+a.main, a.gh {
     display: inline-block;
     box-sizing: border-box;
     height: 38px;
@@ -26,7 +26,7 @@ span {
     padding-left: 16px;
     padding-right: 16px;
 }
-.gh {
+a.gh {
     text-transform: capitalize;
     color: rgb(160,160,160);
     font-weight: normal;
@@ -38,12 +38,12 @@ span {
 :visited {
     text-decoration: none;
 }
-.main:hover
+a.main:hover
 {
     background-color: rgb(238,238,238);
     color: rgb(160,160,160);
 }
-.gh:hover {
+a.gh:hover {
     background-color: rgb(26,164,255);
     color: white;
 }
@@ -51,7 +51,7 @@ span:first-of-type
 {
     margin-left: 59px;
 }
-.main:hover ._travels
+a.main:hover ._travels
 {
     background-color: white !important;
 }

@@ -1,0 +1,30 @@
+.menu {
+    display: inline-block;
+    position: absolute;}
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+.menu li a {
+    display:block;
+    text-decoration:none;
+}
+.menu li a:hover,
+.menu li:hover > a{
+    color:#ffffff;
+    background:#9CA3DA;
+}
+.menu ul {
+    display: none;
+    position: fixed;
+    left: 0;
+}
+.menu li:hover > .submenu
+{
+    display: inline-block;
+}
+.menu li:hover > .submenu li
+{
+    display: inline-block;
+    position: relative;
+}
