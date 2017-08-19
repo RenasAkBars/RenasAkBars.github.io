@@ -1,0 +1,97 @@
+.container {
+    box-sizing: border-box;
+    border: solid rgb(238, 129, 41) 3px;
+    border-radius: 4px;
+    width: 296px;
+    height: 468px;
+    position: absolute;
+    left: 159px;
+    top: 45px;
+    font-family: "Trebuchet MS";
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 8px 0 rgba(8, 116, 178, 0.5);
+}
+span, .items {
+    display: block;
+    position: relative;
+}
+.header {
+    font-size: 24px;
+    text-align: center;
+    line-height: 2.833;
+    font-weight: bold;
+    background-color: rgb(238, 129, 41);
+    color: white;
+
+}
+.text {
+    font-size: 24px;
+    text-align: center;
+    line-height: 2.833;
+    color: #35495a;
+}
+.order {
+    text-align: center;
+    color: #35495a;
+    font-size: 72px;
+    line-height: 0.833;
+    font-weight: bold;
+}
+.order:before {
+    content: "$";
+    font-size: 24px;
+    vertical-align: top;
+    font-weight: normal;
+}
+.order:after {
+    content: "Monthly";
+    font-size: 18px;
+    vertical-align: -8px;
+    font-weight: normal;
+}
+.items {
+    width: 259px;
+    text-align: left;
+    margin: auto;
+    right: 0;
+    left: 0;
+    margin-top: 40px;
+}
+.items span {
+    position: relative;
+    display: block;
+    height: 33px;
+    border-bottom: solid 1px white;
+    color: rgb(136,140,148);
+    padding-left: 30px;
+    box-sizing: border-box;
+    padding-top: 7px;
+}
+.items span:nth-of-type(odd) {
+    background-color: rgb(237,245,253);
+}
+.items span:nth-of-type(even) {
+    background-color: rgb(245,245,246);
+}
+.items span:before {
+    content: url(marker1.png);
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+input {
+    background-color: rgb(238, 129, 41);
+    width: 252px;
+    height: 38px;
+    margin-top: 18px;
+    font-family: "Trebuchet MS";
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: solid 2px rgb(238, 129, 41);
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(179, 86, 11, 1);
+    cursor: pointer;
+}
