@@ -1,0 +1,139 @@
+.container {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS";
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 10%;
+
+}
+h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #41525c;
+    margin-bottom: 30px;
+}
+.stand, .best, .ult {
+    box-sizing: padding-box;
+    border: solid rgb(232, 234, 236) 1px;
+    border-radius: 4px;
+    width: 290px;
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    margin-left: -2px;
+    margin-right: -3px;
+}
+.stand .header {
+    background-color: #37c2d3;
+}
+.best .header {
+    background-color: #ec8136;
+}
+.ult .header {
+    background-color: #1cb79a;
+}
+.header {
+    display: block;
+    position: relative;
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-radius: 3px 3px 0 0;
+}
+.text, .offer, sup, sup {
+    display: inline-block;
+    position: relative;
+}
+.text {
+    font-size: 24px;
+    color: #35495a;
+}
+.offer {
+    text-align: center;
+    color: #35495a;
+    font-size: 72px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+sup {
+    font-size: 0.3em;
+    top: -15px;
+}
+sub {
+    font-size: 0.25em;
+}
+ul.items {
+    position: relative;
+    left: -25px;
+    list-style-type: none;
+    text-align: left;
+    width: 259px;
+    margin-top: 20px;
+}
+ul.items li {
+    position: relative;
+    display: block;
+    margin-bottom: 1px;
+    color: rgb(136,140,148);
+    padding-left: 30px;
+    height: 25px;
+    padding-top: 7px;
+}
+ul.items li:nth-child(odd) {
+    background-color: rgb(237,245,253);
+}
+ul.items li:nth-child(even) {
+    background-color: rgb(245,245,246);
+}
+ul.items li:before {
+    content: url(marker1.png);
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+}
+input {
+    background-color: #3371a6;
+    width: 252px;
+    height: 38px;
+    margin-top: 18px;
+    font-family: inherit;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: solid 2px #3371a6;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 #16436a;
+    cursor: pointer;
+    margin-bottom: 45px;
+}
+.best input {
+    background-color: #ec8136;
+    border: solid 2px #ec8136;
+    box-shadow: 0 3px 0 0 #b1561b;
+}
+.stand:hover, .best:hover, .ult:hover {
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 rgba(8, 116, 178, 0.5);
+    z-index: 3;
+    margin: -12px -5px -12px -4px;
+}
+.stand:hover {
+    border: solid 3px #37c2d3;
+}
+.best:hover {
+    border: solid 3px #ec8136;
+}
+.ult:hover {
+    border: solid 3px #1cb79a;
+}
+.stand:hover .header, .best:hover .header, .ult:hover .header {
+    padding-top: 30px;
+    border-radius: 0;
+}
+.stand:hover input, .best:hover input, .ult:hover input {
+    margin-bottom: 55px;
+}
