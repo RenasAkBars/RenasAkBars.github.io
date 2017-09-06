@@ -14,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Task1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/Task1.html">
+      <file leaf-file-name="Project1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task1.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/Task1.css">
+      <file leaf-file-name="Project1.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="60" column="45" lean-forward="false" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+            <state relative-caret-position="440">
+              <caret line="87" column="29" lean-forward="false" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -37,28 +37,18 @@
       <file leaf-file-name="Task1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01 Markup/Lsn06/HW/Task1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="191">
+              <caret line="35" column="70" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/Project1.html">
+      <file leaf-file-name="Task2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn06/HW/Task2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Project1.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/Project1.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="491">
+              <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -92,8 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01 Markup/Lsn03/HW/task5.html" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn03/HW/task5.css" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn03/HW/task6.html" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn03/HW/task6.css" />
         <option value="$PROJECT_DIR$/Projects/Aircraft list/My Flights p4.html" />
@@ -143,6 +131,8 @@
         <option value="$PROJECT_DIR$/01 Markup/Lsn07/Task1.css" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn07/Project1.html" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn07/Project1.css" />
+        <option value="$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html" />
+        <option value="$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css" />
       </list>
     </option>
   </component>
@@ -205,6 +195,13 @@
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
               <item name="Lsn07" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
+              <item name="Lsn07" type="462c0819:PsiDirectoryNode" />
+              <item name="HW" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -330,12 +327,12 @@
       <workItem from="1504121564063" duration="74000" />
       <workItem from="1504207545486" duration="8057000" />
       <workItem from="1504423718995" duration="10325000" />
-      <workItem from="1504440456115" duration="13050000" />
+      <workItem from="1504440456115" duration="18952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163855000" />
+    <option name="totallyTimeSpent" value="169757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -370,20 +367,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Projects/Aircraft list/My Flights p3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/Aircraft list/My Flights p2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Projects/Aircraft list/My Flights p1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
@@ -669,10 +652,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/Project1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/Project1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn06/HW/Task1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        <state relative-caret-position="191">
+          <caret line="35" column="70" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -685,18 +684,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/Project1.html">
+    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        <state relative-caret-position="340">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/Project1.css">
+    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        <state relative-caret-position="440">
+          <caret line="87" column="29" lean-forward="false" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
           <folding />
         </state>
       </provider>
