@@ -64,6 +64,8 @@ header .menu ul li a:hover {
     color: #3070a8;
     border-bottom: solid 4px #3070a8;
 }
+
+
 .one {
     position: absolute;
     box-sizing: border-box;
@@ -100,4 +102,248 @@ header .menu ul li a:hover {
     height: 59px;
     box-sizing: border-box;
     border: solid 1px rgba(255,255,255,0.5);
+}
+.one input:hover {
+    background-color: rgba(255,255,255,0.6);
+    color: #3070a8;
+    cursor: pointer;
+    border-color: #3070a8;
+}
+
+.four {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS";
+    text-align: center;
+    display: block;
+    position: absolute;
+    /*left: 10%;*/
+    width: 99%;
+    height: 704px;
+    top: 1841px;
+
+}
+.four h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #41525c;
+    margin-bottom: 30px;
+}
+.four .frame > h3 {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.stand, .best, .ult {
+    box-sizing: padding-box;
+    border: solid rgb(232, 234, 236) 1px;
+    border-radius: 4px;
+    width: 290px;
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    margin-left: -2px;
+    margin-right: -3px;
+}
+.stand .header {
+    background-color: #37c2d3;
+}
+.best .header {
+    background-color: #ec8136;
+}
+.ult .header {
+    background-color: #1cb79a;
+}
+.four .header {
+    display: block;
+    position: relative;
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-radius: 3px 3px 0 0;
+}
+.four .text, .four .offer, .four sup, .four sup {
+    display: inline-block;
+    position: relative;
+}
+.four .text {
+    font-size: 24px;
+    color: #35495a;
+}
+.four .offer {
+    text-align: center;
+    color: #35495a;
+    font-size: 72px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.four sup {
+    font-size: 0.3em;
+    top: -15px;
+}
+.four sub {
+    font-size: 0.25em;
+}
+.four ul.items {
+    position: relative;
+    left: -25px;
+    list-style-type: none;
+    text-align: left;
+    width: 259px;
+    margin-top: 20px;
+}
+.four ul.items li {
+    position: relative;
+    display: block;
+    margin-bottom: 1px;
+    color: rgb(136,140,148);
+    padding-left: 30px;
+    height: 25px;
+    padding-top: 7px;
+}
+.four ul.items li:nth-child(odd) {
+    background-color: rgb(237,245,253);
+}
+.four ul.items li:nth-child(even) {
+    background-color: rgb(245,245,246);
+}
+.four ul.items li:before {
+    content: url(marker1.png);
+    position: relative;
+    display: inline-block;
+    padding-right: 15px;
+}
+.four input {
+    background-color: #3371a6;
+    width: 252px;
+    height: 38px;
+    margin-top: 18px;
+    font-family: inherit;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: solid 2px #3371a6;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 #16436a;
+    cursor: pointer;
+    margin-bottom: 45px;
+}
+.four .best input {
+    background-color: #ec8136;
+    border: solid 2px #ec8136;
+    box-shadow: 0 3px 0 0 #b1561b;
+}
+.four .stand:hover, .best:hover, .ult:hover {
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 rgba(8, 116, 178, 0.5);
+    z-index: 3;
+    margin: -12px -5px -12px -4px;
+}
+.four .stand:hover {
+    border: solid 3px #37c2d3;
+}
+.four .best:hover {
+    border: solid 3px #ec8136;
+}
+.four .ult:hover {
+    border: solid 3px #1cb79a;
+}
+.four .stand:hover .header, .four .best:hover .header, .four .ult:hover .header {
+    padding-top: 30px;
+    border-radius: 0;
+}
+.four .stand:hover input, .four .best:hover input, .four .ult:hover input {
+    margin-bottom: 55px;
+}
+
+
+.five {
+    font-family: "Trebuchet MS";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 315px;
+    background: #16436a url("Layer 66 copy 1.png");
+    top: 2545px;
+    left: 0;
+}
+.five h3 {
+    text-transform: uppercase;
+    color: #3170a8;
+    text-align: center;
+    font-size: 40px;
+}
+.five .fstwd {
+    color: #ee8129;
+}
+.five .name, .five .amplua {
+    display: inline-block;
+    color: #3070a8;
+}
+.five .amplua {
+    float: right;
+}
+.five .textarea {
+    display: block;
+    position: relative;
+    color: #7f7f7f;
+    border-top: dotted 1px #7f7f7f;
+    padding: 10px 10px 10px 0;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.five .txt {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    width: 366px;
+    padding: 10px;
+    border: solid 1px #e0e0e0;
+    background-color: white;
+    left: 126px;
+}
+.five .img {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 99px;
+    height: 98px;
+}
+.five .block {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    font-size: 13px;
+    min-width: 500px;
+    min-height: 100px;
+    /*margin-left: 23px;*/
+    /*margin-right: 20px;*/
+    margin-bottom: 50px;
+}
+.five .block:nth-of-type(2) {
+    right: -5px;
+}
+.five .items {
+    position: relative;
+    display: block;
+    width: inherit;
+    /*margin: 0 auto;*/
+}
+.five .txt::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    margin-left: -40px;
+    margin-top: 24px;
+    float: left;
+    border: solid 15px;
+    border-color: transparent white transparent transparent;
+
+}
+.five .name::before {
+    content: "-";
+    padding-left: 10px;
+    padding-right: 5px;
 }
