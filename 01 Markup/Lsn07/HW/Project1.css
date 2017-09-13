@@ -24,7 +24,7 @@ header .logo {
     /*margin-top: 30px;*/
     /*margin-left: 180px;*/
     /*margin-right: 180px;*/
-    left: 0%;
+    left: 0;
     bottom: 34px;
 }
 header .logo span {
@@ -37,7 +37,7 @@ header .menu {
     position: absolute;
     box-sizing: border-box;
     margin-right: -15px;
-    right: 0%;
+    right: 0;
     bottom: 22px;
 }
 header .menu ul {
@@ -110,6 +110,90 @@ header .menu ul li a:hover {
     border-color: #3070a8;
 }
 
+.two {
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 701px;
+    height: 563px;
+    /*border: 1px solid black;*/
+    left: 0;
+}
+.two .adv {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    margin-left: 50px;
+}
+.two .adv:nth-of-type(1) {
+    margin-left: 0;
+    left: 0;
+}
+.two h2 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #41525c;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.two h3 {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #3070a8;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.two p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.three {
+    box-sizing: border-box;
+    text-align: left;
+    position: absolute;
+    top: 1263px;
+    width: 100%;
+    height: 578px;
+    left: 0;
+    background: #1f2224 url("layer102.png") round;
+}
+.three h2 {
+    font-size: 26px;
+    color: #ee8129;
+    font-family: sans-serif;
+    font-weight:normal;
+    white-space: pre-line;
+    margin-top: 80px;
+    line-height: 1.5;
+}
+.three h3 {
+    font-size: 19px;
+    color: white;
+    font-style: italic;
+    font-weight: normal;
+}
+.three ul {
+    margin-left: 0;
+    position: relative;
+    font-size: 14px;
+    color: #9d9d9d;
+    line-height: 1.8;
+    white-space: pre-line;
+    padding-left: 15px;
+}
+.three ul li:nth-of-type(even) {
+    color: #3070a8;
+}
+
 .four {
     box-sizing: border-box;
     font-family: "Trebuchet MS";
@@ -117,9 +201,10 @@ header .menu ul li a:hover {
     display: block;
     position: absolute;
     /*left: 10%;*/
-    width: 99%;
+    width: 100%;
     height: 704px;
     top: 1841px;
+    left: 0;
 
 }
 .four h3 {
