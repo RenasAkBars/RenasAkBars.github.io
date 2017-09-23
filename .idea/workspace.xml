@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Project1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Project1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="58" column="31" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+            <state relative-caret-position="474">
+              <caret line="171" column="70" lean-forward="false" selection-start-line="171" selection-start-column="70" selection-end-line="171" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -27,18 +27,18 @@
       <file leaf-file-name="Project1.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5544">
-              <caret line="78" column="17" lean-forward="true" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+            <state relative-caret-position="476">
+              <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heart.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="heart.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01 Markup/Lsn09/heart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="136">
+              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="heart.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01 Markup/Lsn09/heart.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="21" column="94" lean-forward="false" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -129,10 +129,10 @@
         <option value="$PROJECT_DIR$/01 Markup/Lsn08/HW/Task1.css" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn09/task.html" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn09/task.css" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn09/heart.html" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn09/heart.css" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html" />
+        <option value="$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css" />
+        <option value="$PROJECT_DIR$/01 Markup/Lsn09/heart.css" />
+        <option value="$PROJECT_DIR$/01 Markup/Lsn09/heart.html" />
       </list>
     </option>
   </component>
@@ -374,16 +374,15 @@
       <workItem from="1504423718995" duration="10325000" />
       <workItem from="1504440456115" duration="24515000" />
       <workItem from="1505240804100" duration="18945000" />
-      <workItem from="1506174796907" duration="11415000" />
+      <workItem from="1506174796907" duration="20370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205680000" />
+    <option name="totallyTimeSpent" value="214635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -682,34 +681,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn09/heart.html">
+    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn09/heart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="474">
+          <caret line="171" column="70" lean-forward="false" selection-start-line="171" selection-start-column="70" selection-end-line="171" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5544">
-          <caret line="78" column="17" lean-forward="true" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+        <state relative-caret-position="476">
+          <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html">
+    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn09/heart.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="58" column="31" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        <state relative-caret-position="357">
+          <caret line="21" column="94" lean-forward="false" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn09/heart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="9" />
           <folding />
         </state>
       </provider>
