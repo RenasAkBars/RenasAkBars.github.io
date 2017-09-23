@@ -438,6 +438,7 @@ header .menu ul li a:hover {
 
 
 .six {
+    left: 0;
     position: absolute;
     top: 2860px;
     box-sizing: border-box;
@@ -488,6 +489,7 @@ footer {
     width: 100%;
     background: #3070a8;
     text-align: center;
+    left: 0;
 }
 footer p {
     color: white;
