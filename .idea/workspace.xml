@@ -14,61 +14,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Project1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html">
+      <file leaf-file-name="hw4_1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01 Markup/better/hw4_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2548">
-              <caret line="171" column="70" lean-forward="false" selection-start-line="171" selection-start-column="70" selection-end-line="171" selection-end-column="70" />
+            <state relative-caret-position="357">
+              <caret line="21" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project1.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css">
+      <file leaf-file-name="hw4_1.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01 Markup/better/hw4_1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7480">
-              <caret line="440" column="11" lean-forward="false" selection-start-line="440" selection-start-column="11" selection-end-line="440" selection-end-column="11" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn10/HW/Project2.html">
+      <file leaf-file-name="hw4_3.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01 Markup/better/hw4_3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="102" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="5" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hw4_3.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01 Markup/better/hw4_3.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hw5_1.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01 Markup/better/hw5_1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1328">
+              <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hw5_1.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01 Markup/better/hw5_1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task1.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01 Markup/1st try/Lsn05/HW/Task1.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Project2.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn10/HW/Project2.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task2.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn06/HW/Task2.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-750">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Task1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/Lsn06/HW/Task1.html">
+        <entry file="file://$PROJECT_DIR$/01 Markup/1st try/Lsn05/HW/Task1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="1154">
+              <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="77" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -102,13 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01 Markup/Lsn04/HW/Task1-1.css" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn04/HW/Task3.html" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn04/HW/Task3.css" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn04/HW/Task3-1.html" />
-        <option value="$PROJECT_DIR$/Projects/Aircraft list/My Flights.css" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn04/HW/Task1.html" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn04/HW/Task1.css" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1_or.html" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1_fr.html" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1_fr.css" />
@@ -153,6 +166,13 @@
         <option value="$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn10/HW/Project2.html" />
         <option value="$PROJECT_DIR$/01 Markup/Lsn10/HW/Project2.css" />
+        <option value="$PROJECT_DIR$/01 Markup/better/hw4_1.html" />
+        <option value="$PROJECT_DIR$/01 Markup/better/hw4_3.html" />
+        <option value="$PROJECT_DIR$/01 Markup/better/hw4_3.css" />
+        <option value="$PROJECT_DIR$/01 Markup/better/hw4_1.css" />
+        <option value="$PROJECT_DIR$/01 Markup/1st try/Lsn05/HW/Task1.css" />
+        <option value="$PROJECT_DIR$/01 Markup/better/hw5_1.html" />
+        <option value="$PROJECT_DIR$/01 Markup/better/hw5_1.css" />
       </list>
     </option>
   </component>
@@ -200,25 +220,20 @@
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn03" type="462c0819:PsiDirectoryNode" />
+              <item name="1st try" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn03" type="462c0819:PsiDirectoryNode" />
-              <item name="HW" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
+              <item name="1st try" type="462c0819:PsiDirectoryNode" />
               <item name="Lsn04" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
+              <item name="1st try" type="462c0819:PsiDirectoryNode" />
               <item name="Lsn04" type="462c0819:PsiDirectoryNode" />
               <item name="HW" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -226,66 +241,29 @@
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn06" type="462c0819:PsiDirectoryNode" />
+              <item name="1st try" type="462c0819:PsiDirectoryNode" />
+              <item name="Lsn05" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn06" type="462c0819:PsiDirectoryNode" />
+              <item name="1st try" type="462c0819:PsiDirectoryNode" />
+              <item name="Lsn05" type="462c0819:PsiDirectoryNode" />
               <item name="HW" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn07" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn07" type="462c0819:PsiDirectoryNode" />
-              <item name="HW" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn08" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn08" type="462c0819:PsiDirectoryNode" />
-              <item name="HW" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn09" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn10" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="01 Markup" type="462c0819:PsiDirectoryNode" />
-              <item name="Lsn10" type="462c0819:PsiDirectoryNode" />
-              <item name="HW" type="462c0819:PsiDirectoryNode" />
+              <item name="better" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,16 +387,17 @@
       <workItem from="1505240804100" duration="18945000" />
       <workItem from="1506174796907" duration="20370000" />
       <workItem from="1506204217085" duration="127000" />
-      <workItem from="1506777509027" duration="4801000" />
+      <workItem from="1506777509027" duration="8831000" />
+      <workItem from="1507908896769" duration="1194000" />
+      <workItem from="1508087722813" duration="11656000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219563000" />
+    <option name="totallyTimeSpent" value="236443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -449,45 +428,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn04/HW/Task1-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn04/HW/Task1-1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/tsk1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1 - div.css" />
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/tsk1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1 — li a.html" />
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1 — li a.css" />
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1 - div.html" />
-    <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1-div.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1-li-a.html" />
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1-li-a.css" />
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn05/HW/Task1_.html">
@@ -667,13 +607,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="94" lean-forward="false" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2548">
+        <state relative-caret-position="2907">
           <caret line="171" column="70" lean-forward="false" selection-start-line="171" selection-start-column="70" selection-end-line="171" selection-end-column="70" />
           <folding />
         </state>
@@ -683,7 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="5" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,7 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn06/HW/Task2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-750">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -738,15 +673,87 @@
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn10/HW/Project2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/Lsn10/HW/Project2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="119">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/1st try/Lsn04/HW/Task3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/better/hw4_3.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/better/hw4_3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="102" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="5" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/better/hw4_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/better/hw4_1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/1st try/Lsn05/HW/Task1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1154">
+          <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="77" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/1st try/Lsn05/HW/Task1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/better/hw5_1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01 Markup/better/hw5_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1328">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding />
         </state>
       </provider>

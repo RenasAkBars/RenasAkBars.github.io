@@ -32,8 +32,8 @@ nav {
     background-color: rgb(238,238,238);
     box-sizing: border-box;
     text-align: center;
-    amargin-right: -100px;
-    amargin-left: -100px;
+    /*amargin-right: -100px;*/
+    /*amargin-left: -100px;*/
 }
 .menu a{
     display: inline-block;

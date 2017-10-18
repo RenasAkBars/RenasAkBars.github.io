@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Economica:400,700');
+body {
+    font-size: 0;
+}
+nav {
+    background-color: rgb(166, 77, 255);
+    width: 100%;
+    position: relative;
+    font-family: 'Economica', sans-serif;
+}
+nav div {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    /*border: 2px solid black;*/
+    text-align: center;
+}
+div ul li {
+    display: inline-block;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+div ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+    display: inline-block;
+}
+div ul li a:hover {
+    background-color: rgb(238,238,238);
+    color: rgb(160,160,162);
+}

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Economica:400,700');
+body {
+    font-size: 0;
+}
+nav {
+    background-color: rgb(26, 164, 255);
+    width: 100%;
+    position: relative;
+    font-family: 'Economica', sans-serif;
+}
+nav .menu_container {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    /*border: 2px solid black;*/
+    text-align: center;
+}
+.menu {
+    position: relative;
+}
+.menu_container ul li {
+    display: inline-block;
+    position: relative;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu_container ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+    display: inline-block;
+}
+.menu_container ul li a:hover {
+    background-color: rgb(238,238,238);
+    color: rgb(160,160,162);
+}
+.menu_sub {
+    display: none;
+    position: fixed;
+    top: 49px;
+    background-color: rgb(238,238,238);
+    width: 100%;
+    left: 0;
+    /*border: 2px solid black;*/
+}
+.menu_container ul li:hover > .menu_sub {
+    display: block;
+}
+.menu_sub li {
+    position: relative;
+    display: block;
+    width: 950px;
+    margin: 0 auto;
+    /*border: 2px solid black;*/
+    text-align: left;
+}
+.menu_container ul li .menu_sub li a {
+    position: relative;
+    display: inline-block;
+    text-transform: capitalize;
+    color: rgb(160,160,162);
+    font-size: 0.8em;
+    font-weight: normal;
+}
+.menu_container ul li .menu_sub li a:hover {
+    color: white;
+}

@@ -1,0 +1,45 @@
+body {
+    font-size: 0;
+}
+.pager {
+    font-family: sans-serif;
+    background-color:  rgb(250,250,250);
+    position: relative;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    padding: 7px 0 7px 0;
+}
+.pager a {
+    display: inline-block;
+    font-size: 11px;
+    color: rgb(151,59,207);
+    padding: 6px 9px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.pager_num {
+    border: solid 1px rgb(221,221,221);
+    border-radius: 3px;
+    margin: 0 2px 0 3px;
+}
+.pager_dots {
+    position: relative;
+    top: 0.6em;
+}
+.pager_num:hover {
+    color: white;
+    background-color: rgb(151,59,207);
+    border-color: rgb(124,18,188);
+}
+.pager_dots:hover {
+    color: rgb(62,9,94);
+}
+.pager_left:hover, .pager_right:hover {
+    color: rgb(62,9,94);
+}
+.pager_symb {
+    font-size: 0.78em;
+    letter-spacing: -0.15em;
+}
