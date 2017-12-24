@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calculator.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="calculator.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JS/first result/calculator.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="253">
+              <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="keyboard.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="keyboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JS/first result/keyboard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -144,10 +144,10 @@
         <option value="$PROJECT_DIR$/JS/keyboard.html" />
         <option value="$PROJECT_DIR$/JS/JS.html" />
         <option value="$PROJECT_DIR$/JS/calculator.html" />
-        <option value="$PROJECT_DIR$/JS/first result/calculator.css" />
         <option value="$PROJECT_DIR$/JS/JS.css" />
         <option value="$PROJECT_DIR$/JS/first result/calculator.html" />
         <option value="$PROJECT_DIR$/JS/first result/keyboard.html" />
+        <option value="$PROJECT_DIR$/JS/first result/calculator.css" />
       </list>
     </option>
   </component>
@@ -350,12 +350,12 @@
       <workItem from="1512498448873" duration="30307000" />
       <workItem from="1512841478932" duration="13527000" />
       <workItem from="1513010601441" duration="7505000" />
-      <workItem from="1513271291983" duration="76316000" />
+      <workItem from="1513271291983" duration="76406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="477621000" />
+    <option name="totallyTimeSpent" value="477711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -568,18 +568,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/first result/calculator.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/JS.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/first result/keyboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -592,10 +592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/first result/keyboard.html">
+    <entry file="file://$PROJECT_DIR$/JS/first result/calculator.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="253">
+          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
           <folding />
         </state>
       </provider>
