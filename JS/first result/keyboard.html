@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" type="text/css" href="keyboard.css">
+</head>
+<body>
+
+<input id="input">
+<script>
+
+    var languageBase = {
+        english:
+            {small: [['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='],
+        ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\'],
+        ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\''],
+        [ 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/']],
+            big: [['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+'],
+        ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|'],
+        ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '\"'],
+        [ 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?']]},
+        russian:
+            {small: [['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='],
+        ['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\'],
+        ['ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э'],
+        [ 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.']],
+                big: [['Ё', '!', '\"', '№', ';', '%', ':', '?', '*', '(', ')', '_', '+'],
+        ['Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ', '/'],
+        ['Ф', 'Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', 'Ж', 'Э'],
+        [ 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', ',']]}};
+
+    var parent = document.querySelector('body');
+    var input = document.querySelector('#input');
+
+    getKeyboard();
+
+    function getKeyboard() {
+        input.addEventListener('click', activateKeyboard);
+    }
+
+    function activateKeyboard() {
+        keyboardFull(parent, languageBase, 'russian', 'big', input);
+        input.removeEventListener('click', activateKeyboard);
+    }
+
+    function keyboardFull(parent, languageBase, language, size, input) {
+        var keyBoardContainer = document.createElement('div');
+        keyBoardContainer.classList.add('keyBoardContainer');
+        parent.appendChild(keyBoardContainer);
+        keyBoardContainer.classList.add('keyBoardContainer');
+
+        putKeyboard(keyBoardContainer, languageBase, language, size);
+        putSpecialKeyRow(keyBoardContainer);
+        actionSpecialButtons(keyBoardContainer, languageBase, language, size);
+        actionCloseTab(keyBoardContainer, input);
+    }
+
+    function putKeyboard(parent, languageBase, language, size) {
+    var keyboard = document.createElement('div');
+        keyboard.classList.add('keyboard');
+        keyboard.classList.add(language);
+        keyboard.classList.add(size);
+    for (var i = 0; i < languageBase[language][size].length; i++) {
+        var keyrow = document.createElement('div');
+        keyrow.classList.add('keyrow');
+        for (var j = 0; j < languageBase[language][size][i].length; j++) {
+            var key = document.createElement('div');
+            key.innerHTML = languageBase[language][size][i][j];
+            key.classList.add('key');
+            key.addEventListener('mouseover', shadowKey);
+            keyrow.appendChild(key);
+            key.addEventListener('click', write);
+        }
+        keyboard.appendChild(keyrow);
+    }
+        parent.insertBefore(keyboard, parent.firstChild)
+    }
+
+    function write() {
+        input.value += this.innerHTML;
+    }
+
+    function writeSpace() {
+        input.value += ' ';
+    }
+
+    function clearAll() {
+        input.value = '';
+    }
+
+    function removeLast() {
+        input.value = input.value.slice(0, -1);
+    }
+
+    function shadowKey() {
+        this.style.backgroundColor = 'grey';
+        this.addEventListener('mouseout', function () {
+            this.style.backgroundColor = 'inherit';
+        })
+    }
+
+    function putSpecialKey(parent, keyName) {
+        var key = document.createElement('div');
+        key.classList.add('key');
+        key.innerHTML = keyName;
+        key.classList.add(keyName);
+        key.classList.add('specialKey');
+        parent.appendChild(key);
+    }
+
+    function putSpecialKeyRow(parent) {
+        var keyrow = document.createElement('div');
+        keyrow.classList.add('keyrow');
+        putSpecialKey(keyrow, 'CapsLock');
+        putSpecialKey(keyrow, 'Language');
+        putSpecialKey(keyrow, 'Space');
+        putSpecialKey(keyrow, 'BackSpace');
+        putSpecialKey(keyrow, 'Clear');
+        parent.appendChild(keyrow);
+    }
+
+    function actionSpecialButtons(keyBoardContainer, languageBase, language, size) {
+        actionCapsLock(keyBoardContainer, languageBase, language);
+        actionLanguageButton(keyBoardContainer, languageBase, size);
+        actionSpace(keyBoardContainer);
+        actionClear(keyBoardContainer);
+        actionBackSpace(keyBoardContainer);
+    }
+
+    function actionCapsLock(keyBoardContainer, languageBase, language) {
+        var CapsLock = keyBoardContainer.querySelector('.CapsLock');
+        var keyboard = keyBoardContainer.querySelector('.keyboard');
+        CapsLock.addEventListener('click', function () {
+            changeKeyBoardSize(keyboard, keyBoardContainer, languageBase, language);
+        });
+    }
+
+    function actionLanguageButton(keyBoardContainer, languageBase, size) {
+        var LanguageButton = keyBoardContainer.querySelector('.Language');
+        var keyboard = keyBoardContainer.querySelector('.keyboard');
+        LanguageButton.addEventListener('click', function () {
+            changeKeyBoardLanguage(keyboard, keyBoardContainer, languageBase, size);
+        });
+    }
+
+    function actionSpace(keyBoardContainer) {
+        var SpaceButton = keyBoardContainer.querySelector('.Space');
+        SpaceButton.addEventListener('click', writeSpace);
+    }
+
+    function actionBackSpace(keyBoardContainer) {
+        var BackSpaceButton = keyBoardContainer.querySelector('.BackSpace');
+        BackSpaceButton.addEventListener('click', removeLast);
+    }
+
+    function actionClear(keyBoardContainer) {
+        var ClearButton = keyBoardContainer.querySelector('.Clear');
+        ClearButton.addEventListener('click', clearAll);
+    }
+
+    function actionCloseTab(keyBoardContainer, input) {
+        closeTab(keyBoardContainer, input);
+    }
+
+    function RemoveKeyBoard(keyBoardContainer, keyboard) {
+        keyBoardContainer.removeChild(keyboard);
+    }
+
+    function changeKeyBoardSize(keyboard, keyBoardContainer, languageBase, language) {
+        if (keyboard.classList.contains('small')) {
+            RemoveKeyBoard(keyBoardContainer, keyboard);
+            putKeyboard(keyBoardContainer, languageBase, language, 'big');
+            actionSpecialButtons(keyBoardContainer, languageBase, language, 'big');
+        } else if (keyboard.classList.contains('big')) {
+            RemoveKeyBoard(keyBoardContainer, keyboard);
+            putKeyboard(keyBoardContainer, languageBase, language, 'small');
+            actionSpecialButtons(keyBoardContainer, languageBase, language, 'small');
+        }
+    }
+
+    function changeKeyBoardLanguage(keyboard, keyBoardContainer, languageBase, size) {
+        if (keyboard.classList.contains('russian')) {
+            RemoveKeyBoard(keyBoardContainer, keyboard);
+            putKeyboard(keyBoardContainer, languageBase, 'english', size);
+            actionSpecialButtons(keyBoardContainer, languageBase, 'english', size);
+        } else if (keyboard.classList.contains('english')) {
+            RemoveKeyBoard(keyBoardContainer, keyboard);
+            putKeyboard(keyBoardContainer, languageBase, 'russian', size);
+            actionSpecialButtons(keyBoardContainer, languageBase, 'russian', size);
+        }
+    }
+
+    function removeKeyBoardFull(parent) {
+        parent.parentNode.removeChild(parent);
+
+    }
+
+    function closeTab(parent, input) {
+        var close = document.createElement('div');
+        close.classList.add('closeTab');
+        close.innerHTML = 'X';
+        parent.appendChild(close);
+        close.addEventListener('click', function () {
+            removeKeyBoardFull(parent);
+            input.addEventListener('click', activateKeyboard);
+        });
+    }
+
+</script>
+
+
+
+</body>
+</html>

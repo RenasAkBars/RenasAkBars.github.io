@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+
+<input id="input">
+<script>
+
+    var CalculatorBase = [['7', '8', '9', '+'], ['4', '5', '6', '-'], ['1', '2', '3', '/'], ['(', '0', ')', '*']];
+
+    var parent = document.querySelector('body');
+    var input = document.querySelector('#input');
+
+    getCalculator();
+
+    function getCalculator() {
+        input.addEventListener('click', activateCalculator);
+    }
+
+    function activateCalculator() {
+        calculatorFull(parent, input);
+        input.removeEventListener('click', activateCalculator);
+    }
+
+    function calculatorFull(parent, input) {
+        var calculatorContainer = document.createElement('div');
+        calculatorContainer.classList.add('calculatorContainer');
+        parent.appendChild(calculatorContainer);
+        calculatorContainer.classList.add('calculatorContainer');
+
+        putCalculator(calculatorContainer, CalculatorBase);
+        putSpecialKeyRow(calculatorContainer);
+        actionSpecialButtons(calculatorContainer);
+        actionCloseTab(calculatorContainer, input);
+    }
+
+    function putCalculator(parent, CalculatorBase) {
+        var calculator = document.createElement('div');
+        calculator.classList.add('calculator');
+        for (var i = 0; i < CalculatorBase.length; i++) {
+            var keyrow = document.createElement('div');
+            keyrow.classList.add('keyrow');
+            for (var j = 0; j < CalculatorBase[i].length; j++) {
+                var key = document.createElement('div');
+                key.innerHTML = CalculatorBase[i][j];
+                key.classList.add('key');
+                key.addEventListener('mouseover', shadowKey);
+                keyrow.appendChild(key);
+                key.addEventListener('click', write);
+            }
+            calculator.appendChild(keyrow);
+        }
+        parent.insertBefore(calculator, parent.firstChild)
+    }
+
+    function equal() {
+        input.value = eval(input.value);
+    }
+
+    function write() {
+        input.value += this.innerHTML;
+    }
+
+    function clearAll() {
+        input.value = '';
+    }
+
+    function removeLast() {
+        input.value = input.value.slice(0, -1);
+    }
+
+    function shadowKey() {
+        this.style.backgroundColor = 'grey';
+        this.addEventListener('mouseout', function () {
+            this.style.backgroundColor = 'inherit';
+        })
+    }
+
+    function putSpecialKey(parent, keyName) {
+        var key = document.createElement('div');
+        key.classList.add('key');
+        key.innerHTML = keyName;
+        key.classList.add(keyName);
+        key.classList.add('specialKey');
+        parent.appendChild(key);
+    }
+
+    function putSpecialKeyRow(parent) {
+        var keyrow = document.createElement('div');
+        keyrow.classList.add('keyrow');
+        putSpecialKey(keyrow, 'BS');
+        putSpecialKey(keyrow, 'Clear');
+        putEqual(keyrow, 'Equal');
+        parent.appendChild(keyrow);
+    }
+
+    function putEqual(parent, keyName) {
+        var key = document.createElement('div');
+        key.classList.add('key');
+        key.innerHTML = '=';
+        key.classList.add(keyName);
+        key.classList.add('specialKey');
+        parent.appendChild(key);
+    }
+
+    function actionSpecialButtons(calculatorContainer) {
+        actionClear(calculatorContainer);
+        actionBackSpace(calculatorContainer);
+        actionEqual(calculatorContainer);
+    }
+
+    function actionBackSpace(calculatorContainer) {
+        var BackSpaceButton = calculatorContainer.querySelector('.BS');
+        BackSpaceButton.addEventListener('click', removeLast);
+    }
+
+    function actionClear(calculatorContainer) {
+        var ClearButton = calculatorContainer.querySelector('.Clear');
+        ClearButton.addEventListener('click', clearAll);
+    }
+
+    function actionCloseTab(calculatorContainer, input) {
+        closeTab(calculatorContainer, input);
+    }
+
+    function actionEqual(calculatorContainer) {
+        var EqualButton = calculatorContainer.querySelector('.Equal');
+        EqualButton.addEventListener('click', equal);
+    }
+
+    function removeCalculatorFull(parent) {
+        parent.parentNode.removeChild(parent);
+
+    }
+
+    function closeTab(parent, input) {
+        var close = document.createElement('div');
+        close.classList.add('closeTab');
+        close.innerHTML = 'X';
+        parent.appendChild(close);
+        close.addEventListener('click', function () {
+            removeCalculatorFull(parent);
+            input.addEventListener('click', activateCalculator);
+        });
+    }
+
+</script>
+
+
+
+</body>
+</html>
