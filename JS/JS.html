@@ -3,150 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>JS</title>
-    <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
     <link rel="stylesheet" type="text/css" href="JS.css">
 </head>
 <body>
 
-<input id="input">
+
 <script>
 
-    var CalculatorBase = [['7', '8', '9', '+'], ['4', '5', '6', '-'], ['1', '2', '3', '/'], ['(', '0', ')', '*']];
+    createTable(shuffle(range(1, 25)));
 
-    var parent = document.querySelector('body');
-    var input = document.querySelector('#input');
-
-    getCalculator();
-
-    function getCalculator() {
-        input.addEventListener('click', activateCalculator);
-    }
-
-    function activateCalculator() {
-        calculatorFull(parent, input);
-        input.removeEventListener('click', activateCalculator);
-    }
-
-    function calculatorFull(parent, input) {
-        var calculatorContainer = document.createElement('div');
-        calculatorContainer.classList.add('calculatorContainer');
-        parent.appendChild(calculatorContainer);
-        calculatorContainer.classList.add('calculatorContainer');
-
-        putCalculator(calculatorContainer, CalculatorBase);
-        putSpecialKeyRow(calculatorContainer);
-        actionSpecialButtons(calculatorContainer);
-        actionCloseTab(calculatorContainer, input);
-    }
-
-    function putCalculator(parent, CalculatorBase) {
-        var calculator = document.createElement('div');
-        calculator.classList.add('calculator');
-        for (var i = 0; i < CalculatorBase.length; i++) {
-            var keyrow = document.createElement('div');
-            keyrow.classList.add('keyrow');
-            for (var j = 0; j < CalculatorBase[i].length; j++) {
-                var key = document.createElement('div');
-                key.innerHTML = CalculatorBase[i][j];
-                key.classList.add('key');
-                key.addEventListener('mouseover', shadowKey);
-                keyrow.appendChild(key);
-                key.addEventListener('click', write);
-            }
-            calculator.appendChild(keyrow);
+    function createTable(arr) {
+        var table = document.createElement('table');
+        var tr = document.createElement('tr');
+        for (var i = 0; i < arr.length; i++) {
+            var td = document.createElement('td');
+            td.innerHTML = arr[i];
+            tr.appendChild(td);
         }
-        parent.insertBefore(calculator, parent.firstChild)
+        table.appendChild(tr);
+        document.querySelector('body').appendChild(table);
+        enableActivation(table);
     }
 
-    function equal() {
-        input.value = eval(input.value);
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function write() {
-        input.value += this.innerHTML;
+    function range(start, stop) {
+        var result = [];
+        for (var i = start; i < stop + 1; i++) {
+            result.push(i);
+        }
+        return result;
     }
 
-    function clearAll() {
-        input.value = '';
+    function shuffle(arr) {
+        var result = [];
+        var length = arr.length;
+        for (var i = 0; i < length; i++) {
+            var random = getRandomInt(0, arr.length - 1);
+            var elem = arr.splice(random, 1)[0];
+            result.push(elem);
+        }
+        return result;
     }
 
-    function removeLast() {
-        input.value = input.value.slice(0, -1);
+    function enableActivation(table) {
+        table.addEventListener('click', addActivation);
     }
 
-    function shadowKey() {
-        this.style.backgroundColor = 'grey';
-        this.addEventListener('mouseout', function () {
-            this.style.backgroundColor = 'inherit';
-        })
-    }
-
-    function putSpecialKey(parent, keyName) {
-        var key = document.createElement('div');
-        key.classList.add('key');
-        key.innerHTML = keyName;
-        key.classList.add(keyName);
-        key.classList.add('specialKey');
-        parent.appendChild(key);
-    }
-
-    function putSpecialKeyRow(parent) {
-        var keyrow = document.createElement('div');
-        keyrow.classList.add('keyrow');
-        putSpecialKey(keyrow, 'BS');
-        putSpecialKey(keyrow, 'Clear');
-        putEqual(keyrow, 'Equal');
-        parent.appendChild(keyrow);
-    }
-
-    function putEqual(parent, keyName) {
-        var key = document.createElement('div');
-        key.classList.add('key');
-        key.innerHTML = '=';
-        key.classList.add(keyName);
-        key.classList.add('specialKey');
-        parent.appendChild(key);
-    }
-
-    function actionSpecialButtons(calculatorContainer) {
-        actionClear(calculatorContainer);
-        actionBackSpace(calculatorContainer);
-        actionEqual(calculatorContainer);
-    }
-
-    function actionBackSpace(calculatorContainer) {
-        var BackSpaceButton = calculatorContainer.querySelector('.BS');
-        BackSpaceButton.addEventListener('click', removeLast);
-    }
-
-    function actionClear(calculatorContainer) {
-        var ClearButton = calculatorContainer.querySelector('.Clear');
-        ClearButton.addEventListener('click', clearAll);
-    }
-
-    function actionCloseTab(calculatorContainer, input) {
-        closeTab(calculatorContainer, input);
-    }
-
-    function actionEqual(calculatorContainer) {
-        var EqualButton = calculatorContainer.querySelector('.Equal');
-        EqualButton.addEventListener('click', equal);
-    }
-
-    function removeCalculatorFull(parent) {
-        parent.parentNode.removeChild(parent);
-
-    }
-
-    function closeTab(parent, input) {
-        var close = document.createElement('div');
-        close.classList.add('closeTab');
-        close.innerHTML = 'X';
-        parent.appendChild(close);
-        close.addEventListener('click', function () {
-            removeCalculatorFull(parent);
-            input.addEventListener('click', activateCalculator);
-        });
+    function addActivation(event) {
+        var td = event.target.closest('td');
+        if (td) {
+            td.classList.toggle('active');
+        }
     }
 
 </script>
