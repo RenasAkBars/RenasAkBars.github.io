@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="calendar.css">
+</head>
+
+<body>
+<div id="calendarContainer">
+    <button id="back">&larr;</button>
+    <h2 id="show_date"></h2>
+    <button id="forward">&rarr;</button>
+    <div id="thisMonth"></div>
+</div>
+
+<script>
+
+    var date = new Date();
+    var today = new Date();
+    var months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+    var days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
+
+    monthAndYear(date);
+    activateButtons(date);
+
+    function monthAndYear(date) {
+        var showDate = document.querySelector('#show_date');
+        showDate.innerHTML = months[date.getMonth()] + ' ' + date.getFullYear();
+        createUl(date);
+    }
+
+    //Активирует кнопки
+    function activateButtons(date) {
+
+        var back = document.querySelector('#back');
+        var forward = document.querySelector('#forward');
+
+        forward.addEventListener('click', function () {
+            date.setMonth(date.getMonth() + 1);
+            monthAndYear(date);
+        });
+        back.addEventListener('click', function () {
+            date.setMonth(date.getMonth() - 1);
+            monthAndYear(date);
+        });
+    }
+
+    //Выделяет текущий день зеленым
+    function greenDay(elem, num, date) {
+        if (num === today.getDate() && today.getDate() === date.getDate() &&
+            date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear()) {
+            elem.style.backgroundColor = 'green';
+            elem.style.color = 'white';
+        }
+    }
+
+    //Выделяет выходные дни красным
+    function redDay(elem, num, date) {
+        var dateBeta = new Date();
+        dateBeta.setMonth(date.getMonth());
+        dateBeta.setFullYear(date.getFullYear());
+        dateBeta.setDate(num);
+        var day = dateBeta.getDay();
+        if (day === 0 || day === 6) {
+            elem.style.color = 'red';
+            elem.style.borderColor = 'red';
+        }
+    }
+
+    //Превращает некорректное значение дня (32 или -1) в корректное
+    function dayFix(date, num) {
+        var dateBeta = new Date();
+        dateBeta.setMonth(date.getMonth());
+        dateBeta.setFullYear(date.getFullYear());
+        dateBeta.setDate(num);
+        return dateBeta.getDate();
+    }
+
+    //Создает элементы календаря
+    function createUl(date) {
+        var Old = document.querySelector('#thisMonth');
+        document.querySelector('#calendarContainer').removeChild(Old);
+
+        var thisMonth = document.createElement('div');
+        thisMonth.id = 'thisMonth';
+
+        var before = getFirstDayInMonth(date);
+        var after = getLastDayInMonth(date);
+        var to = currentMonthLastDay(date) + after;
+
+        for (var i = 1 - before; i <= to; i++) {
+            var dayCell = document.createElement('div');
+            dayCell.className = 'day_cell';
+
+            var exactDate = dayFix(date, i);
+            dayCell.innerHTML = exactDate + '<br/>' + days[getDayInMonth(date, i)];
+
+            redDay(dayCell, i, date);
+            greenDay(dayCell, i, date);
+
+            thisMonth.appendChild(dayCell);
+            divideWeeks(date, i, dayCell);
+        }
+        document.querySelector('#calendarContainer').appendChild(thisMonth);
+    }
+
+    //разделяет недели по строкам
+    function divideWeeks(date, exactDate, elem) {
+        if (getDayInMonth(date, exactDate) % 7 === 0) {
+            elem.insertAdjacentHTML('afterEnd', '<br/>');
+        }
+    }
+
+    //Показывает последний день запрашиваемого месяца
+    function currentMonthLastDay(date) {
+        var month = date.getMonth();
+        var year = date.getFullYear();
+
+        if (month === 0 || month === 2 || month === 4 || month === 6 || month === 7 || month === 9 || month === 11) {
+            return 31;
+        } else if (month === 3 || month === 5 || month === 8 || month === 10) {
+            return 30;
+        } else if (month === 1 && year % 4 === 0) {
+            return 29;
+        } else {
+            return 28;
+        }
+    }
+
+    //Возвращает номер дня недели
+    function getDayInMonth(date, num) {
+        var dateBeta = new Date();
+        dateBeta.setMonth(date.getMonth());
+        dateBeta.setFullYear(date.getFullYear());
+        dateBeta.setDate(num);
+        var day = dateBeta.getDay();
+        day = fixSunday(day);
+        return day;
+    }
+
+    //Возвращает номер дня недели первого числа месяца
+    function getFirstDayInMonth(date) {
+        return (getDayInMonth(date, 1) - 1);
+
+    }
+
+    //Возвращает номер дня недели последнего числа месяца
+    function getLastDayInMonth(date) {
+        return (7 -getDayInMonth(date, currentMonthLastDay(date)));
+    }
+
+    //меняет номер дня недели воскресенья на 7 вместо 0, ХЗ работает ли=)) Вроде нет, на всякий оставил в комменте
+    //поправил, работает, и даже очень нужна функция!
+    function fixSunday(day) {
+        if (day === 0) {
+            return 7;
+        } else {
+            return day;
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

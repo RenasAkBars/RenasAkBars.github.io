@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checklistbetter</title>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="checklistbetter.css">
+</head>
+<body>
+<div id="checklistContainer">
+        <ul id="checklistUl"></ul>
+    <input id="checklistCreate">
+</div>
+<script>
+    checklistStart();
+
+    function checklistStart() {
+        var checklistUl = document.querySelector('#checklistUl');
+        var checklistCreate = document.querySelector('#checklistCreate');
+
+
+        checklistCreate.addEventListener('keyup', function (event) {
+                if (event.keyCode == 13) {
+                    addLi(checklistCreate, checklistUl);
+                }
+            }
+        );
+    }
+
+    function addLi(input, ul) {
+        var li = document.createElement('li');
+        li.innerHTML = '<span>' + input.value + '</span>';
+        input.value = '';
+        ul.appendChild(li);
+        addClose(li);
+        addCheckbox(li);
+        addRedact(li);
+    }
+
+    function addClose(parent) {
+        var close = document.createElement('button');
+        close.innerHTML = 'X';
+        close.className = 'closeButton';
+        close.addEventListener('click', function () {
+            this.parentNode.parentNode.removeChild(this.parentNode);
+        });
+        parent.appendChild(close);
+    }
+
+    function addCheckbox(parent) {
+        var checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.addEventListener('click', function () {
+            this.parentNode.className = 'done';
+            this.parentNode.removeChild(this);
+        });
+        parent.insertBefore(checkbox, parent.firstChild);
+    }
+
+    function addRedact(elem) {
+        var span = elem.querySelector('span');
+        span.addEventListener('dblclick', function () {
+            if (!this.parentNode.classList.contains('done')) {
+                var input = document.createElement('input');
+                input.value = this.innerHTML;
+                this.innerHTML = '';
+                input.addEventListener('keyup', function (event) {
+                    if (event.keyCode == 13) {
+                        input.parentNode.innerHTML = input.value;
+                    }
+                });
+                this.appendChild(input);
+                input.focus();
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Days To Your Birthday</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/localisation/datepicker-ru.js"></script>
+    <script src="cookies.min.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="DaysToYourBirthday.css">
+</head>
+<body>
+<p id="timer">До Вашего следующего дня рождения осталось: <span class="for_timer"></span> месяцев,
+    <span class="for_timer"></span> дней, <span class="for_timer"></span> часов, <span class="for_timer"></span>
+    минут и <span class="for_timer"></span> секунд</p>
+<input id="bInput"><br/>
+<script>
+    var bDay = $.cookie('birthday');
+
+    var $bInput = $('#bInput');
+    $bInput.val('Укажите свой день рождения').datepicker({changeMonth: true, changeYear: true, yearRange:'-100:+10'});
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+    $bInput.change(function () {
+        $.cookie('birthday', $(this).val());
+        bDay = $.cookie('birthday');
+    });
+
+    timerRefresh();
+
+    function timerRefresh() {
+
+        var now = new Date();
+        var bDate = new Date(now.getFullYear(),+bDay.slice(3, 5) - 1, +bDay.slice(0, 2), 0, 0, 0);
+
+        var months = bDate.getMonth() - now.getMonth();
+
+        now.setMonth(bDate.getMonth());
+        var days = bDate.getDate() - now.getDate() - 1;
+
+        if (bDate < now) {
+            bDate.setFullYear(now.getFullYear() + 1);
+            months += 12;
+            days += currentMonthLastDay(now);
+        }
+
+        if(bDate.getDate() <= now.getDate()) {
+            months--;
+        }
+
+        var hrs = 24 - now.getHours() - 1;
+        var mins = 60 - now.getMinutes() - 1;
+        var secs = 60 - now.getSeconds() - 1;
+
+        var timerArr = [months, days, hrs, mins, secs];
+
+        $('#timer .for_timer').each(function (index) {
+            $(this).html(timerArr[index]);
+        });
+
+        window.setTimeout(timerRefresh, 1000);
+    }
+
+    function currentMonthLastDay(date) {
+        var month = date.getMonth();
+        var year = date.getFullYear();
+
+        if (month === 0 || month === 2 || month === 4 || month === 6 || month === 7 || month === 9 || month === 11) {
+            return 31;
+        } else if (month === 3 || month === 5 || month === 8 || month === 10) {
+            return 30;
+        } else if (month === 1 && year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+            return 29;
+        } else {
+            return 28;
+        }
+    }
+</script>
+</body>
+</html>

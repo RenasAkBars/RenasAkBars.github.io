@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Last Visited</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/localisation/datepicker-ru.js"></script>
+    <!--<script src="cookies.min.js"></script>-->
+    <script src="jquery.cookie.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="lastVisited.css">
+</head>
+<body>
+<p id="txt">С последнего захода прошло <span class="for_txt">...</span> секунд, вы посещали эту страницу <span class="for_txt">...</span> раз.</p>
+<script>
+    var date = new Date();
+    var counter = 0;
+
+    var $counterCookie = $.cookie('counterCookie');
+    if ($counterCookie && $counterCookie !== 'null') {
+        counter = +$counterCookie;
+    }
+
+    var $dateCookie = $.cookie('dateCookie');
+    if ($dateCookie && $dateCookie !== 'null') {
+        var dateOld = +$dateCookie;
+    }
+
+    if (counter > 0) {
+        var secs = Math.floor((date.getTime() - dateOld)/1000);
+        $('#txt .for_txt').first().html(secs).end().last().html(counter);
+    }
+
+    counter++;
+
+    $(window).on('beforeunload', function () {
+        $.cookie('counterCookie', counter);
+        $.cookie('dateCookie', date.getTime());
+    });
+
+
+</script>
+</body>
+</html>

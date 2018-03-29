@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organaiser</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/localisation/datepicker-ru.js"></script>
+    <!--<script src="cookies.min.js"></script>-->
+    <script src="jquery.cookie.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="organaiser.css">
+</head>
+<body>
+<div id="calendarContainer">
+    <button id="back">&larr;</button>
+    <h2 id="show_date"></h2>
+    <button id="forward">&rarr;</button>
+    <div id="thisMonth"></div>
+</div>
+<div id="checklistContainer">
+</div>
+<script>
+    var date = new Date();
+    var today = new Date();
+    var texts = {months:['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        months1: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+        days: ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']};
+
+    monthAndYear(date);
+    activateButtons(date);
+
+    //для organaiser.html добавил:
+    organaiserSave();
+
+    function organaiserSave() {
+        var checklistContainer = $('#checklistContainer');
+
+        var organaiserLS = localStorage.getItem('organaiser');
+        if (organaiserLS) {
+            checklistContainer.html(organaiserLS);
+        }
+
+        $(window).on('beforeunload', function () {
+            //удаляет пустые даты, в которых не было или удалены все задачи
+            checklistContainer.children('ul:not(:has(li))').each(function () {
+                $(this).remove();
+                //days.push($(this).html());
+            });
+            //берет в хранилище весь контейнер, не думаю что самый разумный метод, но работает,
+            // причем без сильного изменения предыдущего кода органайзера
+            localStorage.setItem('organaiser', checklistContainer.html());
+        });
+    }
+
+    // Создает заголовок месяца
+    function monthAndYear(date) {
+        $('#show_date').html(texts.months[date.getMonth()] + ' ' + date.getFullYear());
+        createUl(date);
+    }
+
+    // Активирует кнопки
+    function activateButtons(date) {
+        $('#forward').on('click', function () {
+            date.setMonth(date.getMonth() + 1);
+            monthAndYear(date);
+        });
+        $('#back').on('click', function () {
+            date.setMonth(date.getMonth() - 1);
+            monthAndYear(date);
+        });
+    }
+
+    // Создает элементы календаря
+    function createUl(date) {
+        $('#thisMonth').remove();
+
+        var thisMonth = document.createElement('div');
+        thisMonth.id = 'thisMonth';
+
+        var before = getFirstDayInMonth(date);
+        var after = getLastDayInMonth(date);
+        var to = currentMonthLastDay(date) + after;
+
+        for (var i = 1 - before; i <= to; i++) {
+            var dayCell = document.createElement('div');
+            dayCell.className = 'day_cell';
+
+            addUniqueIdCell(date, i, dayCell);
+            activateChecklistToDayCell(dayCell);
+
+            var exactDate = dayFix(date, i);
+            dayCell.innerHTML = exactDate + '<br/>' + texts.days[getDayInMonth(date, i)];
+
+            redDay(dayCell, i, date);
+            greenDay(dayCell, i, date);
+
+            thisMonth.appendChild(dayCell);
+            divideWeeks(date, i, dayCell);
+        }
+        document.querySelector('#calendarContainer').appendChild(thisMonth);
+    }
+
+    // Выделяет текущий день зеленым
+    function greenDay(elem, num, date) {
+        if (num === today.getDate() && today.getDate() === date.getDate() &&
+            date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear()) {
+            //elem.css({backgroundColor: 'green', color: 'white'});
+            elem.style.backgroundColor = 'green';
+            elem.style.color = 'white';
+        }
+    }
+
+    // Выделяет выходные дни красным
+    function redDay(elem, num, date) {
+        var dateBeta = new Date();
+        dateBeta.setMonth(date.getMonth());
+        dateBeta.setFullYear(date.getFullYear());
+        dateBeta.setDate(num);
+        var day = dateBeta.getDay();
+        if (day === 0 || day === 6) {
+            elem.style.color = 'red';
+            elem.style.borderColor = 'red';
+        }
+    }
+
+    // Превращает некорректное значение дня (32 или -1) в корректное
+    function dayFix(date, num) {
+        var dateBeta = new Date();
+        dateBeta.setMonth(date.getMonth());
+        dateBeta.setFullYear(date.getFullYear());
+        dateBeta.setDate(num);
+        return dateBeta.getDate();
+    }
+
+
+
+    // Присуждает id для определенного дня
+    function addUniqueIdCell(date, num, elem) {
+        var dateBeta = new Date();
+        dateBeta.setMonth(date.getMonth());
+        dateBeta.setFullYear(date.getFullYear());
+        dateBeta.setDate(num);
+        elem.id = 'dc_' + dateBeta.getFullYear() + '_' + (100 + dateBeta.getMonth()) + '_' + (100 + dateBeta.getDate());
+    }
+
+    // разделяет недели по строкам
+    function divideWeeks(date, exactDate, elem) {
+        if (getDayInMonth(date, exactDate) % 7 === 0) {
+            elem.insertAdjacentHTML('afterEnd', '<br/>');
+        }
+    }
+
+    // Показывает последний день запрашиваемого месяца
+    function currentMonthLastDay(date) {
+        var month = date.getMonth();
+        var year = date.getFullYear();
+
+        if (month === 0 || month === 2 || month === 4 || month === 6 || month === 7 || month === 9 || month === 11) {
+            return 31;
+        } else if (month === 3 || month === 5 || month === 8 || month === 10) {
+            return 30;
+        } else if (month === 1 && year % 4 === 0) {
+            return 29;
+        } else {
+            return 28;
+        }
+    }
+
+    // Возвращает номер дня недели
+    function getDayInMonth(date, num) {
+        var dateBeta = new Date();
+        dateBeta.setMonth(date.getMonth());
+        dateBeta.setFullYear(date.getFullYear());
+        dateBeta.setDate(num);
+        var day = dateBeta.getDay();
+        day = fixSunday(day);
+        return day;
+    }
+
+    // Возвращает номер дня недели первого числа месяца
+    function getFirstDayInMonth(date) {
+        return (getDayInMonth(date, 1) - 1);
+
+    }
+
+    // Возвращает номер дня недели последнего числа месяца
+    function getLastDayInMonth(date) {
+        return (7 -getDayInMonth(date, currentMonthLastDay(date)));
+    }
+
+    // меняет номер дня недели воскресенья на 7 вместо 0
+    function fixSunday(day) {
+        if (day === 0) {
+            return 7;
+        } else {
+            return day;
+        }
+    }
+
+
+    // здесь дальше код чеклиста
+
+
+    // активирует выскакивание органайзера
+    function activateChecklistToDayCell(elem) {
+
+        elem.addEventListener('click', function () {
+            var checklist = document.getElementById('ul' + elem.id.slice(2));
+            if(!checklist) {
+                checklistStartUnique(elem);
+            } else {
+                showChecklistToDayCell(elem);
+            }
+        });
+
+    }
+
+    // показывает скрытые органайзеры
+    function showChecklistToDayCell(elem) {
+        hideAllChecklist();
+        document.getElementById('ul' + elem.id.slice(2)).style.display = 'block';
+    }
+
+    // прячет ранее открытые органайзеры
+    function hideAllChecklist() {
+        var checklistUls = document.querySelectorAll('.checklistUl');
+        for (var i = 0; i < checklistUls.length; i++) {
+            checklistUls[i].style.display = 'none';
+        }
+
+    }
+
+    // Добавляет заголовок для органайзера
+    function addDayName(parent) {
+        var string = document.createElement('h3');
+        var year = parent.id.slice(3, 7);
+        var month = texts.months1[Number(parent.id.slice(8, 11)) - 100];
+        var day = Number(parent.id.slice(12)) - 100;
+
+        string.innerHTML = day + ' ' + month + ' ' + year + ' года.';
+        parent.appendChild(string);
+    }
+
+    // создает в органайзере чеклист
+    function checklistStartUnique(elem) {
+        hideAllChecklist();
+
+        var checklistContainer = document.querySelector('#checklistContainer');
+        var checklistUl = document.createElement('ul');
+
+        checklistUl.id = 'ul' + elem.id.slice(2);
+        checklistUl.className = 'checklistUl';
+        checklistUl.style.display = 'block';
+
+        var checklistCreate = document.createElement('input');
+        checklistCreate.type = ' text';
+
+        checklistCreate.addEventListener('keyup', function (event) {
+                if (event.keyCode == 13) {
+                    addLi(checklistCreate, checklistUl);
+                }
+            }
+        );
+        addDayName(checklistUl);
+        checklistUl.appendChild(checklistCreate);
+        checklistContainer.appendChild(checklistUl);
+    }
+
+    // Добавляет элемент списка
+    function addLi(input, ul) {
+        var li = document.createElement('li');
+        li.innerHTML = '<span>' + input.value + '</span>';
+        input.value = '';
+        ul.appendChild(li);
+        addClose(li);
+        addCheckbox(li);
+        addRedact(li);
+    }
+
+    //  Добавляет кнопку удаления
+    function addClose(parent) {
+        var close = document.createElement('button');
+        close.innerHTML = 'X';
+        close.className = 'closeButton';
+        close.addEventListener('click', function () {
+            this.parentNode.parentNode.removeChild(this.parentNode);
+        });
+        parent.appendChild(close);
+    }
+
+    // добавляет чекбокс
+    function addCheckbox(parent) {
+        var checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.addEventListener('click', function () {
+            this.parentNode.className = 'done';
+            this.parentNode.removeChild(this);
+        });
+        parent.insertBefore(checkbox, parent.firstChild);
+    }
+
+    // добавляет возможность редактирования
+    function addRedact(elem) {
+        var span = elem.querySelector('span');
+        span.addEventListener('dblclick', function () {
+            if (!this.parentNode.classList.contains('done')) {
+                var input = document.createElement('input');
+                input.value = this.innerHTML;
+                this.innerHTML = '';
+                input.addEventListener('keyup', function (event) {
+                    if (event.keyCode == 13) {
+                        input.parentNode.innerHTML = input.value;
+                    }
+                });
+                this.appendChild(input);
+                input.focus();
+            }
+        });
+    }
+</script>
+</body>
+</html>

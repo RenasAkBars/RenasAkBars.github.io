@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validator</title>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="validator.css">
+</head>
+
+<body>
+
+<form>
+    <table>
+        <tr>
+            <td>От кого</td>
+            <td>
+                <input name="from" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>Ваш пароль</td>
+            <td>
+                <input name="password" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td>Повторите пароль</td>
+            <td>
+                <input name="password2" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td>Куда</td>
+            <td>
+                <select name="to">
+                    <option></option>
+                    <option value="1">Отдел снабжения</option>
+                    <option value="2">Отдел разработки</option>
+                    <option value="3">Директору</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    Сообщение:
+    <label>
+        <textarea name="message" style="display:block;width:400px;height:100px"></textarea>
+    </label>
+
+    <input type="button" onclick="validate(this.form)" value="Отправить">
+</form>
+
+<script>
+    var form = document.querySelector('form');
+    var from = form.elements.from;
+    var password = form.elements.password;
+    var password2 = form.elements.password2;
+    var to = form.elements.to;
+    var message = form.elements.message;
+
+    form.addEventListener('submit', function () {
+        validate(form);
+    });
+
+    addRedAlerts(form);
+
+    function validate() {
+        validateElem(from);
+        validateElem(message);
+        validatePasswords();
+        validateElem(to);
+
+        function validateElem(formTextElem) {
+            var RedAlert = formTextElem.parentNode.lastElementChild;
+            if (formTextElem.value === '') {
+                RedAlert.style.display = 'inline';
+            } else {
+                RedAlert.style.display = 'none';
+            }
+        }
+
+        function validatePasswords() {
+            validateElem(password);
+            var RedAlert = password2.parentNode.lastElementChild;
+            if (password.value === password2.value) {
+                RedAlert.style.display = 'none';
+            } else {
+                RedAlert.style.display = 'inline';
+            }
+        }
+    }
+
+    function addRedAlerts() {
+        from.insertAdjacentHTML('afterEnd', '<span class="redAlert"> Укажите от кого.</span>');
+        to.insertAdjacentHTML('afterEnd', '<span class="redAlert"> Укажите, куда.</span>');
+        message.insertAdjacentHTML('afterEnd', '<span class="redAlert"> Отсутствует текст.</span>');
+        password.insertAdjacentHTML('afterEnd', '<span class="redAlert"> Укажите пароль.</span>');
+        password2.insertAdjacentHTML('afterEnd', '<span class="redAlert for_password2"> Пароли не совпадают.</span>');
+    }
+</script>
+
+<!--<script>
+    function showError(container, errorMessage) {
+        container.className = 'error';
+        var msgElem = document.createElement('span');
+        msgElem.className = "error-message";
+        msgElem.innerHTML = errorMessage;
+        container.appendChild(msgElem);
+    }
+
+    function resetError(container) {
+        container.className = '';
+        if (container.lastChild.className == "error-message") {
+            container.removeChild(container.lastChild);
+        }
+    }
+
+    function validate(form) {
+        var elems = form.elements;
+
+        resetError(elems.from.parentNode);
+        if (!elems.from.value) {
+            showError(elems.from.parentNode, ' Укажите от кого.');
+        }
+
+        resetError(elems.password.parentNode);
+        if (!elems.password.value) {
+            showError(elems.password.parentNode, ' Укажите пароль.');
+        } else if (elems.password.value != elems.password2.value) {
+            showError(elems.password.parentNode, ' Пароли не совпадают.');
+        }
+
+        resetError(elems.to.parentNode);
+        if (!elems.to.value) {
+            showError(elems.to.parentNode, ' Укажите, куда.');
+        }
+
+        resetError(elems.message.parentNode);
+        if (!elems.message.value) {
+            showError(elems.message.parentNode, ' Отсутствует текст.');
+        }
+
+    }
+</script>-->
+
+
+</body>
+</html>

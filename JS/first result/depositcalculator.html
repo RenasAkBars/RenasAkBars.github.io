@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit Calculator</title>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="depositcalculator.css">
+</head>
+<body>
+<div id="container">
+    <p>
+        Калькулятор процентов, из расчёта 12% годовых.<br/>
+        Сумма <input id="sum" value="10000"><br/>
+        Срок в месяцах <select size="1" id="months">
+        <option value="3">3 месяца (минимум)</option>
+        <option value="6">6 месяцев (пол года)</option>
+        <option value="12" selected>12 месяцев (1 год)</option>
+        <option value="18">18 месяцев (1.5 года)</option>
+        <option value="24">24 месца (2 года)</option>
+        <option value="36">36 месяцев (3 года)</option>
+    </select><br/>
+        С капитализацией <input type="checkbox" id="capitalisator"><br/>
+    <div id="line_container">
+    <b class="lines green">Было:<br/><span id="before"></span><br/>
+        <span class="for_green_and_red"><span id="before_line"></span></span></b>
+    <b class="lines red">Станет:<br/><span id="after"></span><br/>
+        <span class="for_green_and_red"><span id="after_line"></span></span></b>
+</div>
+    </p>
+</div>
+<script>
+
+    var sum = document.querySelector('#sum');
+    var months = document.querySelector('#months');
+    var capitalisator = document.querySelector('#capitalisator');
+    var before = document.querySelector('#before');
+    var after = document.querySelector('#after');
+    var redLine = document.querySelector('#after_line');
+    var for_green_and_red = document.querySelectorAll('.for_green_and_red');
+
+    var rate = 0.12;
+
+    before.innerHTML = sum.value;
+    counter();
+    var matter = after.innerHTML / before.innerHTML;
+
+    months.onchange = counter;
+    sum.oninput = counter;
+    capitalisator.onchange = counter;
+
+    function counter() {
+        before.innerHTML = sum.value;
+        if (capitalisator.checked) {
+            countHard();
+        } else {
+            count();
+        }
+        matter = after.innerHTML / before.innerHTML;
+        changeRedLine();
+        changeLinesParent();
+    }
+
+    function count() {
+        after.innerHTML = (sum.value * (1 + rate * months.value / 12)).toFixed();
+    }
+
+    function countHard() {
+        var result = sum.value;
+        for (var i = 0; i < months.value; i++) {
+            result = result * (1 + rate / 12);
+        }
+        after.innerHTML = result.toFixed();
+    }
+
+    function changeRedLine() {
+        redLine.style.height = 100 * matter + 'px';
+    }
+
+    console.log(for_green_and_red);
+
+    function changeLinesParent() {
+        for (var i = 0; i < for_green_and_red.length; i++) {
+            for_green_and_red[i].style.height = (100 * matter + 5) + 'px';
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Up & Down Helper</title>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="updownhelper.css">
+</head>
+<body>
+
+<div id="matrix">
+    <script>
+        //Символы для стрелок: ▲ ▼
+        for (var i = 0; i < 2000; i++) document.writeln(i)
+    </script>
+</div>
+<script>
+    var y = document.documentElement.clientHeight;
+    var yDown = 0;
+
+    var body = document.querySelector('body');
+    var btn = document.createElement('div');
+    btn.id = 'btn';
+    btn.dataset.condition = 'off';
+    document.querySelector('body').appendChild(btn);
+
+    window.onscroll = function () {
+        if (window.pageYOffset > y) {
+            btn.dataset.condition = 'up';
+        } else if (window.pageYOffset < y && btn.dataset.condition === 'down') {
+            btn.dataset.condition = 'down';
+        } else {
+            btn.dataset.condition = 'off';
+        }
+        conditionUpdate();
+    };
+
+    function conditionUpdate() {
+        switch (btn.dataset.condition) {
+            case 'off':
+                btn.innerHTML = '';
+                break;
+            case 'up':
+                btn.innerHTML = '▲';
+                btn.onclick = function () {
+                    yDown = window.pageYOffset;
+                    window.scrollTo(0, 0);
+                    btn.dataset.condition = 'down';
+                };
+                break;
+            case 'down':
+                btn.innerHTML = '▼';
+                btn.onclick = function () {
+                    window.scrollTo(0, yDown);
+                    btn.dataset.condition = 'up';
+                };
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>

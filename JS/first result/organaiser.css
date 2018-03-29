@@ -1,0 +1,75 @@
+td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 10px;
+    position: relative;
+}
+
+.active {
+    /*background-color: red;*/
+    border: none;
+    border-top: 1px solid red;
+}
+
+#container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+p.txt {
+    display: none;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
+.closeButton {
+    color: white;
+    background: red;
+    padding: 0;
+    border: 1px solid red;
+    border-radius: 2px;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+li.done {
+    text-decoration: line-through;
+    color: #BDBDBD;
+}
+
+.day_cell {
+    display: inline-block;
+    width: 40px;
+    height: 35px;
+    border: solid 1px black;
+    border-radius: 2px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+#show_date {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+#calendarContainer {
+    width: 330px;
+    text-align: center;
+    border: solid 1px black;
+    padding-bottom: 3px;
+}

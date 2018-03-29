@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checklist</title>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="checklist.css">
+</head>
+<body>
+
+<div id="checklistContainer">
+    <div id="checklistUlContainer">
+        <ul id="checklistUl"></ul>
+    </div>
+    <input id="checklistCreate">
+</div>
+
+<script>
+
+    //методом многочисленных тыков было найдено решение
+
+    checklist([]);
+
+    function checklist(arr) {
+        activateChecklistCreate(arr);
+        updateUl(arr);
+    }
+
+    function activateChecklistCreate(arr) {
+
+        var checklistCreate = document.querySelector('#checklistCreate');
+
+        checklistCreate.addEventListener('keyup', function () {activateEnter(event)});
+
+        function activateEnter(event) {
+            if (event.keyCode == 13) {
+                var obj = getCheckObj(checklistCreate);
+                arr.push(obj);
+
+                //здесь чтобы обновить инпут, иначе он пустые задачи добавляет если удалить какие либо прежние
+
+                var checklistCreateNew = checklistCreate.cloneNode(true);
+                checklistCreate.parentNode.replaceChild(checklistCreateNew, checklistCreate);
+                checklistCreateNew.focus();
+
+                checklist(arr);
+
+            }
+        }
+    }
+
+    function getCheckObj(elem) {
+        var name = elem.value;
+
+        //UPDATE Проблемку со строчкой ниже решил
+
+        elem.value = '';
+
+        return {taskName: name, actual: true, removed: false};
+    }
+
+    function updateUl(arr) {
+
+        var  ulOld = document.querySelector('#checklistUl');
+        ulOld.parentNode.removeChild(ulOld);
+
+        var ul = document.createElement('ul');
+        ul.id = 'checklistUl';
+
+        for (var i = 0; i < arr.length; i++) {
+
+            var li = document.createElement('li');
+            li.innerHTML = arr[i].taskName;
+            li.id = 'li' + i;
+
+            if(arr[i].actual) {
+                addCheckbox(li, arr);
+                changeTask(li, arr);
+            } else {
+                li.className = 'done';
+            }
+
+            //еще проблема была что после удалений задач, при добавлении новых он возращал ранее удаленные задачи
+            //поэтому решил их не удалять вовсе, а сделать display: none добавив в объект новый параметр removed
+
+            if (!arr[i].removed) {
+                addCloseButton(li, arr);
+            } else {
+                li.style.display = 'none';
+            }
+
+            ul.appendChild(li);
+        }
+        document.querySelector('#checklistUlContainer').appendChild(ul);
+    }
+
+    function addCloseButton(elem, arr) {
+        var closeButton = document.createElement('button');
+
+        closeButton.className = 'closeButton';
+        closeButton.innerHTML = 'X';
+        elem.appendChild(closeButton);
+
+        closeButton.addEventListener('click', function () {
+            var num = Number(this.parentNode.id.slice(2));
+            checklist(removeElemFromArr(arr, num));
+        });
+    }
+
+    function removeElemFromArr(arr, num) {
+        var result = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (i !== num) {
+                result.push(arr[i]);
+            } else {
+                arr[i].removed = true;
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
+
+    function addCheckbox(elem, arr) {
+        var checkbox = document.createElement('input');
+
+        checkbox.type = 'checkbox';
+        checkbox.className = 'checkbox';
+        elem.insertBefore(checkbox, elem.firstChild);
+
+        checkbox.addEventListener('click', function () {
+            var num = Number(this.parentNode.id.slice(2));
+            checklist(deactivateElemInArr(arr, num));
+        });
+    }
+
+    function deactivateElemInArr(arr, num) {
+        var result = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (i !== num) {
+                result.push(arr[i]);
+            } else {
+                arr[i].actual = false;
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
+
+    function changeTask(elem, arr) {
+        var result = [];
+
+        elem.addEventListener('dblclick', function () {
+            var num = Number(this.id.slice(2));
+            var input = document.createElement('input');
+            input.value = arr[num].taskName;
+            this.innerHTML = '';
+            this.appendChild(input);
+
+            input.addEventListener('keyup', function (event) {
+                if (event.keyCode == 13) {
+                    for (var i = 0; i < arr.length; i++) {
+                        if (i !== num) {
+                            result.push(arr[i]);
+                        } else {
+                            arr[i].taskName = input.value;
+                            result.push(arr[i]);
+                        }
+                    }
+                    checklist(result);
+                }
+            });
+        })
+    }
+
+    // теперь все раюотает как хотел
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Heroes</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/localisation/datepicker-ru.js"></script>
+    <!--<script src="cookies.min.js"></script>-->
+    <script src="jquery.cookie.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">-->
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="superheroes.css">
+</head>
+<body>
+<h2>Расставьте супергероев по полю.</h2>
+
+<p>Супергерои и мяч -- это элементы с классом "draggable". Сделайте так, чтобы их можно было переносить.</p>
+
+<p>Важно: если супергероя подносят к низу или верху страницы, она должна автоматически прокручиваться. Если страница помещается на вашем экране целиком и не имеет вертикальной прокрутки -- сделайте окно браузера меньше, чтобы протестировать эту возможность.</p>
+
+<p>Да, и ещё: супергерои ни при каких условиях не должны попасть за край экрана.</p>
+
+<div id="field">
+
+</div>
+
+<div class="hero draggable" id="hero1"></div>
+<div class="hero draggable" id="hero2"></div>
+<div class="hero draggable" id="hero3"></div>
+<div class="hero draggable" id="hero4"></div>
+<div class="hero draggable" id="hero5"></div>
+<div class="hero draggable" id="hero6"></div>
+
+<img src="https://js.cx/drag-heroes/ball.png" class="draggable">
+
+<div style="clear:both"></div>
+<script>
+    //Чтобы драги не заходили за края
+    var body = document.querySelector('body');
+    var bodyCoords = getCoords(body);
+    var bodyWidth = bodyCoords.width;
+    var bodyHeight = bodyCoords.height;
+
+    document.onmousedown = function(e) {
+        var dragElement = e.target;
+        if (!dragElement.classList.contains('draggable')) return;
+        doElemDraggable(dragElement, e);
+    };
+
+    function doElemDraggable(dragElem, e) {
+
+            var coords = getCoords(dragElem);
+            var shiftX = e.pageX - coords.left;
+            var shiftY = e.pageY - coords.top;
+            var width = coords.width;
+            var height = coords.height;
+
+            dragElem.style.position = 'absolute';
+            document.body.appendChild(dragElem);
+            moveAt(e);
+
+            dragElem.style.zIndex = 1000; // над другими элементами
+
+            function moveAt(e) {
+                var top = e.pageY - shiftY;
+                var left = e.pageX - shiftX;
+
+                //Чтобы драги не заходили за края
+                dragElem.style.top = calcBox(height, top, bodyHeight);
+                dragElem.style.left = calcBox(width, left, bodyWidth);
+            }
+
+            document.onmousemove = function(e) {
+                moveAt(e);
+            };
+
+            dragElem.onmouseup = function() {
+                document.onmousemove = null;
+                dragElem.onmouseup = null;
+            };
+
+        dragElem.ondragstart = function() {
+            return false;
+        };
+    }
+
+    function getCoords(elem) {   // кроме IE8-
+        var box = elem.getBoundingClientRect();
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset,
+            width: +box.width,
+            height: +box.height
+        };
+    }
+
+    //Чтобы драги не заходили за края
+    function calcBox(size, side, parentSize) {
+        if (side + size < parentSize && side > 0) {
+            return side + 'px';
+
+        } else if (side < 0) {
+            return 0 + 'px';
+
+        } else if (side + size > parentSize) {
+            return parentSize - size + 'px';
+        }
+    }
+</script>
+</body>
+</html>

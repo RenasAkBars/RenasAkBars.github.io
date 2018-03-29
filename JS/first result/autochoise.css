@@ -1,0 +1,129 @@
+td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 10px;
+    position: relative;
+}
+
+.active {
+    /*background-color: red;*/
+    border: none;
+    border-top: 1px solid red;
+}
+
+#container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+p.txt {
+    display: none;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
+.closeButton {
+    color: white;
+    background: red;
+    padding: 0;
+    border: 1px solid red;
+    border-radius: 2px;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+li.done {
+    text-decoration: line-through;
+    color: #BDBDBD;
+}
+
+.day_cell {
+    display: inline-block;
+    width: 40px;
+    height: 35px;
+    border: solid 1px black;
+    border-radius: 2px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+#show_date {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+#calendarContainer {
+    width: 330px;
+    text-align: center;
+    border: solid 1px black;
+    padding-bottom: 3px;
+}
+
+#div1 {
+    position: relative;
+    /*top: 30px;*/
+    /*left: 30px;*/
+    background: red;
+    z-index: 3;
+}
+#div2 {
+    position: relative;
+    /*top: 60px;*/
+    /*left: 60px;*/
+    background: blue;
+    z-index: 2;
+}
+#div3 {
+    position: relative;
+    /*top: 90px;*/
+    /*left: 90px;*/
+    background: green;
+    z-index: 1;
+}
+/*div {
+    width: 100px;
+    height: 100px;
+}*/
+.text {
+    position: absolute;
+    top: 600px;
+    height: 200px;
+    background-color: yellow;
+}
+
+#fromBegin, #registerSense {
+    cursor: pointer;
+}
+.li_country {
+    cursor: pointer;
+    border-bottom: solid 1px darkgrey;
+}
+ul {
+    list-style-type: none;
+    height: 200px;
+    display: block;
+    overflow: auto;
+    line-height: 1.5em;
+}
+input, ul {
+    width: 200px;
+}

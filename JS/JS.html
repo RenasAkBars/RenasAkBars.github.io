@@ -3,66 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>JS</title>
+
+    <!--jQuery script-->
+    <!--<script src="jquery-3.3.1.min.js"></script>-->
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+    <script src="jquery.jcarousellite.js"></script>
+
+    <!--jQuery UI script-->
+    <!--<script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>-->
+
+    <!--jQuery UI руссификатор календаря script-->
+    <!--<script src="jquery-ui-1.12.1.custom/localisation/datepicker-ru.js"></script>-->
+
+    <!--jQuery UI расширение календаря script-->
+    <!--<script src="jquery.datepicker.extension.range.min.js"></script>-->
+
+    <!--Cookies на чистом Java Script-->
+    <!--<script src="cookies.min.js"></script>-->
+
+    <!--Cookies на jQuery script-->
+    <!--<script src="jquery.cookie.js"></script>-->
+
+    <!--Маска для инпута jQuery https://itchief.ru/lessons/javascript/input-mask-for-html-input-element script-->
+    <!--<script src="jquery.maskedinput.min.js"></script>-->
+
+    <!--Reset CSS-->
     <!--<link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">-->
+
+    <!--Normalize CSS-->
+    <!--<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">-->
+
+    <!--jQuery UI CSS-->
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+    <!--Свои стили CSS-->
     <link rel="stylesheet" type="text/css" href="JS.css">
 </head>
 <body>
+<button class="prev">&laquo;</button>
+<button class="next">&raquo;</button>
 
-
+<div class="any-class">
+    <ul>
+        <li><img src="pic1.jpg" style="width:150px; height:118px;"></li>
+        <li><img src="pic2.jpg" style="width:150px; height:118px;"></li>
+        <li><img src="pic3.jpg" style="width:150px; height:118px;"></li>
+        <li><img src="pic2.jpg" style="width:150px; height:118px;"></li>
+        <li><img src="pic1.jpg" style="width:150px; height:118px;"></li>
+    </ul>
+</div>
 <script>
-
-    createTable(shuffle(range(1, 25)));
-
-    function createTable(arr) {
-        var table = document.createElement('table');
-        var tr = document.createElement('tr');
-        for (var i = 0; i < arr.length; i++) {
-            var td = document.createElement('td');
-            td.innerHTML = arr[i];
-            tr.appendChild(td);
-        }
-        table.appendChild(tr);
-        document.querySelector('body').appendChild(table);
-        enableActivation(table);
-    }
-
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    function range(start, stop) {
-        var result = [];
-        for (var i = start; i < stop + 1; i++) {
-            result.push(i);
-        }
-        return result;
-    }
-
-    function shuffle(arr) {
-        var result = [];
-        var length = arr.length;
-        for (var i = 0; i < length; i++) {
-            var random = getRandomInt(0, arr.length - 1);
-            var elem = arr.splice(random, 1)[0];
-            result.push(elem);
-        }
-        return result;
-    }
-
-    function enableActivation(table) {
-        table.addEventListener('click', addActivation);
-    }
-
-    function addActivation(event) {
-        var td = event.target.closest('td');
-        if (td) {
-            td.classList.toggle('active');
-        }
-    }
-
+    $(function() {
+        $(".any-class").jCarouselLite({
+            btnNext: ".next",
+            btnPrev: ".prev"
+        });
+    });
 </script>
-
-
-
 </body>
 </html>
