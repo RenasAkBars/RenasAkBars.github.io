@@ -1,0 +1,11 @@
+div {
+    background-image: url("bj.png");
+    position: relative;
+    width: 800px;
+    height: 600px;
+}
+#table_ins_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

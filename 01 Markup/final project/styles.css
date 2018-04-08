@@ -96,13 +96,11 @@ body {
     cursor: pointer;
 }
 .sub_menu {
-    display: none;
     position: absolute;
     box-sizing: border-box;
     top: 30px;
     width: 166px;
     background: white;
-    border: 1px solid #dddddd;
     border-radius: 4px;
     padding: 10px 6px 4px;
     font-size: 12px;
@@ -110,6 +108,17 @@ body {
     color: #666666;
     line-height: 1.3;
     z-index: 10;
+
+    /*если без transition*/
+/*    display: none;
+    border: 1px solid #dddddd;*/
+
+    /*Чтобы сработал transition и псеводэлемент лег поверх границы*/
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    box-shadow: inset 0 0 0 1px #dddddd;
+    transition: visibility 0.5s, max-height 0.5s;
 }
 .sub_menu li {
     padding: 4px;
@@ -163,7 +172,12 @@ body {
     display: inline;
 }
 .menu_item:hover > .sub_menu {
-    display: block;
+    /*с transition*/
+    visibility: visible;
+    max-height: 350px;
+
+    /*без transition*/
+    /*display: block;*/
 }
 .logo_name {
     font-size: 40px;

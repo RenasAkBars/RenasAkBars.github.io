@@ -14,60 +14,121 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/01 Markup/final project/index.html">
+      <file leaf-file-name="bj.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS/Projects/BlackJack/bj.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="84" column="36" lean-forward="false" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/final project/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="203" column="19" lean-forward="false" selection-start-line="203" selection-start-column="19" selection-end-line="203" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="effects.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01 Markup/final project/effects.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JS.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS/JS.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="28" />
               <folding>
-                <element signature="e#1665#1672#1" expanded="true" />
-                <element signature="e#1703#1710#1" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#li#4;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JS.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS/JS.css">
+      <file leaf-file-name="bj_styles.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JS/Projects/BlackJack/bj_styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="407">
+              <caret line="210" column="26" lean-forward="true" selection-start-line="210" selection-start-column="26" selection-end-line="210" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bj_script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS/Projects/BlackJack/bj_script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2379">
+              <caret line="346" column="0" lean-forward="true" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+              <folding>
+                <element signature="e#110#870#0" expanded="false" />
+                <element signature="e#7230#7283#0" expanded="false" />
+                <element signature="e#7386#7440#0" expanded="false" />
+                <element signature="e#7463#7551#0" expanded="false" />
+                <element signature="e#7630#7667#0" expanded="false" />
+                <element signature="e#7691#7734#0" expanded="false" />
+                <element signature="e#7758#7877#0" expanded="false" />
+                <element signature="e#7898#8036#0" expanded="false" />
+                <element signature="e#8051#8083#0" expanded="false" />
+                <element signature="e#8101#8136#0" expanded="false" />
+                <element signature="e#8157#8296#0" expanded="false" />
+                <element signature="e#8316#8475#0" expanded="false" />
+                <element signature="e#8492#8524#0" expanded="false" />
+                <element signature="e#14610#16452#0" expanded="false" />
+                <element signature="e#16491#16540#0" expanded="false" />
+                <element signature="e#16572#16634#0" expanded="false" />
+                <element signature="e#16668#16764#0" expanded="false" />
+                <element signature="e#16737#16760#0" expanded="false" />
+                <element signature="e#16787#17011#0" expanded="false" />
+                <element signature="e#17033#17124#0" expanded="false" />
+                <element signature="e#17151#17355#0" expanded="false" />
+                <element signature="e#17376#17451#0" expanded="false" />
+                <element signature="e#17474#17508#0" expanded="false" />
+                <element signature="e#17530#17674#0" expanded="false" />
+                <element signature="e#17694#17750#0" expanded="false" />
+                <element signature="e#17773#18038#0" expanded="false" />
+                <element signature="e#18060#18145#0" expanded="false" />
+                <element signature="e#18168#19707#0" expanded="false" />
+                <element signature="e#19733#19835#0" expanded="false" />
+                <element signature="e#19864#19891#0" expanded="false" />
+                <element signature="e#19925#20213#0" expanded="false" />
+                <element signature="e#20242#20273#0" expanded="false" />
+                <element signature="e#20302#20741#0" expanded="false" />
+                <element signature="e#20787#21301#0" expanded="false" />
+                <element signature="e#21327#21765#0" expanded="false" />
+                <element signature="e#21801#21838#0" expanded="false" />
+                <element signature="e#21865#21898#0" expanded="false" />
+                <element signature="e#21931#22024#0" expanded="false" />
+                <element signature="e#22049#22135#0" expanded="false" />
+                <element signature="e#22158#22240#0" expanded="false" />
+                <element signature="e#22260#22375#0" expanded="false" />
+                <element signature="e#22405#22485#0" expanded="false" />
+                <element signature="e#22533#22579#0" expanded="false" />
+                <element signature="e#22614#22864#0" expanded="false" />
+                <element signature="e#22887#23359#0" expanded="false" />
+                <element signature="e#23683#23767#0" expanded="false" />
+                <element signature="e#23882#23979#0" expanded="false" />
+                <element signature="e#24001#24189#0" expanded="false" />
+                <element signature="e#24213#24292#0" expanded="false" />
+                <element signature="e#24328#24911#0" expanded="false" />
+                <element signature="e#24942#25073#0" expanded="false" />
+                <element signature="e#25107#25406#0" expanded="false" />
+                <element signature="e#25437#25602#0" expanded="false" />
+                <element signature="e#25631#25778#0" expanded="false" />
+                <element signature="e#25807#25838#0" expanded="false" />
+                <element signature="e#25866#25983#0" expanded="false" />
+                <element signature="e#26008#26106#0" expanded="false" />
+                <element signature="e#26139#26285#0" expanded="false" />
+                <element signature="e#26306#26330#0" expanded="false" />
+                <element signature="e#26353#27150#0" expanded="false" />
+                <element signature="e#27169#27202#0" expanded="false" />
+                <element signature="e#27220#27373#0" expanded="false" />
+                <element signature="e#27396#27580#0" expanded="false" />
+                <element signature="e#27602#27786#0" expanded="false" />
+                <element signature="e#27807#28066#0" expanded="false" />
+                <element signature="e#28096#28114#0" expanded="false" />
+                <element signature="e#28141#28176#0" expanded="false" />
+                <element signature="e#28198#28234#0" expanded="false" />
+                <element signature="e#28255#28425#0" expanded="false" />
+                <element signature="e#28456#28504#0" expanded="false" />
+                <element signature="e#28536#28581#0" expanded="false" />
+                <element signature="e#28610#28654#0" expanded="false" />
+                <element signature="e#28683#28735#0" expanded="false" />
+                <element signature="e#28767#28812#0" expanded="false" />
+                <element signature="e#28844#28890#0" expanded="false" />
+                <element signature="e#28954#30166#0" expanded="false" />
+                <element signature="e#30209#30312#0" expanded="false" />
+                <element signature="e#30350#31050#0" expanded="false" />
+                <element signature="e#31105#31883#0" expanded="false" />
+                <element signature="e#31911#32488#0" expanded="false" />
+                <element signature="e#32536#33052#0" expanded="false" />
+                <element signature="e#33117#33369#0" expanded="false" />
+                <element signature="e#33405#33563#0" expanded="false" />
+                <element signature="e#33601#33674#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,36 +145,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>textPole</find>
-      <find>resetGame</find>
-      <find>createUl</find>
-      <find>question</find>
-      <find>arr[num]</find>
-      <find>arr[i]</find>
-      <find>arr</find>
-      <find>getDayInMonth</find>
-      <find>container</find>
-      <find>cons</find>
-      <find>months</find>
-      <find>days</find>
-      <find>&quot;</find>
-      <find>focu</find>
-      <find>ball</find>
-      <find>thumb</find>
-      <find>alert</find>
-      <find>listUl</find>
-      <find>moveAt</find>
-      <find>sizeAt</find>
-      <find>addRedact</find>
-      <find>redactEvent</find>
-      <find>nums0_19</find>
-      <find>nums20_90</find>
-      <find>nums100_900</find>
-      <find>nums2090</find>
-      <find>nums019</find>
-      <find>querySelectorAll</find>
-      <find>$</find>
-      <find>each</find>
+      <find>maxToRight</find>
+      <find>after</find>
+      <find>hideBlock($chips)</find>
+      <find>showBlock($chips)</find>
+      <find>showTransferredCard</find>
+      <find>cards_played</find>
+      <find>css(</find>
+      <find>getCards</find>
+      <find>unh</find>
+      <find>cardTransfer(</find>
+      <find>afterde</find>
+      <find>deali</find>
+      <find>afterDeal</find>
+      <find>transfer(</find>
+      <find>splitPositionOn</find>
+      <find>Block($chips)</find>
+      <find>shine</find>
+      <find>afterDeal()</find>
+      <find>player_hand_pot</find>
+      <find>hand_pot</find>
+      <find>shineOn</find>
+      <find>shineOff</find>
+      <find>clear(</find>
+      <find>deal(</find>
+      <find>checkChipsForShow</find>
+      <find>startBets</find>
+      <find>deal()</find>
+      <find>clear()</find>
+      <find>deal</find>
+      <find>counter</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,10 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01 Markup/Lsn07/HW/Project1.css" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn10/HW/Project2.html" />
-        <option value="$PROJECT_DIR$/01 Markup/Lsn10/HW/Project2.css" />
-        <option value="$PROJECT_DIR$/01 Markup/better/hw4_1.html" />
         <option value="$PROJECT_DIR$/01 Markup/better/hw4_3.html" />
         <option value="$PROJECT_DIR$/01 Markup/better/hw4_3.css" />
         <option value="$PROJECT_DIR$/01 Markup/better/hw4_1.css" />
@@ -168,11 +225,15 @@
         <option value="$PROJECT_DIR$/JS/ajax1.html" />
         <option value="$PROJECT_DIR$/JS/ajax.json" />
         <option value="$PROJECT_DIR$/JS/index.html" />
-        <option value="$PROJECT_DIR$/JS/JS.css" />
-        <option value="$PROJECT_DIR$/JS/JS.html" />
         <option value="$PROJECT_DIR$/01 Markup/final project/effects.js" />
-        <option value="$PROJECT_DIR$/01 Markup/final project/styles.css" />
         <option value="$PROJECT_DIR$/01 Markup/final project/index.html" />
+        <option value="$PROJECT_DIR$/01 Markup/final project/styles.css" />
+        <option value="$PROJECT_DIR$/JS/JS.html" />
+        <option value="$PROJECT_DIR$/JS/JS.css" />
+        <option value="$PROJECT_DIR$/JS/Projects/BlackJack/bj_curves.css" />
+        <option value="$PROJECT_DIR$/JS/Projects/BlackJack/bj.html" />
+        <option value="$PROJECT_DIR$/JS/Projects/BlackJack/bj_script.js" />
+        <option value="$PROJECT_DIR$/JS/Projects/BlackJack/bj_styles.css" />
       </list>
     </option>
   </component>
@@ -231,7 +292,27 @@
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="JS" type="462c0819:PsiDirectoryNode" />
-              <item name="first result" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries_and_plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries_and_plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="eliptext" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+              <item name="Projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+              <item name="Projects" type="462c0819:PsiDirectoryNode" />
+              <item name="BlackJack" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -406,12 +487,13 @@
       <workItem from="1521705414566" duration="50045000" />
       <workItem from="1522134270000" duration="35689000" />
       <workItem from="1522222177779" duration="21091000" />
-      <workItem from="1522304521024" duration="20974000" />
+      <workItem from="1522304521024" duration="32559000" />
+      <workItem from="1522497484267" duration="216823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1146526000" />
+    <option name="totallyTimeSpent" value="1374934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -444,47 +526,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/JS/Projects/BlackJack/bj_script.js</url>
+          <line>860</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01 Markup/1st try/Lsn02/HW/task1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/first result/depositcalculator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/first result/depositcalculator.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/go.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/fix_textarea_scroll.js" />
-    <entry file="file://$PROJECT_DIR$/JS/first result/avatarscroll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/first result/updownhelper.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -499,20 +553,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/jquery-3.3.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4488">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/jquery-3.3.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4896">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/jquery-3.3.1.min.js" />
+    <entry file="file://$PROJECT_DIR$/JS/jquery-3.3.1.js" />
     <entry file="file://$PROJECT_DIR$/JS/first result/validator.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-612">
@@ -534,13 +576,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/jquery-ui-1.12.1.custom/localisation/datepicker-ru.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/jquery-ui-1.12.1.custom/localisation/datepicker-ru.js" />
     <entry file="file://$PROJECT_DIR$/JS/first result/autochoise.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -563,13 +599,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JS/Project1.html" />
-    <entry file="file://$PROJECT_DIR$/JS/cookies.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/cookies.min.js" />
     <entry file="file://$PROJECT_DIR$/JS/js.cookie.js" />
     <entry file="file://$PROJECT_DIR$/JS/first result/DaysToYourBirthday.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -655,20 +685,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/jquery.maskedinput.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/jquery.maskedinput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-525">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/jquery.maskedinput.min.js" />
+    <entry file="file://$PROJECT_DIR$/JS/jquery.maskedinput.js" />
     <entry file="file://$PROJECT_DIR$/JS/ajax2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -718,14 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/JS.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/1st try/Lsn03/HW/task6.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -762,42 +772,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/JS.html">
+    <entry file="file://$PROJECT_DIR$/01 Markup/final project/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="e#1665#1672#1" expanded="true" />
-            <element signature="e#1703#1710#1" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#li#4;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/final project/effects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01 Markup/final project/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="203" column="19" lean-forward="false" selection-start-line="203" selection-start-column="19" selection-end-line="203" selection-end-column="19" />
+        <state relative-caret-position="3026">
+          <caret line="178" column="22" lean-forward="false" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01 Markup/final project/index.html">
+    <entry file="file://$PROJECT_DIR$/JS/JS.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="84" column="36" lean-forward="false" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+        <state relative-caret-position="322">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="56" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/JS.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/libraries_and_plugins/eliptext/eliptext.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Projects/BlackJack/bj_curves.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/libraries_and_plugins/eliptext/jquery.lettering.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Projects/BlackJack/bj.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Projects/BlackJack/bj_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2379">
+          <caret line="346" column="0" lean-forward="true" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+          <folding>
+            <element signature="e#110#870#0" expanded="false" />
+            <element signature="e#7230#7283#0" expanded="false" />
+            <element signature="e#7386#7440#0" expanded="false" />
+            <element signature="e#7463#7551#0" expanded="false" />
+            <element signature="e#7630#7667#0" expanded="false" />
+            <element signature="e#7691#7734#0" expanded="false" />
+            <element signature="e#7758#7877#0" expanded="false" />
+            <element signature="e#7898#8036#0" expanded="false" />
+            <element signature="e#8051#8083#0" expanded="false" />
+            <element signature="e#8101#8136#0" expanded="false" />
+            <element signature="e#8157#8296#0" expanded="false" />
+            <element signature="e#8316#8475#0" expanded="false" />
+            <element signature="e#8492#8524#0" expanded="false" />
+            <element signature="e#14610#16452#0" expanded="false" />
+            <element signature="e#16491#16540#0" expanded="false" />
+            <element signature="e#16572#16634#0" expanded="false" />
+            <element signature="e#16668#16764#0" expanded="false" />
+            <element signature="e#16737#16760#0" expanded="false" />
+            <element signature="e#16787#17011#0" expanded="false" />
+            <element signature="e#17033#17124#0" expanded="false" />
+            <element signature="e#17151#17355#0" expanded="false" />
+            <element signature="e#17376#17451#0" expanded="false" />
+            <element signature="e#17474#17508#0" expanded="false" />
+            <element signature="e#17530#17674#0" expanded="false" />
+            <element signature="e#17694#17750#0" expanded="false" />
+            <element signature="e#17773#18038#0" expanded="false" />
+            <element signature="e#18060#18145#0" expanded="false" />
+            <element signature="e#18168#19707#0" expanded="false" />
+            <element signature="e#19733#19835#0" expanded="false" />
+            <element signature="e#19864#19891#0" expanded="false" />
+            <element signature="e#19925#20213#0" expanded="false" />
+            <element signature="e#20242#20273#0" expanded="false" />
+            <element signature="e#20302#20741#0" expanded="false" />
+            <element signature="e#20787#21301#0" expanded="false" />
+            <element signature="e#21327#21765#0" expanded="false" />
+            <element signature="e#21801#21838#0" expanded="false" />
+            <element signature="e#21865#21898#0" expanded="false" />
+            <element signature="e#21931#22024#0" expanded="false" />
+            <element signature="e#22049#22135#0" expanded="false" />
+            <element signature="e#22158#22240#0" expanded="false" />
+            <element signature="e#22260#22375#0" expanded="false" />
+            <element signature="e#22405#22485#0" expanded="false" />
+            <element signature="e#22533#22579#0" expanded="false" />
+            <element signature="e#22614#22864#0" expanded="false" />
+            <element signature="e#22887#23359#0" expanded="false" />
+            <element signature="e#23683#23767#0" expanded="false" />
+            <element signature="e#23882#23979#0" expanded="false" />
+            <element signature="e#24001#24189#0" expanded="false" />
+            <element signature="e#24213#24292#0" expanded="false" />
+            <element signature="e#24328#24911#0" expanded="false" />
+            <element signature="e#24942#25073#0" expanded="false" />
+            <element signature="e#25107#25406#0" expanded="false" />
+            <element signature="e#25437#25602#0" expanded="false" />
+            <element signature="e#25631#25778#0" expanded="false" />
+            <element signature="e#25807#25838#0" expanded="false" />
+            <element signature="e#25866#25983#0" expanded="false" />
+            <element signature="e#26008#26106#0" expanded="false" />
+            <element signature="e#26139#26285#0" expanded="false" />
+            <element signature="e#26306#26330#0" expanded="false" />
+            <element signature="e#26353#27150#0" expanded="false" />
+            <element signature="e#27169#27202#0" expanded="false" />
+            <element signature="e#27220#27373#0" expanded="false" />
+            <element signature="e#27396#27580#0" expanded="false" />
+            <element signature="e#27602#27786#0" expanded="false" />
+            <element signature="e#27807#28066#0" expanded="false" />
+            <element signature="e#28096#28114#0" expanded="false" />
+            <element signature="e#28141#28176#0" expanded="false" />
+            <element signature="e#28198#28234#0" expanded="false" />
+            <element signature="e#28255#28425#0" expanded="false" />
+            <element signature="e#28456#28504#0" expanded="false" />
+            <element signature="e#28536#28581#0" expanded="false" />
+            <element signature="e#28610#28654#0" expanded="false" />
+            <element signature="e#28683#28735#0" expanded="false" />
+            <element signature="e#28767#28812#0" expanded="false" />
+            <element signature="e#28844#28890#0" expanded="false" />
+            <element signature="e#28954#30166#0" expanded="false" />
+            <element signature="e#30209#30312#0" expanded="false" />
+            <element signature="e#30350#31050#0" expanded="false" />
+            <element signature="e#31105#31883#0" expanded="false" />
+            <element signature="e#31911#32488#0" expanded="false" />
+            <element signature="e#32536#33052#0" expanded="false" />
+            <element signature="e#33117#33369#0" expanded="false" />
+            <element signature="e#33405#33563#0" expanded="false" />
+            <element signature="e#33601#33674#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Projects/BlackJack/bj_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="210" column="26" lean-forward="true" selection-start-line="210" selection-start-column="26" selection-end-line="210" selection-end-column="26" />
           <folding />
         </state>
       </provider>
