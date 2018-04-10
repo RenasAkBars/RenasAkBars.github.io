@@ -342,7 +342,7 @@ $cardsDeck_played.css('display', ' block');
 var shuffledPack = getShuffledPack(cards.length);
 console.log(shuffledPack);
 
-var testPack = [9, 1, 22, 7, 8, 43, 34, 2, 5, 28, 25, 20, 3, 22, 8, 43, 34, 1, 5, 28, 25, 19, 1, 21, 8, 43, 34, 1, 5, 28, 25, 19, 1, 21];
+var testPack = [1, 3, 14, 8, 10, 7, 34, 2, 5, 28, 25, 20, 3, 22, 8, 43, 34, 1, 5, 28, 25, 19, 1, 21, 8, 43, 34, 1, 5, 28, 25, 19, 1, 21];
 // shuffledPack = testPack;
 
 var $dealer = new Hand('#dealer_line');
@@ -854,18 +854,7 @@ function afterDeal() {
 }
 
 function deal() {
-/*    if (money > 0 || (prize1 > 0 || prize2 > 0)) {
-        if (betRound > money + prize1 + prize2 + $player.getPotIns() * 2) {
-            betRound = 0;
-        }
-        clear();
-        startBets();
-    } else {
-        clear();
-        gameOver();
-    }*/
 clear();
-
 }
 
 function hideAllHandsPoints() {
@@ -933,14 +922,13 @@ function checkPps_2(handNum) {
 
 function checkSplitted(handNum) {
     if (hand(handNum).hasSplitted()) {
-        // $player.shineOff();
-        $playerSpl.shineOff();
-        // $playerSpl.shineOn();
         $player.shineOn();
+        $playerSpl.shineOff();
         standartPlay(2);
+        $player.shineOn();
+        $playerSpl.shineOff();
     } else {
         checkPps_2(handNum);
-        // $playerSpl.shineOff();
         $player.shineOff();
     }
 }
@@ -1008,9 +996,9 @@ function splitting() {
     $player.cardTransfer(function () {
         $playerSpl.cardTransfer(function () {
             $playerSpl.unHidePoints();
-            standartPlay(1);
-            // $player.shineOn();
+            $player.shineOff();
             $playerSpl.shineOn();
+            standartPlay(1);
         });
     });
 }
