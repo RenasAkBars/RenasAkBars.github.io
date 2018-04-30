@@ -1,0 +1,16 @@
+@start: 100px;
+@end: 200px;
+.keyframes(@name, @code) {
+  @-o-keyframes @name {@code();}
+  @-moz-keyframes @name {@code();}
+  @-webkit-keyframes @name {@code();}
+  @keyframes @name {@code();}
+}
+.keyframes(animation, {
+  from {
+    left: @start;
+  }
+  to {
+    left: @end;
+  }
+});

@@ -1,0 +1,104 @@
+$violet: #aa226c
+$plum: #4e4981
+$plumBack: #807cb0
+$green: #71bf45
+$white: white
+
+$menuFontSize: 1.1rem
+
+@mixin  transition ($code...)
+  -webkit-transition: $code
+  -moz-transition: $code
+  -ms-transition: $code
+  -o-transition: $code
+  transition: $code
+
+@media only screen and (min-width: 992px)
+  .dropdown:hover .dropdown-menu
+    display: block
+    visibility: visible
+    max-height: 400px
+    opacity: 1
+    margin-top: 0
+  .dropdown
+    position: relative
+    & .dropdown-menu
+      visibility: hidden
+      max-height: 0
+      opacity: 0
+      @include transition(all 0.4s)
+.navbar-brand img
+  height: 84px
+
+.up-line
+  background-color: $green
+  color: $white
+  font-size: $menuFontSize
+  text-transform: uppercase
+  font-weight: bold
+
+.up-icon-link
+  color: $white
+  padding: 5px
+  font-size: $menuFontSize
+  &:hover
+    color: $violet
+
+nav
+  background-color: $plumBack
+  text-transform: uppercase
+  box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.20), inset 0 -5px 5px -5px rgba(0, 0, 0, 0.20)
+
+.icon
+  font-weight: normal
+
+.nav-color
+  color: $green
+  font-weight: bold
+  &:hover
+    color: $violet
+    background: none
+
+.sub-menu
+  @extend nav
+  border: none
+  border-radius: 0
+  border-top: 2px solid $violet
+
+@media only screen and (max-width: 992px)
+  .sub-menu
+    border: none
+    box-shadow: none
+  .nav-color
+    border-bottom: 1px solid $violet
+  .sub-menu .nav-color
+    border-bottom: 1px solid $plum
+
+footer
+  background-color: $plum
+
+.plumicon
+  color: $plum
+
+footer
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.35), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35)
+footer h4
+  color: $green
+.footer-icon-link
+  @extend .up-icon-link
+  font-size: $menuFontSize * 2
+footer p
+  color: $white
+.footer-links
+  color: $white
+  &:hover
+    color: $violet
+    text-decoration: none
+footer ul
+  list-style: none
+.services-link
+  padding-left: 0.2rem
+  .plumicon
+    color: $white
+//.footer-services-link-wrapper
+  padding: -10px 0

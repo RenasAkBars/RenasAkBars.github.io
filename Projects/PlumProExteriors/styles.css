@@ -1,0 +1,99 @@
+@media only screen and (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    visibility: visible;
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 0; }
+
+  .dropdown {
+    position: relative; }
+    .dropdown .dropdown-menu {
+      visibility: hidden;
+      max-height: 0;
+      opacity: 0;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; } }
+.navbar-brand img {
+  height: 84px; }
+
+.up-line {
+  background-color: #71bf45;
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.up-icon-link, .footer-icon-link {
+  color: white;
+  padding: 5px;
+  font-size: 1.1rem; }
+  .up-icon-link:hover, .footer-icon-link:hover {
+    color: #aa226c; }
+
+nav, .sub-menu {
+  background-color: #807cb0;
+  text-transform: uppercase;
+  box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.2), inset 0 -5px 5px -5px rgba(0, 0, 0, 0.2); }
+
+.icon {
+  font-weight: normal; }
+
+.nav-color {
+  color: #71bf45;
+  font-weight: bold; }
+  .nav-color:hover {
+    color: #aa226c;
+    background: none; }
+
+.sub-menu {
+  border: none;
+  border-radius: 0;
+  border-top: 2px solid #aa226c; }
+
+@media only screen and (max-width: 992px) {
+  .sub-menu {
+    border: none;
+    box-shadow: none; }
+
+  .nav-color {
+    border-bottom: 1px solid #aa226c; }
+
+  .sub-menu .nav-color {
+    border-bottom: 1px solid #4e4981; } }
+footer {
+  background-color: #4e4981; }
+
+.plumicon {
+  color: #4e4981; }
+
+footer {
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.35), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35); }
+
+footer h4 {
+  color: #71bf45; }
+
+.footer-icon-link {
+  font-size: 2.2rem; }
+
+footer p {
+  color: white; }
+
+.footer-links {
+  color: white; }
+  .footer-links:hover {
+    color: #aa226c;
+    text-decoration: none; }
+
+footer ul {
+  list-style: none; }
+
+.services-link {
+  padding-left: 0.2rem; }
+  .services-link .plumicon {
+    color: white; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -4,6 +4,9 @@
     <title>My Flights</title>
     <link rel="stylesheet" type="text/css" href="My%20Flights.css"/>
     <meta charset="utf-8"/>
+
+    <!--jQuery script-->
+    <script src="../../Libs/jquery/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 <div>
@@ -229,6 +232,58 @@
     <a href="My%20Flights%20p3.html">3</a>
     <a href="My%20Flights%20p4.html">4</a>
 </p>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var planes = [];
+
+        var $row = $('tbody tr');
+        $row.each(function () {
+            var $self = $(this).children('td');
+
+            var number = $self.eq(0).html();
+            var date = $self.eq(1).html();
+            var airline = $self.eq(2).html();
+            var aircraft = $self.eq(3).html();
+            var flightNumber = $self.eq(4).html();
+            var origin = $self.eq(5).html();
+            var originTitle = $self.eq(5).attr('title');
+            var destination = $self.eq(6).html();
+            var destinationTitle = $self.eq(6).attr('title');
+            var seat = $self.eq(7).html();
+            var aircraftReg = $self.eq(8).children('a').html();
+            var aircraftRegHref = $self.eq(8).children('a').attr('href');
+            var cn = $self.eq(9).html();
+            var picHref = $self.eq(10).children('a').attr('href');
+
+            var plane = {
+                number: number,
+                date: date,
+                airline: airline,
+                aircraft: aircraft,
+                flightNumber: flightNumber,
+                origin: origin,
+                originTitle: originTitle,
+                destination: destination,
+                destinationTitle: destinationTitle,
+                seat: seat,
+                aircraftReg: aircraftReg,
+                aircraftRegHref: aircraftRegHref,
+                cn: cn,
+                picHref: picHref,
+                name: ''
+            };
+
+            planes.push(plane);
+        });
+
+        var jsn = JSON.stringify(planes);
+
+        console.log(jsn);
+        // document.write(planes);
+
+    });
+</script>
 <!--
 <tr>
 <td>№</td>

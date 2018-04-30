@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+
+    <!--jQuery script-->
+    <script src="../../Libs/jquery/jquery-3.3.1.min.js"></script>
+
+    <!--jQuery UI script-->
+    <!--<script src="../../Libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>-->
+
+    <!--jQuery UI руссификатор календаря script-->
+    <!--<script src="../../Libs/jquery-ui-1.12.1.custom/localisation/datepicker-ru.js"></script>-->
+
+    <!--jQuery UI расширение календаря script-->
+    <!--<script src="../../Libs/jquery/jquery.datepicker.extension.range.min.js"></script>-->
+
+    <!--Cookies на чистом Java Script-->
+    <!--<script src="../../Libs/cookies/cookies.min.js"></script>-->
+
+    <!--Cookies на jQuery script-->
+    <!--<script src="../../Libs/jquery/jquery.cookie.js"></script>-->
+
+    <!--Маска для инпута jQuery https://itchief.ru/lessons/javascript/input-mask-for-html-input-element script-->
+    <!--<script src="../../Libs/jquery/jquery.maskedinput.min.js"></script>-->
+
+    <!--Reset CSS https://meyerweb.com/eric/tools/css/reset/reset.css-->
+    <!--<link rel="stylesheet" type="text/css" href="../../Libs/css_clear/reset.css">-->
+
+    <!--Normalize CSS https://necolas.github.io/normalize.css/8.0.0/normalize.css-->
+    <!--<link rel="stylesheet" type="text/css" href="../../Libs/css_clear/normalize.css">-->
+
+    <!--jQuery UI CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+    <!--Свои стили CSS-->
+    <link rel="stylesheet" type="text/css" href="JS.css">
+</head>
+<!--index.html-->
+<body>
+<div id="content"></div>
+<button id="btn">Push!</button>
+<script>
+    $('#btn').click(function () {
+        $.ajax({
+            url: 'ajax.json'
+        })
+            .done(function (arr) {
+                $('#content').html('<ul class="users"></ul>');
+                arr.forEach(function (elem) {
+                    $('.users').append('<li>' + elem + '</li>');
+                });
+            });
+    });
+</script>
+</body>
+</html>

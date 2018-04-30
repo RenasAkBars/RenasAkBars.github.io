@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+
+    <!--jQuery script-->
+    <script src="../../Libs/jquery/jquery-3.3.1.min.js"></script>
+
+    <!--jQuery UI script-->
+    <!--<script src="../../Libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>-->
+
+    <!--jQuery UI руссификатор календаря script-->
+    <!--<script src="../../Libs/jquery-ui-1.12.1.custom/localisation/datepicker-ru.js"></script>-->
+
+    <!--jQuery UI расширение календаря script-->
+    <!--<script src="../../Libs/jquery/jquery.datepicker.extension.range.min.js"></script>-->
+
+    <!--Cookies на чистом Java Script-->
+    <!--<script src="../../Libs/cookies/cookies.min.js"></script>-->
+
+    <!--Cookies на jQuery script-->
+    <!--<script src="../../Libs/jquery/jquery.cookie.js"></script>-->
+
+    <!--Маска для инпута jQuery https://itchief.ru/lessons/javascript/input-mask-for-html-input-element script-->
+    <!--<script src="../../Libs/jquery/jquery.maskedinput.min.js"></script>-->
+
+    <!--Reset CSS https://meyerweb.com/eric/tools/css/reset/reset.css-->
+    <!--<link rel="stylesheet" type="text/css" href="../../Libs/css_clear/reset.css">-->
+
+    <!--Normalize CSS https://necolas.github.io/normalize.css/8.0.0/normalize.css-->
+    <!--<link rel="stylesheet" type="text/css" href="../../Libs/css_clear/normalize.css">-->
+
+    <!--jQuery UI CSS-->
+    <link rel="stylesheet" type="text/css" href="../../Libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+    <!--Свои стили CSS-->
+    <link rel="stylesheet" type="text/css" href="JS.css">
+</head>
+<body>
+<div>
+    <canvas id="table_ins_border" width="800" height="600"></canvas>
+</div>
+<script>
+
+    var ctx = $('#table_ins_border').get(0).getContext('2d');
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 2;
+    ctx.arc(400, -906, 1200, getRadians(0), getRadians(180));
+    ctx.stroke();
+    ctx.strokeStyle = 'white';
+    ctx.arc(400, -953, 1200, getRadians(0), getRadians(180));
+    ctx.stroke();
+
+    function getRadians(degrees) {
+        return (Math.PI/180)*degrees;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@import "variables";
+
+@font-face {
+  font-family: 'plum';
+  src:  url('#{$icomoon-font-path}/plum.eot?mahsa1');
+  src:  url('#{$icomoon-font-path}/plum.eot?mahsa1#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/plum.ttf?mahsa1') format('truetype'),
+    url('#{$icomoon-font-path}/plum.woff?mahsa1') format('woff'),
+    url('#{$icomoon-font-path}/plum.svg?mahsa1#plum') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.plumicon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'plum' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.plum-plum {
+  &:before {
+    content: unicode($plum-plum); 
+  }
+}
+
