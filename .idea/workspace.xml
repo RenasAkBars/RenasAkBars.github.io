@@ -14,20 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+            <state relative-caret-position="1258">
+              <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.sass" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styles.sass" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="103" column="18" lean-forward="true" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
+            <state relative-caret-position="289">
+              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -64,8 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>chipsNums</find>
-      <find>$chips</find>
       <find>afterDeal</find>
       <find>hitting</find>
       <find>standing</find>
@@ -94,6 +92,8 @@
       <find>&lt;/b&gt;</find>
       <find>up-link</find>
       <find>white</find>
+      <find>$menuFontSize</find>
+      <find>$upLineFontSize</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,8 +151,8 @@
         <option value="$PROJECT_DIR$/Projects/Aircraft list/index.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/styles.css" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js" />
-        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/index.html" />
+        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass" />
       </list>
     </option>
   </component>
@@ -398,12 +398,12 @@
       <workItem from="1524224682985" duration="4966000" />
       <workItem from="1524302525962" duration="33650000" />
       <workItem from="1524762066512" duration="762000" />
-      <workItem from="1524984720674" duration="40899000" />
+      <workItem from="1524984720674" duration="41908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1521811000" />
+    <option name="totallyTimeSpent" value="1522820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -642,17 +642,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="103" column="18" lean-forward="true" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
+        <state relative-caret-position="1258">
+          <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        <state relative-caret-position="289">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
         </state>
       </provider>
     </entry>

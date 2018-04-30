@@ -44,6 +44,7 @@ nav, .sub-menu {
 
 .nav-color {
   color: #71bf45;
+  font-size: 1.2rem !important;
   font-weight: bold; }
   .nav-color:hover {
     color: #aa226c;

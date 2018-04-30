@@ -4,7 +4,8 @@ $plumBack: #807cb0
 $green: #71bf45
 $white: white
 
-$menuFontSize: 1.1rem
+$upLineFontSize: 1.1rem
+$menuFontSize: 1.2rem
 
 @mixin  transition ($code...)
   -webkit-transition: $code
@@ -33,14 +34,14 @@ $menuFontSize: 1.1rem
 .up-line
   background-color: $green
   color: $white
-  font-size: $menuFontSize
+  font-size: $upLineFontSize
   text-transform: uppercase
   font-weight: bold
 
 .up-icon-link
   color: $white
   padding: 5px
-  font-size: $menuFontSize
+  font-size: $upLineFontSize
   &:hover
     color: $violet
 
@@ -54,6 +55,7 @@ nav
 
 .nav-color
   color: $green
+  font-size: $menuFontSize !important
   font-weight: bold
   &:hover
     color: $violet
@@ -86,7 +88,7 @@ footer h4
   color: $green
 .footer-icon-link
   @extend .up-icon-link
-  font-size: $menuFontSize * 2
+  font-size: $upLineFontSize * 2
 footer p
   color: $white
 .footer-links
