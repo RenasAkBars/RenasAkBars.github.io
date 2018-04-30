@@ -44,11 +44,11 @@ $('.sub-menu .nav-color, footer .services-link').prepend('<span class="plumicon 
 //---begin carousel set height code
 var $carItem = $('.carousel-item');
 
-setHeight($carItem, 90);// устанавливаем высоту окна при первой загрузке страницы
+setHeight($carItem, 100);// устанавливаем высоту окна при первой загрузке страницы
 $(window).resize( setCarItem ); // обновляем при изменении размеров окна
 
 function setCarItem() {
-    setHeight($carItem, 90);
+    setHeight($carItem, 100);
 }
 
 function setHeight($item, percentage) {

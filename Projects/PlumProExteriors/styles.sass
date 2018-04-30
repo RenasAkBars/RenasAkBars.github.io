@@ -5,7 +5,9 @@
 
 $violet: #aa226c
 $plum: #4e4981
+$plumDark: #3e396a
 $plumBack: #807cb0
+$plumLight: rgba(165, 161, 229, 0.44)
 $plumTr: rgba(78, 73, 129, 0.70)
 $green: #71bf45
 $greenTr: rgba(113, 191, 69, 0.70)
@@ -66,11 +68,15 @@ nav
   font-weight: normal
 
 .nav-color
-  color: $green
+  color: white
+  text-shadow: 0 0 3px $violet, 0 2px 3px rgba(0, 0, 0, 0.42)
   font-size: $menuFontSize !important
   font-weight: bold
+  & span
+    text-shadow: none
   &:hover
     color: $violet
+    text-shadow: none
     background: none
 
 .sub-menu
@@ -126,6 +132,7 @@ section.slideshow
   z-index: 10
 $carouselH1: 1.5rem
 $carouselA: 0.4rem
+$carouselAa: $carouselA * 2
 $carouselBtwn: 10rem
 $f-sm: 1.5
 $f-md: 2
@@ -133,8 +140,8 @@ $f-lg: 2.5
 $f-xl: 3
 .carousel-text h1.carousel-text-header
   font-size: $carouselH1
-  color: $violet
-  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.42)
+  color: white
+  text-shadow: 0 0 3px $violet, 0 5px 8px rgba(0, 0, 0, 0.42)
   @include media-breakpoint-up(sm)
     font-size: $carouselH1 * $f-sm
   @include media-breakpoint-up(md)
@@ -152,7 +159,7 @@ $f-xl: 3
   font-weight: bold
   border-radius: $carouselA * 0.5
   border: 1px solid $plum
-  padding: $carouselA * 0.9 $carouselA * 1.2 $carouselA
+  padding: $carouselAa * 0.9 $carouselAa * 1.2 $carouselAa
   background-color: $plumTr
   cursor: pointer
   text-transform: uppercase
@@ -165,7 +172,7 @@ $f-xl: 3
     text-decoration: none
   @include media-breakpoint-up(sm)
     font-size: $carouselA * $f-sm * 1.4
-    margin-top: $carouselBtwn
+    margin-top: $carouselBtwn * 0.6
   @include media-breakpoint-up(md)
     font-size: $carouselA * $f-md * 0.9
     margin-top: $carouselBtwn
@@ -176,10 +183,11 @@ $f-xl: 3
     font-size: $carouselA * $f-xl
     margin-top: $carouselBtwn
 
-
+.home-text
+  color: $plumDark
 $aLink: 0.8rem
 .button-link
-  color: black
+  color: $plumDark
   display: inline-block
   font-weight: bold
   border-radius: $aLink * 0.25
@@ -193,3 +201,10 @@ $aLink: 0.8rem
     background-color: $plum
     color: white
     text-decoration: none
+
+.card-link
+  color: $plumDark
+  &:hover
+    color: $violet
+.card
+  border-color: $plumLight

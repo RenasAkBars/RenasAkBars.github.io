@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="113" column="40" selection-start-line="113" selection-start-column="40" selection-end-line="113" selection-end-column="40" />
+            <state relative-caret-position="251">
+              <caret line="119" column="27" lean-forward="true" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -31,8 +31,8 @@
       <file leaf-file-name="styles.sass" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="523">
+              <caret line="208" column="23" selection-start-line="208" selection-start-column="23" selection-end-line="208" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -40,8 +40,8 @@
       <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            <state relative-caret-position="370">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1109">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="489">
+              <caret line="197" selection-start-line="197" selection-end-line="197" />
             </state>
           </provider>
         </entry>
@@ -58,8 +58,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/landing_on_bootstrap/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="30" selection-start-line="30" selection-end-line="32" selection-end-column="52" />
+            <state relative-caret-position="85">
+              <caret line="117" column="23" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -82,17 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>doubling</find>
-      <find>writeYourMoney</find>
-      <find>putBet</find>
-      <find>startBets</find>
-      <find>startPlay</find>
-      <find>compare</find>
-      <find>checkDps</find>
-      <find>checkSplitted</find>
-      <find>standartPlay</find>
-      <find>getSpriteCoordsForCard</find>
-      <find>reWriteYourMoney</find>
       <find>checkD2</find>
       <find>checkPPs</find>
       <find>&quot;,&quot;</find>
@@ -112,6 +101,17 @@
       <find>$greenOp</find>
       <find>sele</find>
       <find>im</find>
+      <find>shad</find>
+      <find>Название карточки</find>
+      <find>itle&quot;&gt;&lt;a&gt;</find>
+      <find>col-sm-12 col-md-6 col-lg-4</find>
+      <find>col-xs-12 col-sm-6 col-md-4</find>
+      <find>col-md-4 my-3 mx-lg-3</find>
+      <find>px-lg-3</find>
+      <find>row py-3</find>
+      <find>col-xs-12 col-sm-6 col-md-4 my-3</find>
+      <find>&lt;h5 class=&quot;card-ti</find>
+      <find>card-title</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -183,6 +183,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/Libs/anime-master/package.json" />
+      <path value="$PROJECT_DIR$/Libs/bootstrap/package_1_bootstrap-4.1.0/package.json" />
+      <path value="$PROJECT_DIR$/Libs/bootstrap/package_2_bootstrap-4.1.0/package.json" />
       <path value="$PROJECT_DIR$/Libs/jquery-ui-1.12.1.custom/package.json" />
       <path value="$PROJECT_DIR$/Projects/PlumProExteriors/libs/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/Study/JS/carhartl-jquery-cookie-92b7715/package.json" />
@@ -422,12 +424,12 @@
       <workItem from="1524224682985" duration="4966000" />
       <workItem from="1524302525962" duration="33650000" />
       <workItem from="1524762066512" duration="762000" />
-      <workItem from="1524984720674" duration="68875000" />
+      <workItem from="1524984720674" duration="75062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1549787000" />
+    <option name="totallyTimeSpent" value="1555974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -483,7 +485,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01 Markup/final project/index.html" />
     <entry file="file://$PROJECT_DIR$/01 Markup/final project/effects.js" />
     <entry file="file://$PROJECT_DIR$/01 Markup/final project/styles.css" />
     <entry file="file://$PROJECT_DIR$/JS/JS.html" />
@@ -616,17 +617,6 @@
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/images/favicon.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/landing_on_bootstrap/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="30" selection-start-line="30" selection-end-line="32" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../boo/package/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408" />
@@ -680,20 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1109">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Projects/study final project/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -708,10 +684,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/BlackJack_2.0/bj_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="86" column="13" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/landing_on_bootstrap/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="117" column="23" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="113" column="40" selection-start-line="113" selection-start-column="40" selection-end-line="113" selection-end-column="40" />
+        <state relative-caret-position="251">
+          <caret line="119" column="27" lean-forward="true" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -722,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="523">
+          <caret line="208" column="23" selection-start-line="208" selection-start-column="23" selection-end-line="208" selection-end-column="23" />
         </state>
       </provider>
     </entry>
