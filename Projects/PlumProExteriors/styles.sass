@@ -6,8 +6,9 @@
 $violet: #aa226c
 $plum: #4e4981
 $plumBack: #807cb0
+$plumTr: rgba(78, 73, 129, 0.70)
 $green: #71bf45
-$greenOp: rgba(113, 191, 69, 0.73)
+$greenTr: rgba(113, 191, 69, 0.70)
 $white: white
 
 $upLineFontSize: 1.1rem
@@ -19,6 +20,11 @@ $menuFontSize: 1.2rem
   -ms-transition: $code
   -o-transition: $code
   transition: $code
+
+::selection
+  background-color: $greenTr
+  color: $plumBack !important
+
 
 @media only screen and (min-width: 992px)
   .dropdown:hover .dropdown-menu
@@ -35,7 +41,7 @@ $menuFontSize: 1.2rem
       opacity: 0
       @include transition(all 0.4s)
 .navbar-brand img
-  height: 84px
+  height: 100px
 
 .up-line
   background-color: $green
@@ -113,14 +119,14 @@ footer ul
   background-size: cover !important
   background-position: center center !important
   background-repeat: no-repeat !important
-.slideshow
-  position: relative
+section.slideshow
+  position: relative  !important
 .carousel-text
-  margin: 0 auto
   position: absolute
   z-index: 10
 $carouselH1: 1.5rem
 $carouselA: 0.4rem
+$carouselBtwn: 10rem
 $f-sm: 1.5
 $f-md: 2
 $f-lg: 2.5
@@ -128,7 +134,7 @@ $f-xl: 3
 .carousel-text h1.carousel-text-header
   font-size: $carouselH1
   color: $violet
-  text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.42)
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.42)
   @include media-breakpoint-up(sm)
     font-size: $carouselH1 * $f-sm
   @include media-breakpoint-up(md)
@@ -139,42 +145,51 @@ $f-xl: 3
     font-size: $carouselH1 * $f-xl
 
 .carousel-text a.carousel-text-link
-  position: relative
-  font-size: $carouselA
+  //position: relative
+  //font-size: $carouselA
   color: white
   display: inline-block
+  font-weight: bold
   border-radius: $carouselA * 0.5
-  border: 1px solid $green
+  border: 1px solid $plum
   padding: $carouselA * 0.9 $carouselA * 1.2 $carouselA
-  background-color: $greenOp
+  background-color: $plumTr
   cursor: pointer
   text-transform: uppercase
   line-height: 1
-  top: 1rem
   text-align: center
+  margin-top: $carouselBtwn
   //vertical-align: sub
   &:hover
-    background-color: $green
-    color: white
+    background-color: $plum
+    text-decoration: none
   @include media-breakpoint-up(sm)
-    font-size: $carouselA * $f-sm
-    top: 1rem
+    font-size: $carouselA * $f-sm * 1.4
+    margin-top: $carouselBtwn
   @include media-breakpoint-up(md)
     font-size: $carouselA * $f-md * 0.9
-    top: 2rem
+    margin-top: $carouselBtwn
   @include media-breakpoint-up(lg)
     font-size: $carouselA * $f-lg * 0.9
-    top: 3rem
+    margin-top: $carouselBtwn
   @include media-breakpoint-up(xl)
     font-size: $carouselA * $f-xl
-    top: 4rem
-  //& span
-    display: inline-block
-    margin: 0
-    padding: 0
-
-//@media only screen and (min-width: 992px)
-  .carousel-text h1.carousel-text-header
-    font-size: 55px
+    margin-top: $carouselBtwn
 
 
+$aLink: 0.8rem
+.button-link
+  color: black
+  display: inline-block
+  font-weight: bold
+  border-radius: $aLink * 0.25
+  border: 1px solid $plum
+  padding: $aLink * 0.9 $aLink * 1.2 $aLink
+  cursor: pointer
+  text-transform: uppercase
+  line-height: 1
+  text-align: center
+  &:hover
+    background-color: $plum
+    color: white
+    text-decoration: none

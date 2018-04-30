@@ -1,7 +1,10 @@
 
+$('.up-line').click(function () {
+    alert($(document).width());
+});
+
 //---begin nav menu hover code
 $('.dropdown-toggle').click(function(e) {
-    alert($(document).width());
     if ($(document).width() > 992) {
 /*        var url = $(this).attr('href');
         if (url !== '#') {
@@ -13,11 +16,29 @@ $('.dropdown-toggle').click(function(e) {
 //---end nav menu hover code
 
 
+//---begin carousel text vertical align code
+$(document).ready(function () {
+    var $carText = $('.carousel-text');
+    var $carParent = $('section.slideshow');
+
+    alignVertical($carText, $carParent);
+    $(window).resize( setItem );
+
+    function setItem() {
+        alignVertical($carText, $carParent);
+    }
+
+    function alignVertical($item, $parent) {
+        var mt = ($parent.height() - $item.height()) / 2;
+        $item.css('top', mt);
+    }
+});
+//---end carousel text vertical align code
+
 
 //---begin our services add plums code
 $('.sub-menu .nav-color, footer .services-link').prepend('<span class="plumicon plum-plum"></span> ');
 //---end our services add plums code
-
 
 
 //---begin carousel set height code
@@ -37,3 +58,4 @@ function setHeight($item, percentage) {
     });
 }
 //---begin carousel set height code
+
