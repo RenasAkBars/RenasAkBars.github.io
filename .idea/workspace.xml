@@ -14,20 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+            <state relative-caret-position="204">
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.sass" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+            <state relative-caret-position="489">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -151,8 +151,8 @@
         <option value="$PROJECT_DIR$/Projects/Aircraft list/index.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/styles.css" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js" />
-        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/index.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass" />
+        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/index.html" />
       </list>
     </option>
   </component>
@@ -398,12 +398,12 @@
       <workItem from="1524224682985" duration="4966000" />
       <workItem from="1524302525962" duration="33650000" />
       <workItem from="1524762066512" duration="762000" />
-      <workItem from="1524984720674" duration="41908000" />
+      <workItem from="1524984720674" duration="43222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1522820000" />
+    <option name="totallyTimeSpent" value="1524134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -642,17 +642,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+        <state relative-caret-position="489">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+        <state relative-caret-position="204">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
         </state>
       </provider>
     </entry>
