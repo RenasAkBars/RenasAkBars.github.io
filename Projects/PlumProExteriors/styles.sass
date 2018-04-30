@@ -1,7 +1,13 @@
+//@import "libs/bootstrap/scss/bootstrap.scss"
+@import "libs/bootstrap/scss/_functions.scss"
+@import "libs/bootstrap/scss/_variables.scss"
+@import "libs/bootstrap/scss/mixins/_breakpoints.scss"
+
 $violet: #aa226c
 $plum: #4e4981
 $plumBack: #807cb0
 $green: #71bf45
+$greenOp: rgba(113, 191, 69, 0.73)
 $white: white
 
 $upLineFontSize: 1.1rem
@@ -102,3 +108,73 @@ footer ul
   padding-left: 0.2rem
   .plumicon
     color: $white
+
+.slideshow .carousel-item
+  background-size: cover !important
+  background-position: center center !important
+  background-repeat: no-repeat !important
+.slideshow
+  position: relative
+.carousel-text
+  margin: 0 auto
+  position: absolute
+  z-index: 10
+$carouselH1: 1.5rem
+$carouselA: 0.4rem
+$f-sm: 1.5
+$f-md: 2
+$f-lg: 2.5
+$f-xl: 3
+.carousel-text h1.carousel-text-header
+  font-size: $carouselH1
+  color: $violet
+  text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.42)
+  @include media-breakpoint-up(sm)
+    font-size: $carouselH1 * $f-sm
+  @include media-breakpoint-up(md)
+    font-size: $carouselH1 * $f-md
+  @include media-breakpoint-up(lg)
+    font-size: $carouselH1 * $f-lg
+  @include media-breakpoint-up(xl)
+    font-size: $carouselH1 * $f-xl
+
+.carousel-text a.carousel-text-link
+  position: relative
+  font-size: $carouselA
+  color: white
+  display: inline-block
+  border-radius: $carouselA * 0.5
+  border: 1px solid $green
+  padding: $carouselA * 0.9 $carouselA * 1.2 $carouselA
+  background-color: $greenOp
+  cursor: pointer
+  text-transform: uppercase
+  line-height: 1
+  top: 1rem
+  text-align: center
+  //vertical-align: sub
+  &:hover
+    background-color: $green
+    color: white
+  @include media-breakpoint-up(sm)
+    font-size: $carouselA * $f-sm
+    top: 1rem
+  @include media-breakpoint-up(md)
+    font-size: $carouselA * $f-md * 0.9
+    top: 2rem
+  @include media-breakpoint-up(lg)
+    font-size: $carouselA * $f-lg * 0.9
+    top: 3rem
+  @include media-breakpoint-up(xl)
+    font-size: $carouselA * $f-xl
+    top: 4rem
+  //& span
+    display: inline-block
+    margin: 0
+    padding: 0
+
+//@media only screen and (min-width: 992px)
+  .carousel-text h1.carousel-text-header
+    font-size: 55px
+
+
