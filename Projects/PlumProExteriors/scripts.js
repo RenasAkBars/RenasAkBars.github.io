@@ -59,3 +59,6 @@ function setHeight($item, percentage) {
 }
 //---begin carousel set height code
 
+$(".sandwich").click(function() {
+    $(".sandwich").toggleClass("active");
+});

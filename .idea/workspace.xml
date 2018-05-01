@@ -14,11 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+            <state relative-caret-position="-1517">
+              <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/services.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -26,8 +35,8 @@
       <file leaf-file-name="styles.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="209" column="26" selection-start-line="209" selection-start-column="26" selection-end-line="209" selection-end-column="26" />
+            <state relative-caret-position="1560">
+              <caret line="278" column="37" selection-start-line="278" selection-start-column="37" selection-end-line="278" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -35,8 +44,8 @@
       <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="795">
+              <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -44,8 +53,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3349">
-              <caret line="197" selection-start-line="197" selection-end-line="197" />
+            <state relative-caret-position="2937">
+              <caret line="255" selection-start-line="255" selection-end-line="255" />
             </state>
           </provider>
         </entry>
@@ -77,10 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>checkD2</find>
-      <find>checkPPs</find>
-      <find>&quot;,&quot;</find>
-      <find>,{&quot;</find>
       <find>{&quot;</find>
       <find>[</find>
       <find>]</find>
@@ -107,6 +112,10 @@
       <find>col-xs-12 col-sm-6 col-md-4 my-3</find>
       <find>&lt;h5 class=&quot;card-ti</find>
       <find>card-title</find>
+      <find>col-md-4 my-3</find>
+      <find>&lt;a/&gt;</find>
+      <find>$w</find>
+      <find>$w:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JS/first result/updownhelper.html" />
         <option value="$PROJECT_DIR$/JS/first result/imglatedownload.html" />
         <option value="$PROJECT_DIR$/JS/jquery-ui-1.12.1.custom/localisation/datepicker-ru.js" />
         <option value="$PROJECT_DIR$/01 Markup/1st try/Lsn07/HW/Project1.html" />
@@ -166,6 +174,7 @@
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/index.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass" />
+        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/services.html" />
       </list>
     </option>
   </component>
@@ -180,7 +189,9 @@
       <path value="$PROJECT_DIR$/Libs/anime-master/package.json" />
       <path value="$PROJECT_DIR$/Libs/bootstrap/package_1_bootstrap-4.1.0/package.json" />
       <path value="$PROJECT_DIR$/Libs/jquery-ui-1.12.1.custom/package.json" />
+      <path value="$PROJECT_DIR$/Libs/parallax.js-1.5.0/package.json" />
       <path value="$PROJECT_DIR$/Projects/PlumProExteriors/libs/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/Projects/PlumProExteriors/libs/parallax.js-1.5.0/package.json" />
       <path value="$PROJECT_DIR$/Study/JS/carhartl-jquery-cookie-92b7715/package.json" />
       <path value="$PROJECT_DIR$/Study/JS/first result/jquery-ui-1.12.1.custom/package.json" />
       <path value="$PROJECT_DIR$/Study/JS/libraries_and_plugins/anime-master/package.json" />
@@ -189,7 +200,7 @@
       <path value="$PROJECT_DIR$/node_modules/bootstrap/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="487" />
     <option name="y" value="-21" />
     <option name="width" value="1382" />
@@ -217,18 +228,6 @@
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="Projects" type="462c0819:PsiDirectoryNode" />
-              <item name="BlackJack_2.0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="Projects" type="462c0819:PsiDirectoryNode" />
-              <item name="landing_on_bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="Projects" type="462c0819:PsiDirectoryNode" />
               <item name="PlumProExteriors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -237,12 +236,6 @@
               <item name="Projects" type="462c0819:PsiDirectoryNode" />
               <item name="PlumProExteriors" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="Projects" type="462c0819:PsiDirectoryNode" />
-              <item name="study final project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -421,15 +414,15 @@
       <workItem from="1524302525962" duration="33650000" />
       <workItem from="1524762066512" duration="762000" />
       <workItem from="1524984720674" duration="75593000" />
-      <workItem from="1525162102121" duration="996000" />
+      <workItem from="1525162102121" duration="7426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1557501000" />
+    <option name="totallyTimeSpent" value="1563931000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17935579" />
@@ -712,31 +705,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3349">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        <state relative-caret-position="2937">
+          <caret line="255" selection-start-line="255" selection-end-line="255" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="209" column="26" selection-start-line="209" selection-start-column="26" selection-end-line="209" selection-end-column="26" />
+        <state relative-caret-position="1560">
+          <caret line="278" column="37" selection-start-line="278" selection-start-column="37" selection-end-line="278" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+        <state relative-caret-position="-1517">
+          <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/services.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
         </state>
       </provider>
     </entry>

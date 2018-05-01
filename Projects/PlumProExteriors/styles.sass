@@ -5,7 +5,7 @@
 
 $violet: #aa226c
 $plum: #4e4981
-$plumDark: #3e396a
+$plumDark: #333056
 $plumBack: #807cb0
 $plumLight: rgba(165, 161, 229, 0.44)
 $plumTr: rgba(78, 73, 129, 0.70)
@@ -84,6 +84,67 @@ nav
   border: none
   border-radius: 0
   border-top: 2px solid $violet
+
+.navbar-toggler
+  position: relative
+
+$swW: 28px
+$swH: 3px
+
+.sandwich
+  width: $swW
+  height: $swW
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+  z-index: 15
+  display: block
+
+.sw-line
+  position: relative
+  width: $swW
+  height: $swH
+  background: rgb(255, 255, 255)
+  border: none
+  border-radius: 1px
+  display: block
+
+.sw-topper
+  @extend .sw-line
+  top: 0
+  transition: transform 0.5s, top 0.2s
+
+/* transition-delay: 0.2s, 0s; */
+
+.sw-bottom
+  @extend .sw-line
+
+  top: $swH * 2
+
+  transition: transform 0.5s, top 0.2s
+  transition-delay: 0.2s, 0s
+
+.sw-footer
+  @extend .sw-line
+
+  top: $swH * 4
+  transition: all 0.5s
+  transition-delay: 0.1s
+
+.sandwich.active
+  .sw-topper
+    top: 11px
+    transform: rotate(140deg)
+  .sw-bottom
+    top: 7px
+    transform: rotate(-140deg)
+  .sw-footer
+    opacity: 0
+    top: 0
+    transform: rotate(180deg)
 
 @media only screen and (max-width: 992px)
   .sub-menu
@@ -183,8 +244,9 @@ $f-xl: 3
     font-size: $carouselA * $f-xl
     margin-top: $carouselBtwn
 
-.home-text
+.main-text
   color: $plumDark
+
 $aLink: 0.8rem
 .button-link
   color: $plumDark
@@ -208,3 +270,10 @@ $aLink: 0.8rem
     color: $violet
 .card
   border-color: $plumLight
+  display: block
+.card-link-wrap
+  height: 100%
+
+.parallax-window
+  min-height: 400px
+  background: rgba(255, 255, 255, 0.5)
