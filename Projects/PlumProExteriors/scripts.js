@@ -10,7 +10,8 @@ $('.dropdown-toggle').click(function(e) {
         if (url !== '#') {
             window.location.href = url;
         }*/
-        return false;
+        return location.href = $(this).attr('href');
+        // return false;
     }
 });
 //---end nav menu hover code

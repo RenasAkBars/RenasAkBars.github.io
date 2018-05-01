@@ -4,9 +4,11 @@
 @import "libs/bootstrap/scss/mixins/_breakpoints.scss"
 
 $violet: #aa226c
+$violetDark: #6a1442
 $plum: #4e4981
 $plumDark: #333056
-$plumBack: #807cb0
+//$plumBack: #807cb0
+$plumBack: #272636
 $plumLight: rgba(165, 161, 229, 0.44)
 $plumTr: rgba(78, 73, 129, 0.70)
 $green: #71bf45
@@ -46,7 +48,7 @@ $menuFontSize: 1.2rem
   height: 100px
 
 .up-line
-  background-color: $green
+  background-color: $violetDark
   color: $white
   font-size: $upLineFontSize
   text-transform: uppercase
@@ -200,7 +202,7 @@ $f-md: 2
 $f-lg: 2.5
 $f-xl: 3
 .carousel-text h1.carousel-text-header
-  font-size: $carouselH1
+  font-size: $carouselH1 * 1.4
   color: white
   text-shadow: 0 0 3px $violet, 0 5px 8px rgba(0, 0, 0, 0.42)
   @include media-breakpoint-up(sm)
@@ -246,6 +248,8 @@ $f-xl: 3
 
 .main-text
   color: $plumDark
+  & p, ul
+    font-size: 1.15rem
 
 $aLink: 0.8rem
 .button-link
