@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 
 //---begin our services add plums code
-$('.sub-menu .nav-color, footer .services-link').prepend('<span class="plumicon plum-plum"></span> ');
+$('.sub-menu .nav-color, footer .services-link, .parallax-text h1').prepend('<span class="plumicon plum-plum"></span> ');
 //---end our services add plums code
 
 
@@ -57,8 +57,11 @@ function setHeight($item, percentage) {
         height: h
     });
 }
-//---begin carousel set height code
+//---end carousel set height code
 
+
+//---begin animated sandwich code
 $(".sandwich").click(function() {
     $(".sandwich").toggleClass("active");
 });
+//---end animated sandwich code
