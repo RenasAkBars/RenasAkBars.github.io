@@ -36,7 +36,7 @@
   padding: 5px;
   font-size: 1.1rem; }
   .up-icon-link:hover, .footer-icon-link:hover {
-    color: #aa226c; }
+    color: rgba(165, 161, 229, 0.44); }
 
 nav, .sub-menu {
   background-color: #272636;
@@ -48,7 +48,6 @@ nav, .sub-menu {
 
 .nav-color {
   color: white;
-  text-shadow: 0 0 3px #aa226c, 0 2px 3px rgba(0, 0, 0, 0.42);
   font-size: 1.2rem !important;
   font-weight: bold; }
   .nav-color span {
@@ -124,10 +123,7 @@ nav, .sub-menu {
   .sub-menu .nav-color {
     border-bottom: 1px solid #4e4981; } }
 footer {
-  background-color: #4e4981; }
-
-.plumicon {
-  color: #4e4981; }
+  background-color: #272636; }
 
 footer {
   box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.35), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35); }
@@ -220,7 +216,7 @@ section.slideshow {
 .main-text {
   color: #333056; }
   .main-text p, .main-text ul {
-    font-size: 1.15rem; }
+    font-size: 1.35rem; }
 
 .button-link {
   color: #333056;
