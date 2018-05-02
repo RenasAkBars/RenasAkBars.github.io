@@ -284,3 +284,34 @@ $aLink: 0.8rem
 .parallax-text
   background: rgba(255, 255, 255, 0.6)
   color: $plum
+
+.ph-folder-icon img, .ph-icon-img
+  cursor: pointer
+#photoGalleryCarousel
+  display: none
+  //& .carousel-controller
+    //position: relative
+    z-index: 10
+  & .carousel-inner
+    position: fixed
+    top: 0
+    z-index: 100
+  & .carousel-item
+    background-size: contain !important
+    background-position: center center !important
+    background-repeat: no-repeat !important
+.photoGalleryCarouselOn
+  display: block
+.slideshow-img
+  cursor: pointer
+  //z-index: 5
+.close-slideshow
+  position: absolute
+  top: 0
+  right: 0
+  padding: 1rem
+//.carousel-blank
+  position: absolute
+  width: 100vw
+  height: 100vh
+  z-index: 4

@@ -254,4 +254,30 @@ section.slideshow {
   background: rgba(255, 255, 255, 0.6);
   color: #4e4981; }
 
+.ph-folder-icon img, .ph-icon-img {
+  cursor: pointer; }
+
+#photoGalleryCarousel {
+  display: none; }
+  #photoGalleryCarousel .carousel-inner {
+    position: fixed;
+    top: 0;
+    z-index: 100; }
+  #photoGalleryCarousel .carousel-item {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important; }
+
+.photoGalleryCarouselOn {
+  display: block; }
+
+.slideshow-img {
+  cursor: pointer; }
+
+.close-slideshow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem; }
+
 /*# sourceMappingURL=styles.css.map */
