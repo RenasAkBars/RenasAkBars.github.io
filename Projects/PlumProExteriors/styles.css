@@ -267,17 +267,12 @@ section.slideshow {
     background-size: contain !important;
     background-position: center center !important;
     background-repeat: no-repeat !important; }
-
-.photoGalleryCarouselOn {
-  display: block; }
-
-.slideshow-img {
-  cursor: pointer; }
-
-.close-slideshow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem; }
+  #photoGalleryCarousel .slideshow-img {
+    cursor: pointer; }
+  #photoGalleryCarousel .close-slideshow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem; }
 
 /*# sourceMappingURL=styles.css.map */

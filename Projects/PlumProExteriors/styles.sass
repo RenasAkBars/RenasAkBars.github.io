@@ -289,9 +289,6 @@ $aLink: 0.8rem
   cursor: pointer
 #photoGalleryCarousel
   display: none
-  //& .carousel-controller
-    //position: relative
-    z-index: 10
   & .carousel-inner
     position: fixed
     top: 0
@@ -300,18 +297,10 @@ $aLink: 0.8rem
     background-size: contain !important
     background-position: center center !important
     background-repeat: no-repeat !important
-.photoGalleryCarouselOn
-  display: block
-.slideshow-img
-  cursor: pointer
-  //z-index: 5
-.close-slideshow
-  position: absolute
-  top: 0
-  right: 0
-  padding: 1rem
-//.carousel-blank
-  position: absolute
-  width: 100vw
-  height: 100vh
-  z-index: 4
+  & .slideshow-img
+    cursor: pointer
+  & .close-slideshow
+    position: absolute
+    top: 0
+    right: 0
+    padding: 1rem

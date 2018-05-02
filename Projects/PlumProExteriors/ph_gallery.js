@@ -34,26 +34,48 @@ function hideCarousel() {
 function setSlideShow($parent) {
     var links = getLinks($parent, 'data-pic-');
 
+    $carouselInner.html('');
+    links.forEach(function (link) {
+        $carouselInner.append('<div class="carousel-item text-center"><img href="#photoGalleryCarousel" role="button" data-slide="next" class="slideshow-img" src="' + link + '"></div>');
+    });
+
+    var $carouselItem = $('.carousel-item');
+
+    $carouselItem.click(function (event) {
+        if (event.target === this) {
+            hideCarousel();
+        }
+    });
+
     $('.ph-icon-img').each(function (index) {
         $(this).click(function () {
-            // alert(index);
-            $carouselInner.html('');
-            links.forEach(function (link) {
-                $carouselInner.append('<div class="carousel-item text-center"><img href="#photoGalleryCarousel" role="button" data-slide="next" class="slideshow-img" src="' + link + '"></div>');
-            });
+
             $carouselInner.children('.carousel-item').eq(index).addClass('active');
-            var $carouselItem = $('.carousel-item');
-            setCarouselHeight($carouselItem, $('.slideshow-img'));
+
             $carousel.css('display', 'block');
 
-            $carouselItem.click(function (event) {
-                if (event.target === this) {
-                    hideCarousel();
-                }
-            });
+            setImg($carouselItem);
         });
     });
 }
+
+//настраивает изображение (более высокая функция)
+function setImg($carouselItem) {
+    $carouselItem.each(function () {
+        var $self = $(this);
+        var $img = $self.find('.slideshow-img');
+
+        setCarouselHeight($self, $img);
+    });
+}
+
+/*function alignVertical($item, $parent) {
+    var mt = ($parent.height() - $item.innerHeight() / 2);
+    console.log($parent.height());
+    console.log($item.innerHeight());
+    console.log(mt);
+    $parent.css('top', mt);
+}*/
 
 //строит папку в модальном окне
 function setFolder() {
@@ -97,15 +119,16 @@ function getLinks($holder, prefix) {
     return result;
 }
 
+//настраивает размер изображения
 function setImgSize($wrapper, img) {
     var kW = +$wrapper.width() / +$wrapper.height();
-    var kI = +img.width() / +img.height();
+    var kI = +img.get(0).naturalWidth / +img.get(0).naturalHeight;
     if (kI > kW) {
         img.css({
             width: $wrapper.width(),
             height: 'auto'
         });
-    } else {
+    } else if (kI <= kW) {
         img.css({
             width: 'auto',
             height: $wrapper.height()
