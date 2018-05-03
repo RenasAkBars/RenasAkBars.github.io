@@ -52,8 +52,8 @@
       <file leaf-file-name="ph_gallery.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/ph_gallery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="122" column="23" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
+            <state relative-caret-position="341">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
             </state>
           </provider>
         </entry>
@@ -451,12 +451,12 @@
       <workItem from="1524302525962" duration="33650000" />
       <workItem from="1524762066512" duration="762000" />
       <workItem from="1524984720674" duration="75593000" />
-      <workItem from="1525162102121" duration="62784000" />
+      <workItem from="1525162102121" duration="63149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1619289000" />
+    <option name="totallyTimeSpent" value="1619654000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -786,8 +786,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/ph_gallery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="122" column="23" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
+        <state relative-caret-position="341">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
         </state>
       </provider>
     </entry>

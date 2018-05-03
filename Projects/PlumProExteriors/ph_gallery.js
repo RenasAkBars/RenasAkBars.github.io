@@ -120,14 +120,16 @@ function setImgSize($wrapper, img) {
             width: $wrapper.width(),
             height: 'auto'
         });
-        if (+img.height() > 0) {
+
+/*        if (+img.height() > 0) {
             console.log(+img.height());
             var n = (+$wrapper.height() - +img.height()) / 2;
             $('.carousel-inner').css('top', n);
             // $('.close-slideshow').css('top', 0 - n);
-/*            $('.carousel-controller').css('top', n + 'px');
-            $('.carousel-controller').css('height', +$wrapper.height() + 'px');*/
-        }
+/!*            $('.carousel-controller').css('top', n + 'px');
+            $('.carousel-controller').css('height', +$wrapper.height() + 'px');*!/
+        }*/
+
     } else if (kI <= kW) {
         img.css({
             width: 'auto',
