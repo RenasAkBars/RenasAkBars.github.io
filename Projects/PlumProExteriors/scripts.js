@@ -4,6 +4,33 @@ $('.up-line').click(function () {
     // alert(document.documentElement.clientWidth);
 });
 
+$.fn.extend({
+    animateCss: function(animationName, callback) {
+        var animationEnd = (function(el) {
+            var animations = {
+                animation: 'animationend',
+                OAnimation: 'oAnimationEnd',
+                MozAnimation: 'mozAnimationEnd',
+                WebkitAnimation: 'webkitAnimationEnd',
+            };
+
+            for (var t in animations) {
+                if (el.style[t] !== undefined) {
+                    return animations[t];
+                }
+            }
+        })(document.createElement('div'));
+
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+
+            if (typeof callback === 'function') callback();
+        });
+
+        return this;
+    },
+});
+
 dropdownAnimation();
 
 carouselTextVerticalAlign();
@@ -17,13 +44,15 @@ function dropdownAnimation() {
     $('.dropdown').hover(
         function () {
             if (isLgScreen()) {
-                $dropdownMenu.css('visibility', 'visible').removeClass('fadeOut').addClass('fadeIn');
+                $dropdownMenu.removeClass('fadeOut').css('visibility', 'visible').animateCss('fadeIn');
             } else {
-                $dropdownMenu.removeClass('fadeIn');
+                $dropdownMenu.removeClass('fadeIn').removeClass('fadeOut').css('visibility', 'visible');
             }
         },
         function () {
-            $dropdownMenu.addClass('fadeOut');
+            $dropdownMenu.animateCss('fadeOut', function() {
+                $dropdownMenu.css('visibility', 'hidden');
+            });
         });
 }
 
