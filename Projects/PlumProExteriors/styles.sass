@@ -291,11 +291,12 @@ $aLink: 0.8rem
   cursor: pointer
 #photoGalleryCarousel
   display: none
+  z-index: 100
   & .carousel-inner
     position: fixed
     top: 0
     z-index: 100
-  & .carousel-item
+  & .carousel-element
     background-size: contain !important
     background-position: center center !important
     background-repeat: no-repeat !important
@@ -330,3 +331,17 @@ $aLink: 0.8rem
   right: 0
   bottom: 0
   margin: auto
+
+/* Основной блок */
+.owl-wrapper-outer
+  //border: 1px solid #777
+  //border-radius: 5px
+  overflow: hidden
+  //background: white
+
+/* 1 квадратик карусели */
+.carousel-element
+  //padding: 30px
+  text-align: center
+  //font-size: 300%
+  //border-right: 1px solid #777

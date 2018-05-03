@@ -12,6 +12,38 @@ imgHoverZoom();
 setFolder();
 closeSlideShow();
 
+$(document).ready(function(){
+
+    // Находим блок карусели
+    var carousel = $("#owlCarousel");
+
+    // Запускаем плагин карусели
+    carousel.owlCarousel({
+        singleItem: true // Показывать только 1 блок на всю ширину
+    });
+
+    // Назад
+// При клике на "Назад"
+    $('#js-prev').click(function () {
+
+        // Запускаем перемотку влево
+        carousel.trigger('owl.prev');
+
+        return false;
+    });
+
+// Вперед
+// При клике на "Вперед"
+    $('#js-next').click(function () {
+
+        // Запускаем перемотку вправо
+        carousel.trigger('owl.next');
+
+        return false;
+    });
+
+});
+
 function imgHoverZoom() {
     $('.ph-folder-icon-img').wrap('<div class="icon-img-wrapper"></div>').after('<div class="img-mask"><i class="far fa-folder-open img-mask-icon"></i></div>');
     $('.icon-img-wrapper').attr('data-toggle', dataToggle).attr('data-target', dataTarget);
@@ -69,10 +101,12 @@ function setSlideShow($parent) {
 
     $carouselInner.html('');
     links.forEach(function (link) {
-        $carouselInner.append('<div class="carousel-item text-center"><img href="#photoGalleryCarousel" role="button" data-slide="next" class="slideshow-img" src="' + link + '"></div>');
+        $carouselInner.append('<div class="carousel-element text-center"><img src="' + link + '"></div>');
+        // href="#photoGalleryCarousel" role="button" data-slide="next" class="slideshow-img"
     });
 
-    var $carouselItem = $('.carousel-item');
+
+    var $carouselItem = $('.carousel-element');
 
     $carouselItem.click(function (event) {
         if (event.target === this) {
@@ -83,7 +117,7 @@ function setSlideShow($parent) {
     $('.ph-icon-img-wrapper').each(function (index) {
         $(this).click(function () {
 
-            $carouselInner.children('.carousel-item').removeClass('active').eq(index).addClass('active');
+            $carouselInner.children('.carousel-element').removeClass('active').eq(index).addClass('active');
 
             $carousel.css('display', 'block');
 
