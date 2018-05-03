@@ -50,7 +50,7 @@ function setSlideShow($parent) {
     $('.ph-icon-img').each(function (index) {
         $(this).click(function () {
 
-            $carouselInner.children('.carousel-item').eq(index).addClass('active');
+            $carouselInner.children('.carousel-item').removeClass('active').eq(index).addClass('active');
 
             $carousel.css('display', 'block');
 
@@ -68,14 +68,6 @@ function setImg($carouselItem) {
         setCarouselHeight($self, $img);
     });
 }
-
-/*function alignVertical($item, $parent) {
-    var mt = ($parent.height() - $item.innerHeight() / 2);
-    console.log($parent.height());
-    console.log($item.innerHeight());
-    console.log(mt);
-    $parent.css('top', mt);
-}*/
 
 //строит папку в модальном окне
 function setFolder() {
@@ -128,6 +120,14 @@ function setImgSize($wrapper, img) {
             width: $wrapper.width(),
             height: 'auto'
         });
+        if (+img.height() > 0) {
+            console.log(+img.height());
+            var n = (+$wrapper.height() - +img.height()) / 2;
+            $('.carousel-inner').css('top', n);
+            // $('.close-slideshow').css('top', 0 - n);
+/*            $('.carousel-controller').css('top', n + 'px');
+            $('.carousel-controller').css('height', +$wrapper.height() + 'px');*/
+        }
     } else if (kI <= kW) {
         img.css({
             width: 'auto',
