@@ -4,23 +4,14 @@
 
 @media only screen and (min-width: 992px) {
   .dropdown:hover .dropdown-menu {
-    display: block;
-    visibility: visible;
-    max-height: 400px;
-    opacity: 1;
     margin-top: 0; }
 
   .dropdown {
     position: relative; }
     .dropdown .dropdown-menu {
+      display: block;
       visibility: hidden;
-      max-height: 0;
-      opacity: 0;
-      -webkit-transition: all 0.4s;
-      -moz-transition: all 0.4s;
-      -ms-transition: all 0.4s;
-      -o-transition: all 0.4s;
-      transition: all 0.4s; } }
+      margin-top: 0; } }
 .navbar-brand img {
   height: 100px; }
 
@@ -274,5 +265,29 @@ section.slideshow {
     top: 0;
     right: 0;
     padding: 1rem; }
+
+.ph-folder-icon:hover .img-mask {
+  display: block; }
+
+.img-mask {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  cursor: pointer; }
+
+.img-mask-icon {
+  display: block;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.35);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
 
 /*# sourceMappingURL=styles.css.map */

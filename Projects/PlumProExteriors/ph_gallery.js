@@ -4,9 +4,42 @@ var $modalMainWrapper = $('#phfolder');
 var $carousel = $('#photoGalleryCarousel');
 var $carouselInner = $carousel.find('.carousel-inner-wrapper');
 
+var dataToggle = 'modal';
+var dataTarget = '#' + $modalMainWrapper.attr('id');
+
 setLogo();
+imgHoverZoom();
 setFolder();
 closeSlideShow();
+
+function imgHoverZoom() {
+    $('.ph-folder-icon-img').wrap('<div class="icon-img-wrapper"></div>').after('<div class="img-mask"><i class="far fa-folder-open img-mask-icon"></i></div>');
+    $('.icon-img-wrapper').attr('data-toggle', dataToggle).attr('data-target', dataTarget);
+
+    setMask($phFolderIcon);
+}
+
+function setMask($parent) {
+    $parent.find('.img-mask').each(function () {
+        var $img = $(this).prev('img');
+        var imW = $img.width();
+        console.log($img.outerWidth(true));
+        $(this).css({
+            'width': imW,
+            'height': imW,
+            'line-height': imW
+        });
+    });
+    $parent.find('.icon-img-wrapper').hover(
+        function () {
+            $(this).find('.img-mask').css('display', 'block');
+        },
+        function () {
+            $(this).find('.img-mask').css('display', 'none');
+        }
+    )
+}
+
 
 //задает события для закрытия слайдшоу (карусели) и модального окна (только ESC)
 function closeSlideShow() {
@@ -47,7 +80,7 @@ function setSlideShow($parent) {
         }
     });
 
-    $('.ph-icon-img').each(function (index) {
+    $('.ph-icon-img-wrapper').each(function (index) {
         $(this).click(function () {
 
             $carouselInner.children('.carousel-item').removeClass('active').eq(index).addClass('active');
@@ -71,13 +104,17 @@ function setImg($carouselItem) {
 
 //строит папку в модальном окне
 function setFolder() {
-    $phFolderIcon.children('.ph-folder-icon-img').click(function () {
+    $phFolderIcon.children('.icon-img-wrapper').click(function () {
         var $self = $(this);
         $modal.html('<div class="row modal-inner"></div>');
         var links = getLinks($self.parent(), 'data-pic-mini-');
         var $modalInner = $('.modal-inner');
         links.forEach(function (link) {
-            $modalInner.append('<div class="ph-icon col-6 col-sm-4 col-lg-3 my-3"><img class="card-img-top ph-icon-img" src="' + link + '"></div>');
+            $modalInner.append('<div class="ph-icon col-6 col-sm-4 col-lg-3 my-3"><div class="icon-img-wrapper ph-icon-img-wrapper"><img class="card-img-top ph-icon-img img-thumbnail" src="' + link + '"><div class="img-mask"><i class="fas fa-search-plus img-mask-icon"></i></div></div></div>');
+
+        });
+        $modalMainWrapper.on('shown.bs.modal', function (e) {
+            setMask($('.ph-icon'));
         });
         setSlideShow($self.parent());
     });
