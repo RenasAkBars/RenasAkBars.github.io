@@ -1,50 +1,24 @@
 
 $('.up-line').click(function () {
-    alert(window.innerWidth);
-    // alert(document.documentElement.clientWidth);
+    alert($(document).width());
 });
 
-dropdownAnimation();
-
-carouselTextVerticalAlign();
-addPlums();
-carouselSetHeight();
-animatedSandwich();
-
-function dropdownAnimation() {
-    activeLink();
-    var $dropdownMenu = $('.dropdown-menu');
-    $('.dropdown').hover(
-        function () {
-            if (isLgScreen()) {
-                $dropdownMenu.css('visibility', 'visible').removeClass('fadeOut').addClass('fadeIn');
-            } else {
-                $dropdownMenu.removeClass('fadeIn');
-            }
-        },
-        function () {
-                $dropdownMenu.addClass('fadeOut');
-        });
-}
-
 //---begin nav menu hover code
-function activeLink() {
-    $('.dropdown-toggle').click(function() {
-        if (isLgScreen()) {
-            return location.href = $(this).attr('href');
-        }
-    });
-}
+$('.dropdown-toggle').click(function(e) {
+    if ($(document).width() > 992) {
+/*        var url = $(this).attr('href');
+        if (url !== '#') {
+            window.location.href = url;
+        }*/
+        return location.href = $(this).attr('href');
+        // return false;
+    }
+});
 //---end nav menu hover code
 
-//---begin is Screen Large code
-function isLgScreen() {
-    return window.innerWidth /*$(document).width()*/ > 992;
-}
-//---end is Screen Large code
 
 //---begin carousel text vertical align code
-function carouselTextVerticalAlign() {$(document).ready(function () {
+$(document).ready(function () {
     var $carText = $('.carousel-text');
     var $carParent = $('section.slideshow');
 
@@ -60,42 +34,35 @@ function carouselTextVerticalAlign() {$(document).ready(function () {
         $item.css('top', mt);
     }
 });
-}
 //---end carousel text vertical align code
 
 
 //---begin our services add plums code
-function addPlums() {
-    $('.sub-menu .nav-color, footer .services-link, .parallax-text h1').prepend('<span class="plumicon plum-plum"></span> ');
-}
+$('.sub-menu .nav-color, footer .services-link, .parallax-text h1').prepend('<span class="plumicon plum-plum"></span> ');
 //---end our services add plums code
 
 
 //---begin carousel set height code
-function carouselSetHeight() {
-    var $carItem = $('.carousel-item');
+var $carItem = $('.carousel-item');
 
-    setHeight($carItem, 100);// устанавливаем высоту окна при первой загрузке страницы
-    $(window).resize( setCarItem ); // обновляем при изменении размеров окна
+setHeight($carItem, 100);// устанавливаем высоту окна при первой загрузке страницы
+$(window).resize( setCarItem ); // обновляем при изменении размеров окна
 
-    function setCarItem() {
-        setHeight($carItem, 100);
-    }
+function setCarItem() {
+    setHeight($carItem, 100);
+}
 
-    function setHeight($item, percentage) {
-        var h = $(window).height() * percentage / 100 + 'px';
-        $item.css({
-            height: h
-        });
-    }
+function setHeight($item, percentage) {
+    var h = $(window).height() * percentage / 100 + 'px';
+    $item.css({
+        height: h
+    });
 }
 //---end carousel set height code
 
 
 //---begin animated sandwich code
-function animatedSandwich() {
-    $(".sandwich").click(function() {
-        $(".sandwich").toggleClass("active");
-    });
-}
+$(".sandwich").click(function() {
+    $(".sandwich").toggleClass("active");
+});
 //---end animated sandwich code

@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+            <state relative-caret-position="302">
+              <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -31,8 +31,8 @@
       <file leaf-file-name="services.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/services.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+            <state relative-caret-position="33">
+              <caret line="351" column="80" selection-start-line="351" selection-start-column="80" selection-end-line="351" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -40,8 +40,13 @@
       <file leaf-file-name="photogallery.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/photogallery.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="132">
               <caret line="522" column="33" selection-start-line="522" selection-start-column="13" selection-end-line="522" selection-end-column="33" />
+=======
+            <state relative-caret-position="370">
+              <caret line="525" column="63" selection-start-line="525" selection-start-column="44" selection-end-line="525" selection-end-column="63" />
+>>>>>>> parent of 047a6a7... 3 May 2018
               <folding>
                 <element signature="e#8003#8010#1" expanded="true" />
               </folding>
@@ -52,8 +57,13 @@
       <file leaf-file-name="ph_gallery.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/ph_gallery.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="120">
               <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+=======
+            <state relative-caret-position="341">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+>>>>>>> parent of 047a6a7... 3 May 2018
             </state>
           </provider>
         </entry>
@@ -61,26 +71,12 @@
       <file leaf-file-name="styles.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-344">
               <caret line="298" column="21" selection-start-line="298" selection-start-column="21" selection-end-line="298" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="303" selection-start-line="303" selection-end-line="303" />
+=======
+            <state relative-caret-position="169">
+              <caret line="106" column="80" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -88,8 +84,23 @@
       <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="169">
+              <caret line="106" column="80" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
+>>>>>>> parent of 047a6a7... 3 May 2018
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="256">
               <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+=======
+            <state relative-caret-position="387">
+              <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="20" />
+>>>>>>> parent of 047a6a7... 3 May 2018
             </state>
           </provider>
         </entry>
@@ -97,12 +108,34 @@
       <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="26" selection-end-column="11" />
+<<<<<<< HEAD
+            <state relative-caret-position="421">
+              <caret line="303" selection-start-line="303" selection-end-line="303" />
+=======
+            <state relative-caret-position="323">
+              <caret line="31" selection-start-line="31" selection-end-line="34" selection-end-column="5" />
+>>>>>>> parent of 047a6a7... 3 May 2018
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="278" selection-start-line="278" selection-end-line="278" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projects/landing_on_bootstrap/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="171" selection-start-line="171" selection-end-line="225" selection-end-column="10" />
               <folding>
-                <element signature="e#1161#1541#0" />
-                <element signature="n#!!block;n#f#0" />
-                <element signature="n#!!block;n#animatedSandwich#0" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,6 +155,21 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
+=======
+      <find>&lt;ul&gt;</find>
+      <find>col-lg-2</find>
+      <find>images/photogalery</find>
+      <find>col-lg-2 col-md-3 col-sm-4 col-6</find>
+      <find>&lt;div class=&quot;col-lg-2 col-md-3 col-sm-4 col-6 my-3&quot;&gt;</find>
+      <find>col-lg-2 col-md-3 col-sm-4 col-6 my-3</find>
+      <find>data-pic-01</find>
+      <find>data-pic-</find>
+      <find>exampleModalLong</find>
+      <find>card-img-top</find>
+      <find>er-icon-img&quot; src</find>
+      <find>data-toggle=&quot;modal&quot; data-target=&quot;#phfolder&quot;</find>
+>>>>>>> parent of 047a6a7... 3 May 2018
       <find>img class=&quot;card-img-top ph-folder-icon-img&quot;</find>
       <find>data-pic-mini-0</find>
       <find>data-pic-0</find>
@@ -131,11 +179,14 @@
       <find>$carItem</find>
       <find>$plumBack</find>
       <find>wrapper</find>
+      <find>click</find>
+      <find>setSlideShow</find>
       <find>photoGalleryCarouselOn</find>
       <find>alignVertical</find>
       <find>console</find>
       <find>setImg</find>
       <find>setCarouselHeight</find>
+<<<<<<< HEAD
       <find>&lt;div class=&quot;dropdown-menu sub-menu</find>
       <find>card-img-top ph-folder-icon-img</find>
       <find>setImgSize</find>
@@ -152,6 +203,9 @@
       <find>setSlideShow</find>
       <find>carousel-item</find>
       <find>opa</find>
+=======
+      <find>setImgSize</find>
+>>>>>>> parent of 047a6a7... 3 May 2018
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -203,11 +257,11 @@
         <option value="$PROJECT_DIR$/Projects/Aircraft list/data.json" />
         <option value="$PROJECT_DIR$/Projects/Aircraft list/index.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/styles.css" />
-        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js" />
-        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/index.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/services.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/about.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/contact.html" />
+        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js" />
+        <option value="$PROJECT_DIR$/Projects/PlumProExteriors/index.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/photogallery.html" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/ph_gallery.js" />
         <option value="$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass" />
@@ -222,12 +276,10 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/Libs/animate/package/package.json" />
       <path value="$PROJECT_DIR$/Libs/anime-master/package.json" />
       <path value="$PROJECT_DIR$/Libs/bootstrap/package_1_bootstrap-4.1.0/package.json" />
       <path value="$PROJECT_DIR$/Libs/jquery-ui-1.12.1.custom/package.json" />
       <path value="$PROJECT_DIR$/Libs/parallax.js-1.5.0/package.json" />
-      <path value="$PROJECT_DIR$/Projects/PlumProExteriors/libs/animate/package.json" />
       <path value="$PROJECT_DIR$/Projects/PlumProExteriors/libs/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/Projects/PlumProExteriors/libs/parallax.js-1.5.0/package.json" />
       <path value="$PROJECT_DIR$/Study/JS/carhartl-jquery-cookie-92b7715/package.json" />
@@ -267,13 +319,6 @@
               <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="Projects" type="462c0819:PsiDirectoryNode" />
               <item name="PlumProExteriors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RenasAkBars.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="Projects" type="462c0819:PsiDirectoryNode" />
-              <item name="PlumProExteriors" type="462c0819:PsiDirectoryNode" />
-              <item name="styles.sass" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="RenasAkBars.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -452,12 +497,20 @@
       <workItem from="1524302525962" duration="33650000" />
       <workItem from="1524762066512" duration="762000" />
       <workItem from="1524984720674" duration="75593000" />
+<<<<<<< HEAD
       <workItem from="1525162102121" duration="88594000" />
+=======
+      <workItem from="1525162102121" duration="63149000" />
+>>>>>>> parent of 047a6a7... 3 May 2018
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1645099000" />
+=======
+    <option name="totallyTimeSpent" value="1619654000" />
+>>>>>>> parent of 047a6a7... 3 May 2018
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -513,6 +566,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/01 Markup/final project/styles.css" />
     <entry file="file://$PROJECT_DIR$/JS/JS.html" />
     <entry file="file://$PROJECT_DIR$/JS/JS.css" />
     <entry file="file://$PROJECT_DIR$/JS/libraries_and_plugins/eliptext/eliptext.js" />
@@ -638,6 +692,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../boo/package/README.md" />
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../boo/package/scss/_carousel.scss" />
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/libs/bootstrap/scss/bootstrap.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -660,6 +721,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/study final project/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/study final project/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -699,17 +774,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="81" />
+        <state relative-caret-position="169">
+          <caret line="106" column="80" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/services.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="351" column="80" selection-start-line="351" selection-start-column="80" selection-end-line="351" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+        <state relative-caret-position="302">
+          <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -718,65 +800,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/services.html">
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/study final project/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="120" column="50" selection-start-line="120" selection-start-column="50" selection-end-line="120" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/study final project/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="448" column="21" lean-forward="true" selection-start-line="448" selection-start-column="21" selection-end-line="448" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="303" selection-start-line="303" selection-end-line="303" />
+        <state relative-caret-position="169">
+          <caret line="106" column="80" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <element signature="e#1161#1541#0" />
-            <element signature="n#!!block;n#f#0" />
-            <element signature="n#!!block;n#animatedSandwich#0" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="31" selection-start-line="31" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/study final project/effects.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/about.html">
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+<<<<<<< HEAD
+        <state relative-caret-position="421">
+          <caret line="303" selection-start-line="303" selection-end-line="303" />
+=======
+        <state relative-caret-position="489">
+          <caret line="278" selection-start-line="278" selection-end-line="278" />
+>>>>>>> parent of 047a6a7... 3 May 2018
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/photogallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="525" column="63" selection-start-line="525" selection-start-column="44" selection-end-line="525" selection-end-column="63" />
+          <folding>
+            <element signature="e#8003#8010#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-344">
           <caret line="298" column="21" selection-start-line="298" selection-start-column="21" selection-end-line="298" selection-end-column="21" />
         </state>
@@ -786,16 +848,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+=======
+        <state relative-caret-position="387">
+          <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="20" />
+>>>>>>> parent of 047a6a7... 3 May 2018
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/photogallery.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="132">
           <caret line="522" column="33" selection-start-line="522" selection-start-column="13" selection-end-line="522" selection-end-column="33" />
           <folding>
             <element signature="e#8003#8010#1" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="341">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+>>>>>>> parent of 047a6a7... 3 May 2018
         </state>
       </provider>
     </entry>

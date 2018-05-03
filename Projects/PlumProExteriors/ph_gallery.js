@@ -4,14 +4,11 @@ var $modalMainWrapper = $('#phfolder');
 var $carousel = $('#photoGalleryCarousel');
 var $carouselInner = $carousel.find('.carousel-inner-wrapper');
 
-var dataToggle = 'modal';
-var dataTarget = '#' + $modalMainWrapper.attr('id');
-
 setLogo();
-imgHoverZoom();
 setFolder();
 closeSlideShow();
 
+<<<<<<< HEAD
 $(document).ready(function(){
 
     // Находим блок карусели
@@ -73,6 +70,8 @@ function setMask($parent) {
 }
 
 
+=======
+>>>>>>> parent of 047a6a7... 3 May 2018
 //задает события для закрытия слайдшоу (карусели) и модального окна (только ESC)
 function closeSlideShow() {
     var $btn = $('.close-slideshow');
@@ -114,7 +113,7 @@ function setSlideShow($parent) {
         }
     });
 
-    $('.ph-icon-img-wrapper').each(function (index) {
+    $('.ph-icon-img').each(function (index) {
         $(this).click(function () {
 
             $carouselInner.children('.carousel-element').removeClass('active').eq(index).addClass('active');
@@ -138,17 +137,13 @@ function setImg($carouselItem) {
 
 //строит папку в модальном окне
 function setFolder() {
-    $phFolderIcon.children('.icon-img-wrapper').click(function () {
+    $phFolderIcon.children('.ph-folder-icon-img').click(function () {
         var $self = $(this);
         $modal.html('<div class="row modal-inner"></div>');
         var links = getLinks($self.parent(), 'data-pic-mini-');
         var $modalInner = $('.modal-inner');
         links.forEach(function (link) {
-            $modalInner.append('<div class="ph-icon col-6 col-sm-4 col-lg-3 my-3"><div class="icon-img-wrapper ph-icon-img-wrapper"><img class="card-img-top ph-icon-img img-thumbnail" src="' + link + '"><div class="img-mask"><i class="fas fa-search-plus img-mask-icon"></i></div></div></div>');
-
-        });
-        $modalMainWrapper.on('shown.bs.modal', function (e) {
-            setMask($('.ph-icon'));
+            $modalInner.append('<div class="ph-icon col-6 col-sm-4 col-lg-3 my-3"><img class="card-img-top ph-icon-img" src="' + link + '"></div>');
         });
         setSlideShow($self.parent());
     });
