@@ -4,42 +4,13 @@ var $modalMainWrapper = $('#phfolder');
 var $carousel = $('#photoGalleryCarousel');
 var $carouselInner = $carousel.find('.carousel-inner-wrapper');
 
+var dataToggle = 'modal';
+var dataTarget = '#' + $modalMainWrapper.attr('id');
+
 setLogo();
+imgHoverZoom();
 setFolder();
 closeSlideShow();
-
-<<<<<<< HEAD
-$(document).ready(function(){
-
-    // Находим блок карусели
-    var carousel = $("#owlCarousel");
-
-    // Запускаем плагин карусели
-    carousel.owlCarousel({
-        singleItem: true // Показывать только 1 блок на всю ширину
-    });
-
-    // Назад
-// При клике на "Назад"
-    $('#js-prev').click(function () {
-
-        // Запускаем перемотку влево
-        carousel.trigger('owl.prev');
-
-        return false;
-    });
-
-// Вперед
-// При клике на "Вперед"
-    $('#js-next').click(function () {
-
-        // Запускаем перемотку вправо
-        carousel.trigger('owl.next');
-
-        return false;
-    });
-
-});
 
 function imgHoverZoom() {
     $('.ph-folder-icon-img').wrap('<div class="icon-img-wrapper"></div>').after('<div class="img-mask"><i class="far fa-folder-open img-mask-icon"></i></div>');
@@ -70,8 +41,6 @@ function setMask($parent) {
 }
 
 
-=======
->>>>>>> parent of 047a6a7... 3 May 2018
 //задает события для закрытия слайдшоу (карусели) и модального окна (только ESC)
 function closeSlideShow() {
     var $btn = $('.close-slideshow');
@@ -100,12 +69,10 @@ function setSlideShow($parent) {
 
     $carouselInner.html('');
     links.forEach(function (link) {
-        $carouselInner.append('<div class="carousel-element text-center"><img src="' + link + '"></div>');
-        // href="#photoGalleryCarousel" role="button" data-slide="next" class="slideshow-img"
+        $carouselInner.append('<div class="carousel-item text-center"><img href="#photoGalleryCarousel" role="button" data-slide="next" class="slideshow-img" src="' + link + '"></div>');
     });
 
-
-    var $carouselItem = $('.carousel-element');
+    var $carouselItem = $('.carousel-item');
 
     $carouselItem.click(function (event) {
         if (event.target === this) {
@@ -113,10 +80,10 @@ function setSlideShow($parent) {
         }
     });
 
-    $('.ph-icon-img').each(function (index) {
+    $('.ph-icon-img-wrapper').each(function (index) {
         $(this).click(function () {
 
-            $carouselInner.children('.carousel-element').removeClass('active').eq(index).addClass('active');
+            $carouselInner.children('.carousel-item').removeClass('active').eq(index).addClass('active');
 
             $carousel.css('display', 'block');
 
@@ -137,13 +104,17 @@ function setImg($carouselItem) {
 
 //строит папку в модальном окне
 function setFolder() {
-    $phFolderIcon.children('.ph-folder-icon-img').click(function () {
+    $phFolderIcon.children('.icon-img-wrapper').click(function () {
         var $self = $(this);
         $modal.html('<div class="row modal-inner"></div>');
         var links = getLinks($self.parent(), 'data-pic-mini-');
         var $modalInner = $('.modal-inner');
         links.forEach(function (link) {
-            $modalInner.append('<div class="ph-icon col-6 col-sm-4 col-lg-3 my-3"><img class="card-img-top ph-icon-img" src="' + link + '"></div>');
+            $modalInner.append('<div class="ph-icon col-6 col-sm-4 col-lg-3 my-3"><div class="icon-img-wrapper ph-icon-img-wrapper"><img class="card-img-top ph-icon-img img-thumbnail" src="' + link + '"><div class="img-mask"><i class="fas fa-search-plus img-mask-icon"></i></div></div></div>');
+
+        });
+        $modalMainWrapper.on('shown.bs.modal', function (e) {
+            setMask($('.ph-icon'));
         });
         setSlideShow($self.parent());
     });
@@ -187,14 +158,14 @@ function setImgSize($wrapper, img) {
             height: 'auto'
         });
 
-/*        if (+img.height() > 0) {
-            console.log(+img.height());
-            var n = (+$wrapper.height() - +img.height()) / 2;
-            $('.carousel-inner').css('top', n);
-            // $('.close-slideshow').css('top', 0 - n);
-/!*            $('.carousel-controller').css('top', n + 'px');
-            $('.carousel-controller').css('height', +$wrapper.height() + 'px');*!/
-        }*/
+        /*        if (+img.height() > 0) {
+                    console.log(+img.height());
+                    var n = (+$wrapper.height() - +img.height()) / 2;
+                    $('.carousel-inner').css('top', n);
+                    // $('.close-slideshow').css('top', 0 - n);
+        /!*            $('.carousel-controller').css('top', n + 'px');
+                    $('.carousel-controller').css('height', +$wrapper.height() + 'px');*!/
+                }*/
 
     } else if (kI <= kW) {
         img.css({

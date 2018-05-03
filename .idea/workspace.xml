@@ -41,8 +41,13 @@
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/photogallery.html">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="132">
               <caret line="522" column="33" selection-start-line="522" selection-start-column="13" selection-end-line="522" selection-end-column="33" />
+=======
+            <state relative-caret-position="370">
+              <caret line="525" column="63" selection-start-line="525" selection-start-column="44" selection-end-line="525" selection-end-column="63" />
+>>>>>>> parent of 047a6a7... 3 May 2018
 =======
             <state relative-caret-position="370">
               <caret line="525" column="63" selection-start-line="525" selection-start-column="44" selection-end-line="525" selection-end-column="63" />
@@ -58,8 +63,13 @@
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/ph_gallery.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="120">
               <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+=======
+            <state relative-caret-position="341">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+>>>>>>> parent of 047a6a7... 3 May 2018
 =======
             <state relative-caret-position="341">
               <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
@@ -72,8 +82,10 @@
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="-344">
               <caret line="298" column="21" selection-start-line="298" selection-start-column="21" selection-end-line="298" selection-end-column="21" />
+=======
 =======
             <state relative-caret-position="169">
               <caret line="106" column="80" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
@@ -84,13 +96,29 @@
       <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/contact.html">
           <provider selected="true" editor-type-id="text-editor">
+>>>>>>> parent of 047a6a7... 3 May 2018
             <state relative-caret-position="169">
               <caret line="106" column="80" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="169">
+              <caret line="106" column="80" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
+>>>>>>> parent of 047a6a7... 3 May 2018
+=======
+            <state relative-caret-position="387">
+              <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="20" />
 >>>>>>> parent of 047a6a7... 3 May 2018
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/about.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,6 +140,13 @@
             <state relative-caret-position="421">
               <caret line="303" selection-start-line="303" selection-end-line="303" />
 =======
+            <state relative-caret-position="323">
+              <caret line="31" selection-start-line="31" selection-end-line="34" selection-end-column="5" />
+>>>>>>> parent of 047a6a7... 3 May 2018
+=======
+      <file leaf-file-name="scripts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/scripts.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="31" selection-start-line="31" selection-end-line="34" selection-end-column="5" />
 >>>>>>> parent of 047a6a7... 3 May 2018
@@ -156,7 +191,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 047a6a7... 3 May 2018
       <find>&lt;ul&gt;</find>
       <find>col-lg-2</find>
       <find>images/photogalery</find>
@@ -169,6 +207,9 @@
       <find>card-img-top</find>
       <find>er-icon-img&quot; src</find>
       <find>data-toggle=&quot;modal&quot; data-target=&quot;#phfolder&quot;</find>
+<<<<<<< HEAD
+>>>>>>> parent of 047a6a7... 3 May 2018
+=======
 >>>>>>> parent of 047a6a7... 3 May 2018
       <find>img class=&quot;card-img-top ph-folder-icon-img&quot;</find>
       <find>data-pic-mini-0</find>
@@ -187,6 +228,7 @@
       <find>setImg</find>
       <find>setCarouselHeight</find>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <find>&lt;div class=&quot;dropdown-menu sub-menu</find>
       <find>card-img-top ph-folder-icon-img</find>
       <find>setImgSize</find>
@@ -203,6 +245,9 @@
       <find>setSlideShow</find>
       <find>carousel-item</find>
       <find>opa</find>
+=======
+      <find>setImgSize</find>
+>>>>>>> parent of 047a6a7... 3 May 2018
 =======
       <find>setImgSize</find>
 >>>>>>> parent of 047a6a7... 3 May 2018
@@ -498,7 +543,11 @@
       <workItem from="1524762066512" duration="762000" />
       <workItem from="1524984720674" duration="75593000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1525162102121" duration="88594000" />
+=======
+      <workItem from="1525162102121" duration="63149000" />
+>>>>>>> parent of 047a6a7... 3 May 2018
 =======
       <workItem from="1525162102121" duration="63149000" />
 >>>>>>> parent of 047a6a7... 3 May 2018
@@ -507,7 +556,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1645099000" />
+=======
+    <option name="totallyTimeSpent" value="1619654000" />
+>>>>>>> parent of 047a6a7... 3 May 2018
 =======
     <option name="totallyTimeSpent" value="1619654000" />
 >>>>>>> parent of 047a6a7... 3 May 2018
@@ -817,8 +870,13 @@
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.css">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="421">
           <caret line="303" selection-start-line="303" selection-end-line="303" />
+=======
+        <state relative-caret-position="489">
+          <caret line="278" selection-start-line="278" selection-end-line="278" />
+>>>>>>> parent of 047a6a7... 3 May 2018
 =======
         <state relative-caret-position="489">
           <caret line="278" selection-start-line="278" selection-end-line="278" />
@@ -837,6 +895,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/styles.sass">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="-344">
@@ -864,6 +923,18 @@
             <element signature="e#8003#8010#1" expanded="true" />
           </folding>
 =======
+        <state relative-caret-position="341">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+>>>>>>> parent of 047a6a7... 3 May 2018
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Projects/PlumProExteriors/ph_gallery.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
 >>>>>>> parent of 047a6a7... 3 May 2018

@@ -32,18 +32,20 @@ $menuFontSize: 1.2rem
 
 @media only screen and (min-width: 992px)
   .dropdown:hover .dropdown-menu
-    display: block
-    visibility: visible
-    max-height: 400px
-    opacity: 1
+    //display: block
+    //visibility: visible
+    //max-height: 400px
+    //opacity: 1
     margin-top: 0
   .dropdown
     position: relative
     & .dropdown-menu
+      display: block
       visibility: hidden
-      max-height: 0
-      opacity: 0
-      @include transition(all 0.4s)
+      margin-top: 0
+//max-height: 0
+//opacity: 0
+//@include transition(all 0.4s)
 .navbar-brand img
   height: 100px
 
@@ -289,12 +291,11 @@ $aLink: 0.8rem
   cursor: pointer
 #photoGalleryCarousel
   display: none
-  z-index: 100
   & .carousel-inner
     position: fixed
     top: 0
     z-index: 100
-  & .carousel-element
+  & .carousel-item
     background-size: contain !important
     background-position: center center !important
     background-repeat: no-repeat !important
@@ -306,8 +307,7 @@ $aLink: 0.8rem
     right: 0
     padding: 1rem
   & .carousel-controller
-<<<<<<< HEAD
-    //position: relative
+//position: relative
 
 .ph-folder-icon:hover .img-mask
   display: block
@@ -330,20 +330,3 @@ $aLink: 0.8rem
   right: 0
   bottom: 0
   margin: auto
-
-/* Основной блок */
-.owl-wrapper-outer
-  //border: 1px solid #777
-  //border-radius: 5px
-  overflow: hidden
-  //background: white
-
-/* 1 квадратик карусели */
-.carousel-element
-  //padding: 30px
-  text-align: center
-  //font-size: 300%
-  //border-right: 1px solid #777
-=======
-    //position: relative
->>>>>>> parent of 047a6a7... 3 May 2018
