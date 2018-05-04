@@ -1,3 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Hind:400,700");
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700");
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Khand:400,700");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+.ft1 {
+  font-family: "Josefin Sans", sans-serif; }
+
+.ft2 {
+  font-family: "Hind", sans-serif; }
+
+.ft3 {
+  font-family: "Catamaran", sans-serif; }
+
+.ft4 {
+  font-family: "Philosopher", sans-serif; }
+
+.ft5 {
+  font-family: "Fira Sans Condensed", sans-serif; }
+
+.ft6 {
+  font-family: "Khand", sans-serif; }
+
+.ft7, body {
+  font-family: "Alegreya Sans SC", sans-serif; }
+
+.ft8, .carousel-text h1.carousel-text-header {
+  font-family: "Averia Serif Libre", cursive; }
+
+.ft9 {
+  font-family: "Dosis", sans-serif; }
+
 .item-disabled {
   display: none; }
 
@@ -158,6 +194,7 @@ section.slideshow {
   z-index: 10; }
 
 .carousel-text h1.carousel-text-header {
+  font-family: "Averia Serif Libre", cursive;
   font-size: 2.1rem;
   color: white;
   text-shadow: 0 0 3px #aa226c, 0 5px 8px rgba(0, 0, 0, 0.42); }

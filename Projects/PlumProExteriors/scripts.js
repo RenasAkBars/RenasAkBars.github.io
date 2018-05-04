@@ -48,30 +48,54 @@ function hideIcons(className) {
 
 function dropdownAnimation() {
     activeLink();
-    var $dropdownMenu = $('.dropdown-menu');
-    $('.dropdown').hover(
-        function () {
-            if (isLgScreen()) {
-                $dropdownMenu.removeClass('fadeOut').css('visibility', 'visible').animateCss('fadeIn');
-            } else {
-                $dropdownMenu.removeClass('fadeIn').removeClass('fadeOut').css('visibility', 'visible');
-            }
-        },
-        function () {
-            $dropdownMenu.animateCss('fadeOut', function() {
-                $dropdownMenu.css('visibility', 'hidden');
+    var $dropdown = $('.dropdown');
+    $dropdown.each(function () {
+        var $self = $(this);
+        var $dropdownMenu = $self.find('.dropdown-menu');
+
+        $self.hover(
+            function () {
+                if (isLgScreen()) {
+                    // $dropdownMenu.removeClass('fadeOut').css('visibility', 'visible').animateCss('fadeIn');
+
+                    $dropdownMenu.removeClass('fadeOut').css('visibility', 'visible').animateCss('fadeIn', function() {
+                        $dropdownMenu.css('visibility', 'visible');
+                    });
+                } else {
+                    $dropdownMenu.removeClass('fadeIn').removeClass('fadeOut').css('visibility', 'visible');
+                }
+            },
+            function () {
+                if (isLgScreen()) {
+                $dropdownMenu.animateCss('fadeOut', function() {
+                    $dropdownMenu.css('visibility', 'hidden');
+                });
+                } else {
+                    $dropdownMenu.removeClass('fadeIn').removeClass('fadeOut').css('visibility', 'visible');
+                }
             });
+
+        $(window).resize( setItem );
+
+        function setItem() {
+            if (isLgScreen()) {
+                $dropdownMenu.css('visibility', 'hidden');
+            } else {
+                $dropdownMenu.css('visibility', 'visible');
+            }
+            $dropdownMenu.removeClass('fadeIn').removeClass('fadeOut')
+        }
+    });
+    function activeLink() {
+        $('.dropdown-toggle').click(function() {
+            if (isLgScreen()) {
+                return location.href = $(this).attr('href');
+            }
         });
+    }
 }
 
 //---begin nav menu hover code
-function activeLink() {
-    $('.dropdown-toggle').click(function() {
-        if (isLgScreen()) {
-            return location.href = $(this).attr('href');
-        }
-    });
-}
 //---end nav menu hover code
 
 //---begin is Screen Large code
