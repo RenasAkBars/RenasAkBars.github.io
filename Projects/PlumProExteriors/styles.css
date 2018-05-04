@@ -319,4 +319,10 @@ button.form-submit-button {
   button.form-submit-button :hover {
     color: #aa226c; }
 
+.aboutSlideShow p {
+  line-height: 1.2; }
+  @media (min-width: 768px) {
+    .aboutSlideShow p {
+      line-height: 1.5; } }
+
 /*# sourceMappingURL=styles.css.map */
