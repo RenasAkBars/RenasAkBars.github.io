@@ -1,3 +1,6 @@
+.item-disabled {
+  display: none; }
+
 ::selection {
   background-color: rgba(113, 191, 69, 0.7);
   color: #272636 !important; }
@@ -300,9 +303,20 @@ section.slideshow {
 .review-nav-item a.review-nav-tab.active {
   color: #333056;
   font-size: 1.5rem;
-  font-weight: bold; }
+  font-weight: bold;
+  background: none; }
 .review-nav-item a.review-nav-tab {
   color: #333056;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  background: none; }
+
+.nav-pills a.review-nav-tab.active {
+  background: rgba(165, 161, 229, 0.44); }
+
+button.form-submit-button {
+  background-color: rgba(165, 161, 229, 0.44);
+  color: #333056; }
+  button.form-submit-button :hover {
+    color: #aa226c; }
 
 /*# sourceMappingURL=styles.css.map */

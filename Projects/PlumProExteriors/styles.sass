@@ -3,6 +3,9 @@
 @import "libs/bootstrap/scss/_variables.scss"
 @import "libs/bootstrap/scss/mixins/_breakpoints.scss"
 
+.item-disabled
+  display: none
+
 $violet: #aa226c
 $violetDark: #6a1442
 $plum: #4e4981
@@ -346,7 +349,17 @@ $slideShowBtnColor: rgba(256,256,256,0.35)
     color: $plumDark
     font-size: 1.5rem
     font-weight: bold
+    background: none
   & a.review-nav-tab
     color: $plumDark
     font-size: 1.5rem
+    background: none
     //font-weight: bold
+.nav-pills
+  & a.review-nav-tab.active
+    background: $plumLight
+button.form-submit-button
+  background-color: $plumLight
+  color: $plumDark
+  & :hover
+    color: $violet

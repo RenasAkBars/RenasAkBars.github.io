@@ -38,6 +38,14 @@ addPlums();
 carouselSetHeight();
 animatedSandwich();
 
+hideIcons('yelp-link');
+hideIcons('google-link');
+
+
+function hideIcons(className) {
+    $('.' + className).addClass('item-disabled');
+}
+
 function dropdownAnimation() {
     activeLink();
     var $dropdownMenu = $('.dropdown-menu');
@@ -71,6 +79,12 @@ function isLgScreen() {
     return window.innerWidth /*$(document).width()*/ > 992;
 }
 //---end is Screen Large code
+
+//---begin is Screen Small code
+function isSmScreen() {
+    return window.innerWidth /*$(document).width()*/ > 576;
+}
+//---end is Screen Small code
 
 //---begin carousel text vertical align code
 function carouselTextVerticalAlign() {$(document).ready(function () {
