@@ -325,4 +325,15 @@ button.form-submit-button {
     .aboutSlideShow p {
       line-height: 1.5; } }
 
+.contact-icon {
+  font-size: 10rem;
+  margin-top: -2rem; }
+
+.contact-icon-link {
+  color: #333056;
+  margin-right: 0.5rem;
+  font-size: 2.5rem; }
+  .contact-icon-link :hover {
+    color: #aa226c; }
+
 /*# sourceMappingURL=styles.css.map */
