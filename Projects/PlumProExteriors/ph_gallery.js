@@ -20,16 +20,9 @@ function imgHoverZoom() {
 }
 
 function setMask($parent) {
-    $parent.find('.img-mask').each(function () {
-        var $img = $(this).prev('img');
-        var imW = $img.width();
-        console.log($img.outerWidth(true));
-        $(this).css({
-            'width': imW,
-            'height': imW,
-            'line-height': imW
-        });
-    });
+
+    setMaskSize($parent);
+
     $parent.find('.icon-img-wrapper').hover(
         function () {
             $(this).find('.img-mask').css('display', 'block');
@@ -40,6 +33,22 @@ function setMask($parent) {
     )
 }
 
+function setMaskSize($parent) {
+    $parent.find('.img-mask').each(function () {
+        var $img = $(this).prev('img');
+        var imW = $img.width();
+        $(this).css({
+            'width': imW,
+            'height': imW,
+            'line-height': imW
+        });
+    });
+    $(window).resize( setItem ); // обновляем при изменении размеров окна
+
+    function setItem() {
+        setMaskSize($parent);
+    }
+}
 
 //задает события для закрытия слайдшоу (карусели) и модального окна (только ESC)
 function closeSlideShow() {

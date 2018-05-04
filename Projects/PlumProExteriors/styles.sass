@@ -287,6 +287,8 @@ $aLink: 0.8rem
   background: rgba(255, 255, 255, 0.6)
   color: $plum
 
+$slideShowBtnColor: rgba(256,256,256,0.35)
+
 .ph-folder-icon img, .ph-icon-img
   cursor: pointer
 #photoGalleryCarousel
@@ -306,6 +308,7 @@ $aLink: 0.8rem
     top: 0
     right: 0
     padding: 1rem
+    color: $slideShowBtnColor
   & .carousel-controller
 //position: relative
 
@@ -325,8 +328,25 @@ $aLink: 0.8rem
 .img-mask-icon
   display: block
   font-size: 2rem
-  color: rgba(256,256,256,0.35)
+  color: $slideShowBtnColor
   position: absolute
   right: 0
   bottom: 0
   margin: auto
+
+.review-links
+  & .review-icon-link
+    font-size: 4rem
+    color: inherit
+    //margin: 0 4rem
+    & :hover
+      color: $violet
+.review-nav-item
+  & a.review-nav-tab.active
+    color: $plumDark
+    font-size: 1.5rem
+    font-weight: bold
+  & a.review-nav-tab
+    color: $plumDark
+    font-size: 1.5rem
+    //font-weight: bold
