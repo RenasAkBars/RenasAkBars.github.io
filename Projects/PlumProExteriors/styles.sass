@@ -23,7 +23,10 @@
 @import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,400i,700,700i')
 //font-family: 'Dosis', sans-serif
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,700')
-
+//font-family: 'Signika', sans-serif
+@import url('https://fonts.googleapis.com/css?family=Signika:400,700')
+//font-family: 'Neuton', serif
+@import url('https://fonts.googleapis.com/css?family=Neuton:400,400i,700')
 .ft1
   font-family: 'Josefin Sans', sans-serif
 .ft2
@@ -42,10 +45,14 @@
   font-family: 'Averia Serif Libre', cursive
 .ft9
   font-family: 'Dosis', sans-serif
+.ft10
+  font-family: 'Signika', sans-serif
+.ft11
+  font-family: 'Neuton', serif
 
 
 body
-  @extend .ft7
+  @extend .ft11
 
 .item-disabled
   display: none
@@ -62,7 +69,7 @@ $green: #71bf45
 $greenTr: rgba(113, 191, 69, 0.70)
 $white: white
 
-$upLineFontSize: 1.1rem
+$upLineFontSize: 1.3rem
 $menuFontSize: 1.2rem
 
 @mixin  transition ($code...)
@@ -108,7 +115,7 @@ $menuFontSize: 1.2rem
   padding: 5px
   font-size: $upLineFontSize
   &:hover
-    color: $plumLight
+    color: $plumDark
 
 nav
   background-color: $plumBack
@@ -219,6 +226,8 @@ footer h4
 .footer-icon-link
   @extend .up-icon-link
   font-size: $upLineFontSize * 2
+  &:hover
+    color: $violet
 footer p
   color: $white
 .footer-links
@@ -252,7 +261,7 @@ $f-lg: 2.5
 $f-xl: 3
 .carousel-text h1.carousel-text-header
   @extend .ft8
-  font-family: 'Averia Serif Libre', cursive
+  //font-family: 'Averia Serif Libre', cursive
   font-size: $carouselH1 * 1.4
   color: white
   text-shadow: 0 0 3px $violet, 0 5px 8px rgba(0, 0, 0, 0.42)
@@ -301,6 +310,9 @@ $f-xl: 3
   color: $plumDark
   & p, ul
     font-size: 1.35rem
+
+.custom-width-text
+  letter-spacing: 0.02rem
 
 $aLink: 0.8rem
 .button-link

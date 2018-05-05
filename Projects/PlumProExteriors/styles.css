@@ -7,6 +7,8 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+@import url("https://fonts.googleapis.com/css?family=Signika:400,700");
+@import url("https://fonts.googleapis.com/css?family=Neuton:400,400i,700");
 .ft1 {
   font-family: "Josefin Sans", sans-serif; }
 
@@ -25,14 +27,20 @@
 .ft6 {
   font-family: "Khand", sans-serif; }
 
-.ft7, body {
+.ft7 {
   font-family: "Alegreya Sans SC", sans-serif; }
 
-.ft8, .carousel-text h1.carousel-text-header {
+.ft8 {
   font-family: "Averia Serif Libre", cursive; }
 
 .ft9 {
   font-family: "Dosis", sans-serif; }
+
+.ft10 {
+  font-family: "Signika", sans-serif; }
+
+.ft11, body {
+  font-family: "Neuton", serif; }
 
 .item-disabled {
   display: none; }
@@ -57,16 +65,16 @@
 .up-line {
   background-color: #6a1442;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   font-weight: bold; }
 
 .up-icon-link, .footer-icon-link {
   color: white;
   padding: 5px;
-  font-size: 1.1rem; }
+  font-size: 1.3rem; }
   .up-icon-link:hover, .footer-icon-link:hover {
-    color: rgba(165, 161, 229, 0.44); }
+    color: #333056; }
 
 nav, .sub-menu {
   background-color: #272636;
@@ -162,7 +170,9 @@ footer h4 {
   color: #71bf45; }
 
 .footer-icon-link {
-  font-size: 2.2rem; }
+  font-size: 2.6rem; }
+  .footer-icon-link:hover {
+    color: #aa226c; }
 
 footer p {
   color: white; }
@@ -194,7 +204,6 @@ section.slideshow {
   z-index: 10; }
 
 .carousel-text h1.carousel-text-header {
-  font-family: "Averia Serif Libre", cursive;
   font-size: 2.1rem;
   color: white;
   text-shadow: 0 0 3px #aa226c, 0 5px 8px rgba(0, 0, 0, 0.42); }
@@ -248,6 +257,9 @@ section.slideshow {
   color: #333056; }
   .main-text p, .main-text ul {
     font-size: 1.35rem; }
+
+.custom-width-text {
+  letter-spacing: 0.02rem; }
 
 .button-link {
   color: #333056;
