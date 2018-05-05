@@ -1,3 +1,43 @@
+
+$violet: #aa226c
+$violetDark: #6a1442
+$plum: #4e4981
+$plumDark: #333056
+//$plumBack: #807cb0
+$plumBack: #272636
+$plumLight: rgba(165, 161, 229, 0.44)
+$plumTr: rgba(78, 73, 129, 0.70)
+$green: #71bf45
+$greenTr: rgba(113, 191, 69, 0.70)
+$white: white
+
+#page-preloader
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background: $violetDark
+  z-index: 100500
+$preloaderWidth: 32px
+$preloaderMargin: $preloaderWidth / 2
+#page-preloader .spinner
+  width: $preloaderWidth
+  height: $preloaderWidth
+  position: absolute
+  left: 50%
+  top: 50%
+  //background: url('images/preloader.gif') no-repeat 50% 50%
+  margin: 0
+.plum-preloader
+  width: 100px
+  height: 100px
+  position: absolute
+  left: 50%
+  top: 50%
+  background: url('images/preloader.png') no-repeat 50% 50%
+  margin: -50px 0 0 -50px
+
 //@import "libs/bootstrap/scss/bootstrap.scss"
 @import "libs/bootstrap/scss/_functions.scss"
 @import "libs/bootstrap/scss/_variables.scss"
@@ -53,21 +93,10 @@
 
 body
   @extend .ft11
+  letter-spacing: 0.04rem
 
 .item-disabled
   display: none
-
-$violet: #aa226c
-$violetDark: #6a1442
-$plum: #4e4981
-$plumDark: #333056
-//$plumBack: #807cb0
-$plumBack: #272636
-$plumLight: rgba(165, 161, 229, 0.44)
-$plumTr: rgba(78, 73, 129, 0.70)
-$green: #71bf45
-$greenTr: rgba(113, 191, 69, 0.70)
-$white: white
 
 $upLineFontSize: 1.3rem
 $menuFontSize: 1.2rem
@@ -306,10 +335,13 @@ $f-xl: 3
     font-size: $carouselA * $f-xl
     margin-top: $carouselBtwn
 
+$mainTextFtSize: 1.35rem
 .main-text
   color: $plumDark
   & p, ul
-    font-size: 1.35rem
+    font-size: $mainTextFtSize
+section.main-text
+  background-color: white
 
 .custom-width-text
   letter-spacing: 0.02rem
@@ -438,3 +470,5 @@ $contactIconSize: 10rem
   font-size: 2.5rem
   & :hover
     color: $violet
+#contactForm
+  font-size: $mainTextFtSize

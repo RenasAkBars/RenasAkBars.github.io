@@ -1,36 +1,6 @@
 
-$('.up-line').click(function () {
-    alert(window.innerWidth);
-    // alert(document.documentElement.clientWidth);
-});
-
-$.fn.extend({
-    animateCss: function(animationName, callback) {
-        var animationEnd = (function(el) {
-            var animations = {
-                animation: 'animationend',
-                OAnimation: 'oAnimationEnd',
-                MozAnimation: 'mozAnimationEnd',
-                WebkitAnimation: 'webkitAnimationEnd',
-            };
-
-            for (var t in animations) {
-                if (el.style[t] !== undefined) {
-                    return animations[t];
-                }
-            }
-        })(document.createElement('div'));
-
-        this.addClass('animated ' + animationName).one(animationEnd, function() {
-            $(this).removeClass('animated ' + animationName);
-
-            if (typeof callback === 'function') callback();
-        });
-
-        return this;
-    },
-});
-
+animationExtender();
+preloader();
 dropdownAnimation();
 
 carouselTextVerticalAlign();
@@ -41,11 +11,46 @@ animatedSandwich();
 hideIcons('yelp-link');
 hideIcons('google-link');
 
-
+//---begin Hides icon
 function hideIcons(className) {
     $('.' + className).addClass('item-disabled');
 }
+//---end Hides icon
 
+//---begin Preloader code
+function preloader() {
+    $(window).on('load', function () {
+        var $preloader = $('#page-preloader'),
+            $spinner   = $preloader.find('.plum-preloader');
+        anim();
+        // $spinner.css('display', 'none');
+
+        // $preloader.animateCss('fadeOut', function () {
+            // $preloader.css('display', 'none');
+        // });
+
+        function anim() {
+            $spinner.addClass('infinite').animateCss('swing', function () {
+                // anim();
+            });
+        }
+    });
+}
+/*function preloader() {
+    $(window).on('load', function () {
+        var $preloader = $('#page-preloader'),
+            $spinner   = $preloader.find('.spinner');
+
+        $spinner.css('display', 'none');
+
+        $preloader.animateCss('fadeOut', function () {
+            $preloader.css('display', 'none');
+        });
+    });
+}*/
+//---end Preloader code
+
+//---begin nav menu hover code
 function dropdownAnimation() {
     activeLink();
     var $dropdown = $('.dropdown');
@@ -94,8 +99,6 @@ function dropdownAnimation() {
         });
     }
 }
-
-//---begin nav menu hover code
 //---end nav menu hover code
 
 //---begin is Screen Large code
@@ -185,3 +188,41 @@ function animatedSandwich() {
         });
     }, false);
 })();
+
+//---begin From Animate.cc
+function animationExtender() {
+    $.fn.extend({
+        animateCss: function(animationName, callback) {
+            var animationEnd = (function(el) {
+                var animations = {
+                    animation: 'animationend',
+                    OAnimation: 'oAnimationEnd',
+                    MozAnimation: 'mozAnimationEnd',
+                    WebkitAnimation: 'webkitAnimationEnd',
+                };
+
+                for (var t in animations) {
+                    if (el.style[t] !== undefined) {
+                        return animations[t];
+                    }
+                }
+            })(document.createElement('div'));
+
+            this.addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+
+                if (typeof callback === 'function') callback();
+            });
+
+            return this;
+        }
+    });
+}
+//---begin From Animate.cc
+
+//---begin Screen width by click on top menu
+$('.up-line').click(function () {
+    alert(window.innerWidth);
+    // alert(document.documentElement.clientWidth);
+});
+//---end Screen width by click on top menu

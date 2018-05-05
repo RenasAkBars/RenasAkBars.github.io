@@ -9,6 +9,32 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
 @import url("https://fonts.googleapis.com/css?family=Signika:400,700");
 @import url("https://fonts.googleapis.com/css?family=Neuton:400,400i,700");
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #6a1442;
+  z-index: 100500; }
+
+#page-preloader .spinner {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0; }
+
+.plum-preloader {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("images/preloader.png") no-repeat 50% 50%;
+  margin: -50px 0 0 -50px; }
+
 .ft1 {
   font-family: "Josefin Sans", sans-serif; }
 
@@ -41,6 +67,9 @@
 
 .ft11, body {
   font-family: "Neuton", serif; }
+
+body {
+  letter-spacing: 0.04rem; }
 
 .item-disabled {
   display: none; }
@@ -258,6 +287,9 @@ section.slideshow {
   .main-text p, .main-text ul {
     font-size: 1.35rem; }
 
+section.main-text {
+  background-color: white; }
+
 .custom-width-text {
   letter-spacing: 0.02rem; }
 
@@ -383,5 +415,8 @@ button.form-submit-button {
   font-size: 2.5rem; }
   .contact-icon-link :hover {
     color: #aa226c; }
+
+#contactForm {
+  font-size: 1.35rem; }
 
 /*# sourceMappingURL=styles.css.map */
