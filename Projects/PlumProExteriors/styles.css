@@ -30,7 +30,7 @@
 .ft7 {
   font-family: "Alegreya Sans SC", sans-serif; }
 
-.ft8 {
+.ft8, .carousel-text h1.carousel-text-header {
   font-family: "Averia Serif Libre", cursive; }
 
 .ft9 {
@@ -74,7 +74,7 @@
   padding: 5px;
   font-size: 1.3rem; }
   .up-icon-link:hover, .footer-icon-link:hover {
-    color: #333056; }
+    color: #71bf45; }
 
 nav, .sub-menu {
   background-color: #272636;
@@ -161,12 +161,12 @@ nav, .sub-menu {
   .sub-menu .nav-color {
     border-bottom: 1px solid #4e4981; } }
 footer {
-  background-color: #272636; }
-
-footer {
-  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.35), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35); }
+  background-color: #272636;
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.35), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35);
+  font-size: 1.2rem; }
 
 footer h4 {
+  font-size: 1.68rem;
   color: #71bf45; }
 
 .footer-icon-link {
