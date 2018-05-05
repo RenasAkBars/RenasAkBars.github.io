@@ -19,23 +19,25 @@ function hideIcons(className) {
 
 //---begin Preloader code
 function preloader() {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('.plum-preloader');
+    anim();
+    function anim() {
+        $spinner.addClass('infinite').animateCss('swing', function () {
+
+        });
+    }
     $(window).on('load', function () {
-        var $preloader = $('#page-preloader'),
-            $spinner   = $preloader.find('.plum-preloader');
-        anim();
-        // $spinner.css('display', 'none');
+        $spinner.css('display', 'none').removeClass('infinite').removeClass('animated');
 
-        // $preloader.animateCss('fadeOut', function () {
-            // $preloader.css('display', 'none');
-        // });
+        $preloader.animateCss('fadeOut', function () {
+            $preloader.css('display', 'none');
+        });
 
-        function anim() {
-            $spinner.addClass('infinite').animateCss('swing', function () {
-                // anim();
-            });
-        }
+
     });
 }
+
 /*function preloader() {
     $(window).on('load', function () {
         var $preloader = $('#page-preloader'),
