@@ -10,6 +10,7 @@ animatedSandwich();
 
 hideIcons('yelp-link');
 hideIcons('google-link');
+// getScreenWidth();
 
 //---begin Hides icon
 function hideIcons(className) {
@@ -22,20 +23,27 @@ function preloader() {
     var $preloader = $('#page-preloader'),
         $spinner   = $preloader.find('.plum-preloader');
     anim();
+    wReady();
     function anim() {
         $spinner.addClass('infinite').animateCss('swing', function () {
 
         });
     }
-    $(window).on('load', function () {
-        $spinner.css('display', 'none').removeClass('infinite').removeClass('animated');
+    function wReady() {
+        $(window).on('load', function () {
 
-        $preloader.animateCss('fadeOut', function () {
-            $preloader.css('display', 'none');
+            window.setTimeout(hidePreloader, 500);
+
+            function hidePreloader() {
+                $spinner.css('display', 'none').removeClass('infinite').removeClass('animated');
+
+                $preloader.animateCss('fadeOut', function () {
+                    $preloader.css('display', 'none');
+                });
+            }
+
         });
-
-
-    });
+    }
 }
 
 /*function preloader() {
@@ -223,8 +231,10 @@ function animationExtender() {
 //---begin From Animate.cc
 
 //---begin Screen width by click on top menu
-$('.up-line').click(function () {
-    alert(window.innerWidth);
-    // alert(document.documentElement.clientWidth);
-});
+function getScreenWidth() {
+    $('.up-line').click(function () {
+        alert(window.innerWidth);
+        // alert(document.documentElement.clientWidth);
+    });
+}
 //---end Screen width by click on top menu
