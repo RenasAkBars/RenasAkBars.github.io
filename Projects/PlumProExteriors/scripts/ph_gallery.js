@@ -13,7 +13,7 @@ setFolder();
 closeSlideShow();
 
 function imgHoverZoom() {
-    $('.ph-folder-icon-img').wrap('<div class="icon-img-wrapper"></div>').after('<div class="img-mask"><i class="far fa-folder-open img-mask-icon"></i></div>');
+    $('.ph-folder-icon-img').wrap('<div class="icon-img-wrapper"></div>').after('<div class="img-mask"><i class="icm icm-folder-open img-mask-icon"></i></div>');
     $('.icon-img-wrapper').attr('data-toggle', dataToggle).attr('data-target', dataTarget);
 
     setMask($phFolderIcon);
@@ -124,7 +124,7 @@ function setFolder() {
         var links = getLinks($self.parent(), 'data-pic-mini-');
         var $modalInner = $('.modal-inner');
         links.forEach(function (link) {
-            $modalInner.append('<div class="ph-icon col-6 col-sm-4 col-lg-3 my-3"><div class="icon-img-wrapper ph-icon-img-wrapper"><img class="card-img-top ph-icon-img img-thumbnail" src="' + link + '"><div class="img-mask"><i class="fas fa-search-plus img-mask-icon"></i></div></div></div>');
+            $modalInner.append('<div class="ph-icon col-6 col-sm-4 col-lg-3 my-3"><div class="icon-img-wrapper ph-icon-img-wrapper"><img class="card-img-top ph-icon-img img-thumbnail" src="' + link + '"><div class="img-mask"><i class="icm icm-search-plus img-mask-icon"></i></div></div></div>');
 
         });
         $modalMainWrapper.on('shown.bs.modal', function (e) {

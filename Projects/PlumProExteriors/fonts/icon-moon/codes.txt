@@ -9,6 +9,13 @@ HTML Entity
 Charcter
 f
 
+<span class="icm icm-times"></span>
+.icm-times:before {
+  content: "\78";
+}
+&#x78;
+x
+
 <span class="icm icm-search-plus"></span>
 .icm-search-plus:before {
   content: "\2b";

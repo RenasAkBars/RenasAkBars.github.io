@@ -4,6 +4,36 @@
     {
       "icon": {
         "paths": [
+          "M646.2 882l107.8-107.8c18.8-18.8 18.8-49 0-67.8l-194.4-194.4 194.4-194.4c18.8-18.8 18.8-49 0-67.8l-107.8-107.8c-18.8-18.8-49-18.8-67.8 0l-194.4 194.4-194.4-194.4c-18.8-18.8-49-18.8-67.8 0l-107.8 107.8c-18.8 18.8-18.8 49 0 67.8l194.4 194.4-194.4 194.4c-18.8 18.8-18.8 49 0 67.8l107.8 107.8c18.8 18.8 49 18.8 67.8 0l194.4-194.4 194.4 194.4c18.6 18.6 49 18.6 67.8 0z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 768,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "times"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 27,
+        "id": 11,
+        "name": "times",
+        "prevSize": 32,
+        "code": 120
+      },
+      "setIdx": 0,
+      "setId": 1,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M153.4 1024v-458h-153.4v-182h153.4v-143.4c0-155.8 95.2-240.6 234.2-240.6 66.6 0 123.8 5 140.4 7.2v162.8h-96.4c-75.6 0-90.2 36-90.2 88.6v125.4h170.6l-23.4 182h-147.2v458z"
         ],
         "attrs": [
@@ -29,7 +59,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 0
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -58,7 +88,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 1
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -88,7 +118,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 2
+      "iconIdx": 3
     },
     {
       "icon": {
@@ -117,7 +147,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 3
+      "iconIdx": 4
     },
     {
       "icon": {
@@ -147,7 +177,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 4
+      "iconIdx": 5
     },
     {
       "icon": {
@@ -177,7 +207,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 5
+      "iconIdx": 6
     },
     {
       "icon": {
@@ -207,7 +237,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 6
+      "iconIdx": 7
     },
     {
       "icon": {
@@ -237,7 +267,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 7
+      "iconIdx": 8
     },
     {
       "icon": {
@@ -262,11 +292,12 @@
         "id": 1,
         "name": "envelope",
         "prevSize": 32,
-        "code": 64
+        "code": 64,
+        "ligatures": ""
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 8
+      "iconIdx": 9
     },
     {
       "icon": {
@@ -295,7 +326,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 9
+      "iconIdx": 10
     },
     {
       "icon": {
@@ -376,6 +407,7 @@
     "showLiga": true,
     "quickUsageToken": {
       "Plum": "MjFjMWY2MzJhY2MzZTllZTM4MDFlZTQ1MThhYWU0MWQjMSMxNTI1MDMyMzY3IyMj"
-    }
+    },
+    "gridSize": 16
   }
 }

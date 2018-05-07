@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'icon-moon';
-  src:  url('#{$icomoon-font-path}/icon-moon.eot?8x3bl7');
-  src:  url('#{$icomoon-font-path}/icon-moon.eot?8x3bl7#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/icon-moon.ttf?8x3bl7') format('truetype'),
-    url('#{$icomoon-font-path}/icon-moon.woff?8x3bl7') format('woff'),
-    url('#{$icomoon-font-path}/icon-moon.svg?8x3bl7#icon-moon') format('svg');
+  src:  url('#{$icomoon-font-path}/icon-moon.eot?87idf2');
+  src:  url('#{$icomoon-font-path}/icon-moon.eot?87idf2#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icon-moon.ttf?87idf2') format('truetype'),
+    url('#{$icomoon-font-path}/icon-moon.woff?87idf2') format('woff'),
+    url('#{$icomoon-font-path}/icon-moon.svg?87idf2#icon-moon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,6 +30,11 @@
   @return unquote("\"") + $str + unquote("\"");
 }
 
+.icm-times {
+  &:before {
+    content: unicode($icm-times); 
+  }
+}
 .icm-facebook-f {
   &:before {
     content: unicode($icm-facebook-f); 
