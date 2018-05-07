@@ -1,7 +1,0 @@
-CACHE MANIFEST
-fonts/google/averia-serif-libre/css.css?family=Averia+Serif+Libre:400,700
-fonts/google/neuton/css.css?family=Neuton:400,700
-fonts/google/neuton/UMBTrPtMoH62xUZCz4g6.woff2
-fonts/google/neuton/UMBQrPtMoH62xUZKdK0vfQr4.woff2
-libs/animate/animate.min.css
-images/preloader.png
