@@ -30,9 +30,10 @@ function preloader() {
         });
     }
     function wReady() {
-        $(window).on('load', function () {
+        $(document).ready(function () {
+        // $(window).on('load', function () {
 
-            window.setTimeout(hidePreloader, 500);
+            window.setTimeout(hidePreloader, 400);
 
             function hidePreloader() {
                 $spinner.css('display', 'none').removeClass('infinite').removeClass('animated');
@@ -45,19 +46,6 @@ function preloader() {
         });
     }
 }
-
-/*function preloader() {
-    $(window).on('load', function () {
-        var $preloader = $('#page-preloader'),
-            $spinner   = $preloader.find('.spinner');
-
-        $spinner.css('display', 'none');
-
-        $preloader.animateCss('fadeOut', function () {
-            $preloader.css('display', 'none');
-        });
-    });
-}*/
 //---end Preloader code
 
 //---begin nav menu hover code

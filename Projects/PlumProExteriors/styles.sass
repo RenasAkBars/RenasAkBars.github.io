@@ -46,25 +46,25 @@ $preloaderMargin: $preloaderWidth / 2
 //Google Fonts Import
 
 //font-family: 'Josefin Sans', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i')
+//@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i')
 //font-family: 'Hind', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Hind:400,700')
+//@import url('https://fonts.googleapis.com/css?family=Hind:400,700')
 //font-family: 'Catamaran', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700')
+//@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700')
 //font-family: 'Philosopher', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Philosopher:400,400i,700,700i')
+//@import url('https://fonts.googleapis.com/css?family=Philosopher:400,400i,700,700i')
 //font-family: 'Fira Sans Condensed', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i')
+//@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,400i,700,700i')
 //font-family: 'Khand', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Khand:400,700')
+//@import url('https://fonts.googleapis.com/css?family=Khand:400,700')
 //font-family: 'Alegreya Sans SC', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400i,700,700i')
+//@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400i,700,700i')
 //font-family: 'Averia Serif Libre', cursive
 @import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,400i,700,700i')
 //font-family: 'Dosis', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Dosis:400,700')
+//@import url('https://fonts.googleapis.com/css?family=Dosis:400,700')
 //font-family: 'Signika', sans-serif
-@import url('https://fonts.googleapis.com/css?family=Signika:400,700')
+//@import url('https://fonts.googleapis.com/css?family=Signika:400,700')
 //font-family: 'Neuton', serif
 @import url('https://fonts.googleapis.com/css?family=Neuton:400,400i,700')
 .ft1
@@ -177,7 +177,6 @@ nav
 
 $swW: 28px
 $swH: 3px
-
 .sandwich
   width: $swW
   height: $swW
@@ -189,7 +188,6 @@ $swH: 3px
   margin: auto
   z-index: 15
   display: block
-
 .sw-line
   position: relative
   width: $swW
@@ -198,29 +196,20 @@ $swH: 3px
   border: none
   border-radius: 1px
   display: block
-
 .sw-topper
   @extend .sw-line
   top: 0
   transition: transform 0.5s, top 0.2s
-
-/* transition-delay: 0.2s, 0s; */
-
 .sw-bottom
   @extend .sw-line
-
   top: $swH * 2
-
   transition: transform 0.5s, top 0.2s
   transition-delay: 0.2s, 0s
-
 .sw-footer
   @extend .sw-line
-
   top: $swH * 4
   transition: all 0.5s
   transition-delay: 0.1s
-
 .sandwich.active
   .sw-topper
     top: 11px
@@ -242,8 +231,6 @@ $swH: 3px
   .sub-menu .nav-color
     border-bottom: 1px solid $plum
 
-//.plumicon
-  color: $plum
 $footerFS: 1.2rem
 footer
   background-color: $plumBack
@@ -302,7 +289,6 @@ $f-xl: 3
     font-size: $carouselH1 * $f-lg
   @include media-breakpoint-up(xl)
     font-size: $carouselH1 * $f-xl
-
 .carousel-text a.carousel-text-link
   //position: relative
   //font-size: $carouselA
