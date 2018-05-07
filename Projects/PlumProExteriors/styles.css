@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=Neuton:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700");
+@import url("https://fonts.googleapis.com/css?family=Neuton:400,700");
 #page-preloader {
   position: fixed;
   left: 0;
@@ -26,38 +26,11 @@
   background: url("images/preloader.png") no-repeat 50% 50%;
   margin: -50px 0 0 -50px; }
 
-.ft1 {
-  font-family: "Josefin Sans", sans-serif; }
-
-.ft2 {
-  font-family: "Hind", sans-serif; }
-
-.ft3 {
-  font-family: "Catamaran", sans-serif; }
-
-.ft4 {
-  font-family: "Philosopher", sans-serif; }
-
-.ft5 {
-  font-family: "Fira Sans Condensed", sans-serif; }
-
-.ft6 {
-  font-family: "Khand", sans-serif; }
-
-.ft7 {
-  font-family: "Alegreya Sans SC", sans-serif; }
-
-.ft8, .carousel-text h1.carousel-text-header {
-  font-family: "Averia Serif Libre", cursive; }
-
-.ft9 {
-  font-family: "Dosis", sans-serif; }
-
-.ft10 {
-  font-family: "Signika", sans-serif; }
-
-.ft11, body {
+.ft1, body {
   font-family: "Neuton", serif; }
+
+.ft2, .carousel-text h1.carousel-text-header {
+  font-family: "Averia Serif Libre", cursive; }
 
 body {
   letter-spacing: 0.04rem; }
