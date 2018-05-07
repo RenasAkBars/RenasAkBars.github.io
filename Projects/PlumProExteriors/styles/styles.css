@@ -1,5 +1,5 @@
-@import url("fonts/google/averia-serif-libre/css.css?family=Averia+Serif+Libre:400,700");
-@import url("fonts/google/neuton/css.css?family=Neuton:400,700");
+@import url("../fonts/google/averia-serif-libre/css.css?family=Averia+Serif+Libre:400,700");
+@import url("../fonts/google/neuton/css.css?family=Neuton:400,700");
 #page-preloader {
   position: fixed;
   left: 0;
@@ -9,21 +9,13 @@
   background: #6a1442;
   z-index: 100500; }
 
-#page-preloader .spinner {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: 0; }
-
 .plum-preloader {
   width: 100px;
   height: 100px;
   position: absolute;
   left: 50%;
   top: 50%;
-  background: url("images/preloader.png") no-repeat 50% 50%;
+  background: url("../images/preloader.png") no-repeat 50% 50%;
   margin: -50px 0 0 -50px; }
 
 .ft1, body {

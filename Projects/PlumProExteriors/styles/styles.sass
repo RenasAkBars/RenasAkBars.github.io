@@ -3,14 +3,13 @@ $violet: #aa226c
 $violetDark: #6a1442
 $plum: #4e4981
 $plumDark: #333056
-//$plumBack: #807cb0
 $plumBack: #272636
 $plumLight: rgba(165, 161, 229, 0.44)
 $plumTr: rgba(78, 73, 129, 0.70)
 $green: #71bf45
 $greenTr: rgba(113, 191, 69, 0.70)
 $white: white
-
+//
 #page-preloader
   position: fixed
   left: 0
@@ -19,43 +18,34 @@ $white: white
   bottom: 0
   background: $violetDark
   z-index: 100500
-$preloaderWidth: 32px
+$preloaderWidth: 100px
 $preloaderMargin: $preloaderWidth / 2
-#page-preloader .spinner
-  width: $preloaderWidth
-  height: $preloaderWidth
-  position: absolute
-  left: 50%
-  top: 50%
-  //background: url('images/preloader.gif') no-repeat 50% 50%
-  margin: 0
 .plum-preloader
   width: 100px
   height: 100px
   position: absolute
   left: 50%
   top: 50%
-  background: url('images/preloader.png') no-repeat 50% 50%
+  background: url('../images/preloader.png') no-repeat 50% 50%
   margin: -50px 0 0 -50px
-
-//@import "libs/bootstrap/scss/bootstrap.scss"
-@import "libs/bootstrap/scss/_functions.scss"
-@import "libs/bootstrap/scss/_variables.scss"
-@import "libs/bootstrap/scss/mixins/_breakpoints.scss"
 
 //Google Fonts Import
 
 //font-family: 'Averia Serif Libre', cursive
 //@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700')
-@import url('fonts/google/averia-serif-libre/css.css?family=Averia+Serif+Libre:400,700')
+@import url('../fonts/google/averia-serif-libre/css.css?family=Averia+Serif+Libre:400,700')
 //font-family: 'Neuton', serif
 //@import url('https://fonts.googleapis.com/css?family=Neuton:400,700')
-@import url('fonts/google/neuton/css.css?family=Neuton:400,700')
+@import url('../fonts/google/neuton/css.css?family=Neuton:400,700')
+
+@import "../libs/bootstrap/scss/_functions.scss"
+@import "../libs/bootstrap/scss/_variables.scss"
+@import "../libs/bootstrap/scss/mixins/_breakpoints.scss"
+
 .ft1
   font-family: 'Neuton', serif
 .ft2
   font-family: 'Averia Serif Libre', cursive
-
 
 body
   @extend .ft1
@@ -67,13 +57,6 @@ body
 $upLineFontSize: 1.3rem
 $menuFontSize: 1.2rem
 
-@mixin  transition ($code...)
-  -webkit-transition: $code
-  -moz-transition: $code
-  -ms-transition: $code
-  -o-transition: $code
-  transition: $code
-
 ::selection
   background-color: $greenTr
   color: $plumBack !important
@@ -81,10 +64,6 @@ $menuFontSize: 1.2rem
 
 @media only screen and (min-width: 992px)
   .dropdown:hover .dropdown-menu
-    //display: block
-    //visibility: visible
-    //max-height: 400px
-    //opacity: 1
     margin-top: 0
   .dropdown
     position: relative
@@ -92,9 +71,6 @@ $menuFontSize: 1.2rem
       display: block
       visibility: hidden
       margin-top: 0
-//max-height: 0
-//opacity: 0
-//@include transition(all 0.4s)
 .navbar-brand img
   height: 100px
 
@@ -122,7 +98,6 @@ nav
 
 .nav-color
   color: white
-  //text-shadow: 0 0 3px $violet, 0 2px 3px rgba(0, 0, 0, 0.42)
   font-size: $menuFontSize !important
   font-weight: bold
   & span
@@ -243,7 +218,6 @@ $f-lg: 2.5
 $f-xl: 3
 .carousel-text h1.carousel-text-header
   @extend .ft2
-  //font-family: 'Averia Serif Libre', cursive
   font-size: $carouselH1 * 1.4
   color: white
   text-shadow: 0 0 3px $violet, 0 5px 8px rgba(0, 0, 0, 0.42)
@@ -256,8 +230,6 @@ $f-xl: 3
   @include media-breakpoint-up(xl)
     font-size: $carouselH1 * $f-xl
 .carousel-text a.carousel-text-link
-  //position: relative
-  //font-size: $carouselA
   color: white
   display: inline-block
   font-weight: bold
@@ -270,7 +242,6 @@ $f-xl: 3
   line-height: 1
   text-align: center
   margin-top: $carouselBtwn
-  //vertical-align: sub
   &:hover
     background-color: $plum
     text-decoration: none
@@ -355,7 +326,6 @@ $slideShowBtnColor: rgba(256,256,256,0.35)
     padding: 1rem
     color: $slideShowBtnColor
   & .carousel-controller
-//position: relative
 
 .ph-folder-icon:hover .img-mask
   display: block
@@ -383,7 +353,6 @@ $slideShowBtnColor: rgba(256,256,256,0.35)
   & .review-icon-link
     font-size: 4rem
     color: inherit
-    //margin: 0 4rem
     & :hover
       color: $violet
 .review-nav-item
@@ -396,7 +365,6 @@ $slideShowBtnColor: rgba(256,256,256,0.35)
     color: $plumDark
     font-size: 1.5rem
     background: none
-    //font-weight: bold
 .nav-pills
   & a.review-nav-tab.active
     background: $plumLight
@@ -405,9 +373,6 @@ button.form-submit-button
   color: $plumDark
   & :hover
     color: $violet
-//#reviewTabContent p
-  & ::before
-    content: "g"
 .aboutSlideShow p
   line-height: 1.2
   @include media-breakpoint-up(md)
@@ -415,7 +380,6 @@ button.form-submit-button
 $contactIconSize: 10rem
 .contact-icon
   font-size: $contactIconSize
-  //margin-top: -$contactIconSize / 5
 .contact-icon-link
   color: $plumDark
   margin-right: 0.5rem
