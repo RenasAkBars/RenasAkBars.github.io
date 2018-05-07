@@ -34,19 +34,24 @@ function setMask($parent) {
 }
 
 function setMaskSize($parent) {
-    $parent.find('.img-mask').each(function () {
-        var $img = $(this).prev('img');
-        var imW = $img.width();
-        $(this).css({
-            'width': imW,
-            'height': imW,
-            'line-height': imW
-        });
-    });
+    setMaskSize2($parent);
+
     $(window).resize( setItem ); // обновляем при изменении размеров окна
 
     function setItem() {
-        setMaskSize($parent);
+        setMaskSize2($parent);
+    }
+
+    function setMaskSize2($parent) {
+        $parent.find('.img-mask').each(function () {
+            var $img = $(this).prev('img');
+            var imW = $img.width();
+            $(this).css({
+                'width': imW,
+                'height': imW,
+                'line-height': imW
+            });
+        });
     }
 }
 
