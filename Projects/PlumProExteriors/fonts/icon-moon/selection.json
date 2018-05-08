@@ -322,7 +322,7 @@
         "id": 0,
         "name": "phone",
         "prevSize": 32,
-        "code": 32
+        "code": 116
       },
       "setIdx": 0,
       "setId": 1,
@@ -374,7 +374,7 @@
       "metadata": {
         "fontFamily": "icon-moon",
         "majorVersion": 1,
-        "minorVersion": 0
+        "minorVersion": 1
       },
       "metrics": {
         "emSize": 1024,
@@ -388,8 +388,8 @@
       "showSelector": true,
       "selector": "class",
       "showMetrics": false,
-      "showMetadata": false,
-      "showVersion": false,
+      "showMetadata": true,
+      "showVersion": true,
       "autoHost": true,
       "classSelector": ".icm",
       "ie7": false,

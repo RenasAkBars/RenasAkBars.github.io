@@ -74,9 +74,10 @@ i
 
 <span class="icm icm-phone"></span>
 .icm-phone:before {
-  content: "\20";
+  content: "\74";
 }
-&#x20;
+&#x74;
+t
  
 <span class="icm icm-plum"></span>
 .icm-plum:before {
