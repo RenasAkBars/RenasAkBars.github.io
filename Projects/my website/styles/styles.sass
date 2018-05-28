@@ -32,6 +32,7 @@
 $thmColor: #279f78
 $thmColorTp: rgba(39, 159, 120, 0.51)
 $mainColor: #3a494c
+$mainColorTp: rgba(58, 73, 76, 0.51)
 $bgColor: #f4f4f4
 $bgColorTp: rgba(244, 244, 244, 0.7)
 
@@ -57,7 +58,7 @@ body
 
 $baseFS: 1.2rem
 
-p, a
+p, a, span
   font-size: $baseFS
 p
   line-height: 1.5
@@ -77,6 +78,8 @@ a.link
   color: $mainColor
   &:hover
     color: $thmColor
+.td-none
+  text-decoration: none
 
 //before SM
 @media screen and (max-width: 575.9999px)
@@ -118,15 +121,13 @@ a.link
 
 //from XS
 .container
-  width: 100%
+  width: 92%
 .modal-body
   width: 90%
 .portfolio-preview-container
   grid-template-columns: 1fr
   grid-template-rows: 100px 300px 300px 300px 300px 300px 100px
   grid-template-areas: "pp_tit" "pp_a" "pp_b" "pp_c" "pp_d" "pp_e" "pp_ft"
-  grid-column-gap: 4px
-  grid-row-gap: 4px
 
 //from SM
 @media screen and (min-width: 576px)
@@ -138,8 +139,6 @@ a.link
     grid-template-columns: 1fr 1fr
     grid-template-rows: 100px 200px 200px 200px 100px
     grid-template-areas: "pp_tit pp_tit" "pp_b pp_c" "pp_a pp_a" "pp_d pp_e" "pp_ft pp_ft"
-    grid-column-gap: 6px
-    grid-row-gap: 6px
 
 //from MD
 @media screen and (min-width: 768px)
@@ -148,8 +147,6 @@ a.link
   .portfolio-preview-container
     grid-template-columns: 1fr 1fr 1fr
     grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_c" "pp_a pp_a pp_d" "pp_e pp_b pp_b" "pp_ft pp_ft pp_ft"
-    grid-column-gap: 8px
-    grid-row-gap: 8px
 
 //from LG
 @media screen and (min-width: 992px)
@@ -172,8 +169,6 @@ a.link
   .portfolio-preview-container
     grid-template-columns: 1fr 1fr 2fr
     grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_b" "pp_a pp_a pp_c" "pp_d pp_e pp_c" "pp_ft pp_ft pp_ft"
-    grid-column-gap: 10px
-    grid-row-gap: 10px
 
 //from XL
 @media screen and (min-width: 1200px)
@@ -218,7 +213,7 @@ a.link
   @extend .logofont2
   font-size: 2.2rem
   color: $thmColor
-  padding-left: 10px
+  //padding-left: 10px
 .sandwich
   cursor: pointer
   width: $swW
@@ -265,6 +260,8 @@ a.link
   justify-content: center
   .portfolio-preview-container
     display: grid
+    grid-column-gap: 10px
+    grid-row-gap: 10px
     .portfolio-preview-title
       grid-area: pp_tit
       display: flex
@@ -320,15 +317,23 @@ a.link
   height: 100%
   z-index: 100
   overflow: auto
-  .modal-body
+  .modal-body-container
     position: absolute
-    background-color: $bgColor
+    display: flex
+    justify-content: center
+    width: 100%
+    padding-top: 25px
+    padding-bottom: 35px
+  .modal-body
+    position: relative
     display: none
+    background-color: $bgColor
     img
       width: 100%
       height: auto
+      background-color: $bgColor
     .modal-content
-      padding: 30px
+      padding: 1.5rem
       color: $mainColor
       h6
         margin-bottom: 0.5rem
@@ -340,6 +345,37 @@ a.link
       h5
         margin-bottom: 1rem
       p
-        margin-bottom: 1rem
+        margin-bottom: 1.5rem
+      .modal-footer
+        display: flex
+        border-top: 1px solid $mainColorTp
+        justify-content: space-between
+        margin-top: 1rem
+        padding-top: 1rem
+    .close
+      cursor: pointer
+      width: $swW
+      height: $swW
+      position: absolute
+      top: 0
+      right: 0
+      background-color: $mainColorTp
+      .cl
+        width: $swWw
+        height: $swH
+        left: $swL
+        background-color: white
+        position: absolute
+      .cl-topper
+        top: $swTopAct
+        transform: rotate(320deg)
+      .cl-footer
+        top: $swTopAct
+        transform: rotate(-320deg)
+      &:hover
+        background-color: $thmColorTp
+        &.cl
+          background-color: $thmColor
+
 .modal-body.animated, .modal.animated
   animation-duration: 200ms
