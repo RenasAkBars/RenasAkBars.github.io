@@ -1,0 +1,345 @@
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700|Exo+2:400,700|Vollkorn+SC:400,700|Yanone+Kaffeesatz:400,700&subset=cyrillic')
+
+.font1
+  font-family: 'Yanone Kaffeesatz', sans-serif
+.font2
+  font-family: 'Alegreya', serif
+.font3
+  font-family: 'Vollkorn SC', serif
+.font4
+  font-family: 'Exo 2', sans-serif
+
+@import url('https://fonts.googleapis.com/css?family=Caveat:400,700|Finger+Paint|Kalam:400,700|Rock+Salt|Sarina|Sonsie+One|Federant|Bangers')
+
+.logofont1
+  font-family: 'Caveat', cursive
+.logofont2
+  font-family: 'Kalam', cursive
+.logofont3
+  font-family: 'Rock Salt', cursive
+.logofont4
+  font-family: 'Finger Paint', cursive
+.logofont5
+  font-family: 'Sarina', cursive
+.logofont6
+  font-family: 'Sonsie One', cursive
+.logofont7
+  font-family: 'Federant', cursive
+.logofont8
+  font-family: 'Bangers', cursive
+
+$thmColor: #279f78
+$thmColorTp: rgba(39, 159, 120, 0.51)
+$mainColor: #3a494c
+$bgColor: #f4f4f4
+$bgColorTp: rgba(244, 244, 244, 0.7)
+
+//Sandwich numbers:
+$swW: 50px
+$swWw: 30px
+$swL: ($swW - $swWw) / 2
+$swH: 2px
+$swTop: ($swW - 6 - $swH - $swH) / 2
+$swTopAct: $swTop + 4
+$swBot: $swW - $swTop - $swH
+$nvSpd: 150ms
+
+$nvHeight: 50px
+$nvFtSize: 1rem
+
+body
+  @extend .font4
+  background-color: $bgColor
+  position: relative
+
+
+
+$baseFS: 1.2rem
+
+p, a
+  font-size: $baseFS
+p
+  line-height: 1.5
+h1
+  font-size: $baseFS * 4
+h2
+  font-size: $baseFS * 3
+h3
+  font-size: $baseFS * 2.5
+h4
+  font-size: $baseFS * 2
+h5
+  font-size: $baseFS * 1.5
+h6
+  font-size: $baseFS * 1
+a.link
+  color: $mainColor
+  &:hover
+    color: $thmColor
+
+//before SM
+@media screen and (max-width: 575.9999px)
+
+//before MD
+@media screen and (max-width: 767.9999px)
+  h1
+    font-size: $baseFS * 2
+  h2
+    font-size: $baseFS * 1.8
+  h3
+    font-size: $baseFS * 1.6
+  h4
+    font-size: $baseFS * 1.4
+  h5
+    font-size: $baseFS * 1.2
+  h6
+    font-size: $baseFS * 1
+
+//before LG
+@media screen and (max-width: 991.9999px)
+  .nav-menu
+    ul
+      position: absolute
+      height: 100vh
+      top: 0
+      right: 0
+      width: 0
+      background-color: $bgColorTp
+      padding: $nvHeight 0 0
+      box-sizing: border-box
+      li
+        margin: 0 0 20px 30px
+    ul.active
+      width: 200px
+
+//before XL
+@media screen and (max-width: 1199.9999px)
+
+//from XS
+.container
+  width: 100%
+.modal-body
+  width: 90%
+.portfolio-preview-container
+  grid-template-columns: 1fr
+  grid-template-rows: 100px 300px 300px 300px 300px 300px 100px
+  grid-template-areas: "pp_tit" "pp_a" "pp_b" "pp_c" "pp_d" "pp_e" "pp_ft"
+  grid-column-gap: 4px
+  grid-row-gap: 4px
+
+//from SM
+@media screen and (min-width: 576px)
+  .container
+    width: 540px
+  .modal-body
+    width: 500px
+  .portfolio-preview-container
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 100px 200px 200px 200px 100px
+    grid-template-areas: "pp_tit pp_tit" "pp_b pp_c" "pp_a pp_a" "pp_d pp_e" "pp_ft pp_ft"
+    grid-column-gap: 6px
+    grid-row-gap: 6px
+
+//from MD
+@media screen and (min-width: 768px)
+  .container
+    width: 720px
+  .portfolio-preview-container
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_c" "pp_a pp_a pp_d" "pp_e pp_b pp_b" "pp_ft pp_ft pp_ft"
+    grid-column-gap: 8px
+    grid-row-gap: 8px
+
+//from LG
+@media screen and (min-width: 992px)
+  .container
+    width: 960px
+  .modal-body
+    width: 800px
+  .nav-menu ul
+    position: static
+    display: inline-flex
+    justify-content: flex-end
+    width: 0
+    li
+      display: flex
+      white-space: nowrap
+      a
+        padding: 10px
+  .nav-menu ul.active
+    width: 800px
+  .portfolio-preview-container
+    grid-template-columns: 1fr 1fr 2fr
+    grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_b" "pp_a pp_a pp_c" "pp_d pp_e pp_c" "pp_ft pp_ft pp_ft"
+    grid-column-gap: 10px
+    grid-row-gap: 10px
+
+//from XL
+@media screen and (min-width: 1200px)
+  .container
+    width: 1140px
+
+.top-nav-menu
+  width: 100%
+  position: fixed
+  display: flex
+  justify-content: center
+  height: $nvHeight
+  z-index: 10
+  top: 0
+  left: 0
+  transition: background-color $nvSpd
+  &:hover
+    background-color: $bgColorTp
+  a
+    text-decoration: none
+.top-nav-menu-container
+  display: flex
+  align-items: center
+.nav-menu
+  display: inline-flex
+  justify-content: space-between
+  flex: 1
+  font-weight: bold
+  align-items: center
+  ul
+    overflow: hidden
+    transition: width $nvSpd
+    a
+      color: $mainColor
+      text-transform: uppercase
+      transition: color $nvSpd
+      font-size: $nvFtSize
+      &:hover
+        color: $thmColor
+
+.brand-logo a.brand-link
+  @extend .logofont2
+  font-size: 2.2rem
+  color: $thmColor
+  padding-left: 10px
+.sandwich
+  cursor: pointer
+  width: $swW
+  height: $swW
+  position: relative
+  .sw
+    width: $swWw
+    height: $swH
+    left: $swL
+    background-color: $mainColor
+    position: absolute
+    transition: transform $nvSpd, top $nvSpd, background-color $nvSpd * 2
+  .sw-topper
+    top: $swTop
+  .sw-footer
+    top: $swBot
+  &:hover .sw
+    background-color: $thmColor
+.sandwich.active
+  .sw-topper
+    top: $swTopAct
+    transform: rotate(320deg)
+  .sw-footer
+    top: $swTopAct
+    transform: rotate(-320deg)
+
+.greeting
+  .fs-img
+    width: 100%
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $bgColor
+    background-size: cover
+    background-position: center center
+  h1
+    color: $bgColor
+    text-shadow: 1px 0 1px $thmColor
+    font-weight: bold
+
+.portfolio-preview
+  display: flex
+  justify-content: center
+  .portfolio-preview-container
+    display: grid
+    .portfolio-preview-title
+      grid-area: pp_tit
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $thmColor
+      font-weight: bold
+    .portfolio-preview-more
+      grid-area: pp_ft
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      a
+        display: block
+    .portfolio-preview-thumbnail
+      background-size: cover
+      background-position: center center
+      cursor: pointer
+      border-radius: 1px
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr
+      overflow: hidden
+      &:hover .portfolio-preview-thumbnail-mask
+        opacity: 1
+        transform: scale(1.03,1.03)
+      &:nth-child(2)
+        grid-area: pp_a
+      &:nth-child(3)
+        grid-area: pp_b
+      &:nth-child(4)
+        grid-area: pp_c
+      &:nth-child(5)
+        grid-area: pp_d
+      &:nth-child(6)
+        grid-area: pp_e
+      .portfolio-preview-thumbnail-mask
+        background-size: cover
+        background-position: center center
+        opacity: 0
+        transition: all 0.3s
+
+.modal
+  display: none
+  background-color: rgba(0, 0, 0, 0.5)
+  position: fixed
+  justify-content: center
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  height: 100%
+  z-index: 100
+  overflow: auto
+  .modal-body
+    position: absolute
+    background-color: $bgColor
+    display: none
+    img
+      width: 100%
+      height: auto
+    .modal-content
+      padding: 30px
+      color: $mainColor
+      h6
+        margin-bottom: 0.5rem
+        font-size: 0.9rem
+      .title-link
+        text-decoration: none
+      h4
+        margin-bottom: 2rem
+      h5
+        margin-bottom: 1rem
+      p
+        margin-bottom: 1rem
+.modal-body.animated, .modal.animated
+  animation-duration: 200ms
