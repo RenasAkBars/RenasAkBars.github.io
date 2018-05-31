@@ -35,6 +35,7 @@ $mainColor: #3a494c
 $mainColorTp: rgba(58, 73, 76, 0.51)
 $bgColor: #f4f4f4
 $bgColorTp: rgba(244, 244, 244, 0.7)
+$whiteTp: rgba(255, 255, 255, 0.41)
 
 //Sandwich numbers:
 $swW: 50px
@@ -53,6 +54,9 @@ body
   @extend .font4
   background-color: $bgColor
   position: relative
+  overflow: auto
+  &.modal-open
+    overflow: hidden
 
 
 
@@ -124,10 +128,21 @@ a.link
   width: 92%
 .modal-body
   width: 90%
+.modal-body-container
+  .btn
+    font-size: 3rem
+  .btn-back
+    .angle
+      margin-right: 1rem
+  .btn-forward
+    .angle
+      margin-left: 1rem
 .portfolio-preview-container
   grid-template-columns: 1fr
   grid-template-rows: 100px 300px 300px 300px 300px 300px 100px
   grid-template-areas: "pp_tit" "pp_a" "pp_b" "pp_c" "pp_d" "pp_e" "pp_ft"
+  .portfolio-preview-thumbnail-mask
+    filter: grayscale(0.2)
 
 //from SM
 @media screen and (min-width: 576px)
@@ -135,6 +150,15 @@ a.link
     width: 540px
   .modal-body
     width: 500px
+  .modal-body-container
+    .btn
+      font-size: 5rem
+    .btn-back
+      .angle
+        margin-right: 1rem
+    .btn-forward
+      .angle
+        margin-left: 1rem
   .portfolio-preview-container
     grid-template-columns: 1fr 1fr
     grid-template-rows: 100px 200px 200px 200px 100px
@@ -144,6 +168,15 @@ a.link
 @media screen and (min-width: 768px)
   .container
     width: 720px
+  .modal-body-container
+    .btn
+      font-size: 6rem
+    .btn-back
+      .angle
+        margin-right: 4rem
+    .btn-forward
+      .angle
+        margin-left: 4rem
   .portfolio-preview-container
     grid-template-columns: 1fr 1fr 1fr
     grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_c" "pp_a pp_a pp_d" "pp_e pp_b pp_b" "pp_ft pp_ft pp_ft"
@@ -154,6 +187,13 @@ a.link
     width: 960px
   .modal-body
     width: 800px
+  .modal-body-container
+    .btn-back
+      .angle
+        margin-right: 3rem
+    .btn-forward
+      .angle
+        margin-left: 3rem
   .nav-menu ul
     position: static
     display: inline-flex
@@ -169,11 +209,20 @@ a.link
   .portfolio-preview-container
     grid-template-columns: 1fr 1fr 2fr
     grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_b" "pp_a pp_a pp_c" "pp_d pp_e pp_c" "pp_ft pp_ft pp_ft"
+    .portfolio-preview-thumbnail-mask
+      filter: grayscale(0.4) blur(1.2px)
 
 //from XL
 @media screen and (min-width: 1200px)
   .container
     width: 1140px
+  .modal-body-container
+    .btn-back
+      .angle
+        margin-right: 5rem
+    .btn-forward
+      .angle
+        margin-left: 5rem
 
 .top-nav-menu
   width: 100%
@@ -213,7 +262,7 @@ a.link
   @extend .logofont2
   font-size: 2.2rem
   color: $thmColor
-  //padding-left: 10px
+  padding-left: 10px
 .sandwich
   cursor: pointer
   width: $swW
@@ -286,24 +335,22 @@ a.link
       grid-template-rows: 1fr
       overflow: hidden
       &:hover .portfolio-preview-thumbnail-mask
-        opacity: 1
         transform: scale(1.03,1.03)
-      &:nth-child(2)
+        filter: none
+      &[data-number="1"]
         grid-area: pp_a
-      &:nth-child(3)
+      &[data-number="2"]
         grid-area: pp_b
-      &:nth-child(4)
+      &[data-number="3"]
         grid-area: pp_c
-      &:nth-child(5)
+      &[data-number="4"]
         grid-area: pp_d
-      &:nth-child(6)
+      &[data-number="5"]
         grid-area: pp_e
       .portfolio-preview-thumbnail-mask
         background-size: cover
         background-position: center center
-        opacity: 0
         transition: all 0.3s
-
 .modal
   display: none
   background-color: rgba(0, 0, 0, 0.5)
@@ -316,7 +363,8 @@ a.link
   width: 100%
   height: 100%
   z-index: 100
-  overflow: auto
+  overflow-y: auto
+  overflow-x: hidden
   .modal-body-container
     position: absolute
     display: flex
@@ -324,9 +372,32 @@ a.link
     width: 100%
     padding-top: 25px
     padding-bottom: 35px
+  .btn
+    position: fixed
+    //background-color: $thmColorTp
+    height: 60vh
+    top: 20vh
+    display: flex
+    align-items: center
+    color: white
+    cursor: pointer
+    justify-content: center
+    overflow: hidden
+    .angle
+      color: $whiteTp
+      transition: color 0.2s
+    &:hover
+      .angle
+        color: white
+  .btn-back
+    left: 0
+  .btn-forward
+    right: 0
+    .angle
+      transform: rotate(180deg)
   .modal-body
-    position: relative
     display: none
+    position: relative
     background-color: $bgColor
     img
       width: 100%
@@ -352,6 +423,8 @@ a.link
         justify-content: space-between
         margin-top: 1rem
         padding-top: 1rem
+    &.active
+      display: block
     .close
       cursor: pointer
       width: $swW
@@ -376,6 +449,8 @@ a.link
         background-color: $thmColorTp
         &.cl
           background-color: $thmColor
+  &.active
+    display: flex
 
 .modal-body.animated, .modal.animated
   animation-duration: 200ms

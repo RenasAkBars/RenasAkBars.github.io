@@ -38,7 +38,10 @@
 
 body {
   background-color: #f4f4f4;
-  position: relative; }
+  position: relative;
+  overflow: auto; }
+  body.modal-open {
+    overflow: hidden; }
 
 p, a, span {
   font-size: 1.2rem; }
@@ -110,10 +113,19 @@ a.link {
 .modal-body {
   width: 90%; }
 
+.modal-body-container .btn {
+  font-size: 3rem; }
+.modal-body-container .btn-back .angle {
+  margin-right: 1rem; }
+.modal-body-container .btn-forward .angle {
+  margin-left: 1rem; }
+
 .portfolio-preview-container {
   grid-template-columns: 1fr;
   grid-template-rows: 100px 300px 300px 300px 300px 300px 100px;
   grid-template-areas: "pp_tit" "pp_a" "pp_b" "pp_c" "pp_d" "pp_e" "pp_ft"; }
+  .portfolio-preview-container .portfolio-preview-thumbnail-mask {
+    filter: grayscale(0.2); }
 
 @media screen and (min-width: 576px) {
   .container {
@@ -122,6 +134,13 @@ a.link {
   .modal-body {
     width: 500px; }
 
+  .modal-body-container .btn {
+    font-size: 5rem; }
+  .modal-body-container .btn-back .angle {
+    margin-right: 1rem; }
+  .modal-body-container .btn-forward .angle {
+    margin-left: 1rem; }
+
   .portfolio-preview-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 200px 200px 200px 100px;
@@ -129,6 +148,13 @@ a.link {
 @media screen and (min-width: 768px) {
   .container {
     width: 720px; }
+
+  .modal-body-container .btn {
+    font-size: 6rem; }
+  .modal-body-container .btn-back .angle {
+    margin-right: 4rem; }
+  .modal-body-container .btn-forward .angle {
+    margin-left: 4rem; }
 
   .portfolio-preview-container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -139,6 +165,11 @@ a.link {
 
   .modal-body {
     width: 800px; }
+
+  .modal-body-container .btn-back .angle {
+    margin-right: 3rem; }
+  .modal-body-container .btn-forward .angle {
+    margin-left: 3rem; }
 
   .nav-menu ul {
     position: static;
@@ -156,10 +187,17 @@ a.link {
 
   .portfolio-preview-container {
     grid-template-columns: 1fr 1fr 2fr;
-    grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_b" "pp_a pp_a pp_c" "pp_d pp_e pp_c" "pp_ft pp_ft pp_ft"; } }
+    grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_b" "pp_a pp_a pp_c" "pp_d pp_e pp_c" "pp_ft pp_ft pp_ft"; }
+    .portfolio-preview-container .portfolio-preview-thumbnail-mask {
+      filter: grayscale(0.4) blur(1.2px); } }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1140px; } }
+    width: 1140px; }
+
+  .modal-body-container .btn-back .angle {
+    margin-right: 5rem; }
+  .modal-body-container .btn-forward .angle {
+    margin-left: 5rem; } }
 .top-nav-menu {
   width: 100%;
   position: fixed;
@@ -198,7 +236,8 @@ a.link {
 
 .brand-logo a.brand-link {
   font-size: 2.2rem;
-  color: #279f78; }
+  color: #279f78;
+  padding-left: 10px; }
 
 .sandwich {
   cursor: pointer;
@@ -271,22 +310,21 @@ a.link {
       grid-template-rows: 1fr;
       overflow: hidden; }
       .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail:hover .portfolio-preview-thumbnail-mask {
-        opacity: 1;
-        transform: scale(1.03, 1.03); }
-      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail:nth-child(2) {
+        transform: scale(1.03, 1.03);
+        filter: none; }
+      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail[data-number="1"] {
         grid-area: pp_a; }
-      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail:nth-child(3) {
+      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail[data-number="2"] {
         grid-area: pp_b; }
-      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail:nth-child(4) {
+      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail[data-number="3"] {
         grid-area: pp_c; }
-      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail:nth-child(5) {
+      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail[data-number="4"] {
         grid-area: pp_d; }
-      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail:nth-child(6) {
+      .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail[data-number="5"] {
         grid-area: pp_e; }
       .portfolio-preview .portfolio-preview-container .portfolio-preview-thumbnail .portfolio-preview-thumbnail-mask {
         background-size: cover;
         background-position: center center;
-        opacity: 0;
         transition: all 0.3s; }
 
 .modal {
@@ -301,7 +339,8 @@ a.link {
   width: 100%;
   height: 100%;
   z-index: 100;
-  overflow: auto; }
+  overflow-y: auto;
+  overflow-x: hidden; }
   .modal .modal-body-container {
     position: absolute;
     display: flex;
@@ -309,9 +348,30 @@ a.link {
     width: 100%;
     padding-top: 25px;
     padding-bottom: 35px; }
+  .modal .btn {
+    position: fixed;
+    height: 60vh;
+    top: 20vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    overflow: hidden; }
+    .modal .btn .angle {
+      color: rgba(255, 255, 255, 0.41);
+      transition: color 0.2s; }
+    .modal .btn:hover .angle {
+      color: white; }
+  .modal .btn-back {
+    left: 0; }
+  .modal .btn-forward {
+    right: 0; }
+    .modal .btn-forward .angle {
+      transform: rotate(180deg); }
   .modal .modal-body {
-    position: relative;
     display: none;
+    position: relative;
     background-color: #f4f4f4; }
     .modal .modal-body img {
       width: 100%;
@@ -337,6 +397,8 @@ a.link {
         justify-content: space-between;
         margin-top: 1rem;
         padding-top: 1rem; }
+    .modal .modal-body.active {
+      display: block; }
     .modal .modal-body .close {
       cursor: pointer;
       width: 50px;
@@ -361,6 +423,8 @@ a.link {
         background-color: rgba(39, 159, 120, 0.51); }
         .modal .modal-body .close:hover.cl {
           background-color: #279f78; }
+  .modal.active {
+    display: flex; }
 
 .modal-body.animated, .modal.animated {
   animation-duration: 200ms; }

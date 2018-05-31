@@ -1,79 +1,206 @@
+class Modal {
+    constructor(modalSelector,) {
+        this.$modal = $(modalSelector);
+        this.$modalBodyContainer = this.$modal.find('.modal-body-container');
+        this.$modalBody = this.$modal.find('.modal-body');
+        this.$modalContentContainer = this.$modal.find('.modal-content-container');
+        this.$close = this.$modal.find('.close');
+        this.$btn = this.$modal.find('.btn');
+        this.$btnBack = this.$modal.find('.btn-back');
+        this.$btnForward = this.$modal.find('.btn-forward');
+        this.$navMenu = $('.top-nav-menu');
+        this.$body = $('body');
+        this.scrollWidth = window.innerWidth - this.$body.get(0).clientWidth;
+        this.$btnForward.css('right', this.scrollWidth + 'px');
+    }
+    activateStandartEvents() {
+        this.closeModal();
+    }
+    deactivateModal() {
+        var self = this;
+        this.$modal.animateCss('fadeOut', function () {
+            self.$modalBody.removeClass('active');
+            self.$modal.removeClass('active');
+            self.$body.removeClass('modal-open').css({'margin-right': 0});
+            self.$navMenu.css({'left': 0});
+        });
+    }
+    closeModal() {
+        var self = this;
+        this.$modalBodyContainer.click(function (e) {
+            if (e.target === this) {
+                self.deactivateModal();
+            }
+        });
+        this.$modal.click(function (e) {
+            if (e.target === this) {
+                self.deactivateModal();
+            }
+        });
+        this.$close.click(function () {
+            self.deactivateModal();
+        });
+        $(window).keydown(function (e) {
+            if (e.which == 27 || e.keyCode == 27){
+                if (self.$modal.hasClass('active')) {
+                    self.deactivateModal();
+                }
+            }
+        });
+    }
+    setContent(content) {
+        this.$modalContentContainer.html(content);
+    }
+    openAnimation() {
+        var self = this;
+        this.$modal.addClass('active').animateCss('fadeIn', function () {
+            self.$modalBody.addClass('active').animateCss('slideInUp');
+        });
+        this.$body.addClass('modal-open').css({'margin-right': this.scrollWidth + 'px'});
+        this.$navMenu.css({'left': '-' + this.scrollWidth / 2 + 'px'});
+    }
+}
+class ModalPortfolioPreview extends Modal {
+    constructor (modalSelector, launchersSelector) {
+        super(modalSelector);
+        this.launchersSelector = launchersSelector;
+        this.$launchers = $(launchersSelector);
+        this.launchersLength = this.$launchers.length;
+        this.number = 0;
+
+    }
+    activate() {
+        this.activateStandartEvents();
+        this.openFromLauncher();
+        this.activateButtons();
+    }
+    openFromLauncher() {
+        var self = this;
+        this.$launchers.click(function () {
+            self.setSpecialContent($(this));
+            self.openAnimation();
+        });
+    }
+    activateButtons() {
+        var self = this;
+        var anim = 'fade';
+        var animOut, animIn;
+        this.$btn.click(function () {
+            var $self = $(this);
+            var num = self.number;
+
+            if ($self.hasClass('btn-back')) {
+                num--;
+                animOut = anim + 'OutLeft';
+                animIn = anim + 'InRight';
+                if (num <= 0) {
+                    num = self.launchersLength;
+                }
+            } else if ($self.hasClass('btn-forward')) {
+                num++;
+                animOut = anim + 'OutRight';
+                animIn = anim + 'InLeft';
+                if (num >= self.launchersLength + 1) {
+                    num = 1;
+                }
+            }
+            if (num < 1 || num > self.launchersLength) {
+                return false;
+            }
+            self.$modalBody.animateCss(animOut, function () {
+                self.setSpecialContent(self.$launchers.filter(self.launchersSelector + '[data-number="' + num + '"]'));
+                self.$modalBody.animateCss(animIn);
+            });
+        });
+    }
+    setSpecialContent($launcher) {
+
+        var img = $launcher.attr('data-img');
+        var category = $launcher.attr('data-category');
+        var linkInner = $launcher.attr('data-link-inner');
+        var name = $launcher.attr('data-name');
+        var caption = $launcher.attr('data-caption');
+        var text = $launcher.attr('data-text');
+        var linkOuter = $launcher.attr('data-link-outer');
+        var linkOuterName = $launcher.attr('data-link-outer-name');
+        var date = $launcher.attr('data-date');
+        var number = $launcher.attr('data-number');
+
+        var content = '<img src="' + img + '">' +
+            '<div class="modal-content">' +
+            '<h6>' + category + '</h6>' +
+            '<a class="title-link link link-inner" href="' + linkInner + '">' +
+            '<h4>' + name + '</h4></a>' +
+            '<h5>' + caption + '</h5>' +
+            '<div class="text">' + text + '</div>' +
+            '<a class="link td-none link-outer" target="_blank" href="' + linkOuter + '">' + linkOuterName + '</a>' +
+            '<div class="modal-footer"><span class="time">' + date + '</span>' +
+            '<a class="link link-inner" href="' + linkInner + '">Подробнее</a></div></div>';
+
+        this.$modalBody.attr('data-number', number);
+        this.number = number;
+        this.setContent(content);
+    }
+}
+class Menu {
+    constructor(selector) {
+        this.$topNavMenu = $(selector);
+        this.$brandLogo = this.$topNavMenu.find('.brand-logo');
+        this.$navMenuUl = this.$topNavMenu.find('.nav-menu ul');
+        this.$sandwich = this.$topNavMenu.find('.sandwich');
+        this.$body = $('body');
+    }
+    toggleMenu() {
+        this.$navMenuUl.toggleClass('active');
+        this.$sandwich.toggleClass('active');
+    }
+    activateToggler() {
+        var self = this;
+        this.$sandwich.click(function () {
+            self.toggleMenu();
+        }).mouseenter(function () {
+            var $self = $(this);
+            if (!$self.hasClass('active')) {
+                $self.find('.sw').toggleClass('sw-topper').toggleClass('sw-footer');
+            }
+        });
+    }
+    activateBodyOff() {
+        var self = this;
+        this.$body.click(function (e) {
+            var target = $(e.target);
+            if (target.parents('.nav-menu-list').length === 0
+                && self.$navMenuUl.hasClass('active')
+                && !target.hasClass('sandwich')
+                && target.parents('.sandwich').length === 0) {
+                self.toggleMenu();
+            }
+        });
+    }
+    brandLogoAnimation() {
+        this.$brandLogo.mouseenter(function () {
+            $(this).animateCss('tada');
+        });
+    }
+    test() {
+        this.$brandLogo.click(function () {
+            alert('Width: ' + window.innerWidth + '; Height: ' + $(window).height());
+            return false;
+        });
+    }
+    activate() {
+        this.activateToggler();
+        this.activateBodyOff();
+        this.brandLogoAnimation();
+    }
+}
+
 
 var $body = $('body');
-var $navMenu = $('.top-nav-menu');
-var $brandLogo = $('.brand-logo');
-var $modal = $('.modal');
-var $modalBodyContainer = $modal.find('.modal-body-container');
-var $modalBody = $modal.find('.modal-body');
-
-setSwitchMenu();
-setBrandLogo();
-setModal();
-
-function setSwitchMenu() {
-    $('.sandwich').click(function () {
-        toggleMenu();
-    }).mouseenter(function () {
-        var $self = $(this);
-        if (!$self.hasClass('active')) {
-            $self.find('.sw').toggleClass('sw-topper').toggleClass('sw-footer');
-        }
-    });
-
-    $body.click(function (e) {
-        var target = $(e.target);
-        if (target.parents('.nav-menu-list').length === 0
-            && $('.nav-menu ul').hasClass('active')
-            && !target.hasClass('sandwich')
-            && target.parents('.sandwich').length === 0) {
-            toggleMenu();
-        }
-    });
-
-    function toggleMenu() {
-        $('.nav-menu ul').toggleClass('active');
-        $('.sandwich').toggleClass('active');
-    }
-}
-
-function setBrandLogo() {
-    $brandLogo.click(function () {
-        alert('Width: ' + window.innerWidth + '; Height: ' + $(window).height());
-        return false;
-    });
-
-    $brandLogo.mouseenter(function () {
-        $(this).animateCss('tada');
-    });
-}
+var modalPortfolioPreview = new ModalPortfolioPreview('.modal', '.portfolio-preview-thumbnail');
+var topNavMenu = new Menu('.top-nav-menu');
 
 
-function setModal() {
-    $('.portfolio-preview-thumbnail').click(function () {
-        var scrollWidth = window.innerWidth - $body.get(0).clientWidth;
-        $modal.css({'display': 'flex'}).animateCss('fadeIn', function () {
-            $modalBody.css({'display': 'block'}).animateCss('slideInUp');
-        });
-        $body.css({'overflow': 'hidden', 'margin-right': scrollWidth + 'px'});
-        $navMenu.css({'left': '-' + scrollWidth / 2 + 'px'});
-    });
-
-    $modalBodyContainer.click(function (e) {
-        if (e.target === this) {
-            closeModal();
-        }
-    });
-
-    $modal.find('.close').click(function () {
-       closeModal();
-    });
-
-    function closeModal() {
-        $modal.animateCss('fadeOut', function () {
-            $modalBody.css({'display': 'none'});
-            $modal.css({'display': 'none'});
-            $body.css({'overflow': 'auto', 'margin-right': 0});
-            $navMenu.css({'left': 0});
-        });
-    }
-}
+modalPortfolioPreview.activate();
+topNavMenu.activate();
+topNavMenu.test();
