@@ -135,7 +135,7 @@ class ModalPortfolioPreview extends Modal {
                 }
                 $(this).off('touchmove touchend');
             });
-            return false;
+            // return false;
         }).on('dragstart', function() {return false;});
     }
     modalChanger(boolean) {
