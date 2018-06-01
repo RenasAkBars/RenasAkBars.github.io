@@ -48,6 +48,11 @@ class Modal {
                 }
             }
         });
+        document.addEventListener("backbutton", function () {
+            if (self.$modal.hasClass('active')) {
+                self.deactivateModal();
+            }
+        }, false);
     }
     setContent(content) {
         this.$modalContentContainer.html(content);
@@ -59,6 +64,7 @@ class Modal {
         });
         this.$body.addClass('modal-open').css({'margin-right': this.scrollWidth + 'px'});
         this.$navMenu.css({'left': '-' + this.scrollWidth / 2 + 'px'});
+        this.activity = true;
     }
 }
 class ModalPortfolioPreview extends Modal {
