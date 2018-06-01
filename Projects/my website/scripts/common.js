@@ -91,10 +91,9 @@ class ModalPortfolioPreview extends Modal {
         });
     }
     activateSwipe(pixels) {
-        var $mbody = this.$modalBody;
         var self = this;
 
-        self.$modalBody.mousedown(function (e) {
+/*        self.$modalBody.mousedown(function (e) {
             var shiftX = e.pageX;
             var zeroLeft = 0;
             var newLeft;
@@ -111,6 +110,27 @@ class ModalPortfolioPreview extends Modal {
                     self.$modalBody.css('left', zeroLeft + 'px');
                 }
                 $(this).off('mousemove mouseup');
+            });
+            return false;
+        }).on('dragstart', function() {return false;});*/
+
+        self.$modalBody.touchstart(function (e) {
+            var shiftX = e.pageX;
+            var zeroLeft = 0;
+            var newLeft;
+
+            $(document).touchmove(function (e) {
+                newLeft = e.pageX - shiftX;
+                self.$modalBody.css('left', newLeft + 'px');
+            }).touchend(function () {
+                if (newLeft > pixels) {
+                    self.modalChanger(true);
+                } else if (newLeft < -pixels) {
+                    self.modalChanger(false);
+                } else {
+                    self.$modalBody.css('left', zeroLeft + 'px');
+                }
+                $(this).off('touchmove touchend');
             });
             return false;
         }).on('dragstart', function() {return false;});
@@ -231,7 +251,6 @@ class Menu {
 var $body = $('body');
 var modalPortfolioPreview = new ModalPortfolioPreview('.modal', '.portfolio-preview-thumbnail');
 var topNavMenu = new Menu('.top-nav-menu');
-
 
 modalPortfolioPreview.activate();
 modalPortfolioPreview.activateSwipe(100);
