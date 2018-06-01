@@ -99,27 +99,6 @@ class ModalPortfolioPreview extends Modal {
     activateSwipe(pixels) {
         var self = this;
 
-/*        self.$modalBody.mousedown(function (e) {
-            var shiftX = e.pageX;
-            var zeroLeft = 0;
-            var newLeft;
-
-            $(document).mousemove(function (e) {
-                newLeft = e.pageX - shiftX;
-                self.$modalBody.css('left', newLeft + 'px');
-            }).mouseup(function () {
-                if (newLeft > pixels) {
-                    self.modalChanger(true);
-                } else if (newLeft < -pixels) {
-                    self.modalChanger(false);
-                } else {
-                    self.$modalBody.css('left', zeroLeft + 'px');
-                }
-                $(this).off('mousemove mouseup');
-            });
-            return false;
-        }).on('dragstart', function() {return false;});*/
-
         self.$modalBody.on('touchstart', function (e) {
             // var shiftX = e.pageX;
             var shiftX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
@@ -262,7 +241,7 @@ var modalPortfolioPreview = new ModalPortfolioPreview('.modal', '.portfolio-prev
 var topNavMenu = new Menu('.top-nav-menu');
 
 modalPortfolioPreview.activate();
-modalPortfolioPreview.activateSwipe(100);
+modalPortfolioPreview.activateSwipe(60);
 topNavMenu.activate();
 topNavMenu.test();
 
