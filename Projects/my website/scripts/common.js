@@ -51,8 +51,9 @@ class Modal {
         $(document).on('backbutton', function () {
             if (self.$modal.hasClass('active')) {
                 self.deactivateModal();
+                return false;
             }
-        }, false);
+        });
     }
     setContent(content) {
         this.$modalContentContainer.html(content);
