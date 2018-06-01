@@ -115,12 +115,15 @@ class ModalPortfolioPreview extends Modal {
         }).on('dragstart', function() {return false;});*/
 
         self.$modalBody.on('touchstart', function (e) {
-            var shiftX = e.pageX;
+            // var shiftX = e.pageX;
+            var shiftX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
             var zeroLeft = 0;
             var newLeft;
 
             $(document).on('touchmove', function (e) {
-                newLeft = e.pageX - shiftX;
+                var x = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
+                // newLeft = e.pageX - shiftX;
+                newLeft = x - shiftX;
                 self.$modalBody.css('left', newLeft + 'px');
             }).on('touchend', function () {
                 if (newLeft > pixels) {
@@ -255,5 +258,5 @@ var topNavMenu = new Menu('.top-nav-menu');
 modalPortfolioPreview.activate();
 modalPortfolioPreview.activateSwipe(100);
 topNavMenu.activate();
-// topNavMenu.test();
+topNavMenu.test();
 
