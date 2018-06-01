@@ -114,12 +114,12 @@ class ModalPortfolioPreview extends Modal {
             return false;
         }).on('dragstart', function() {return false;});*/
 
-        self.$modalBody.touchstart(function (e) {
+        self.$modalBody.on('touchstart', function (e) {
             var shiftX = e.pageX;
             var zeroLeft = 0;
             var newLeft;
 
-            $(document).touchmove(function (e) {
+            $(document).on('touchmove', function (e) {
                 newLeft = e.pageX - shiftX;
                 self.$modalBody.css('left', newLeft + 'px');
             }).touchend(function () {
