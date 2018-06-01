@@ -48,7 +48,7 @@ class Modal {
                 }
             }
         });
-        document.addEventListener("backbutton", function () {
+        $(document).on('backbutton', function () {
             if (self.$modal.hasClass('active')) {
                 self.deactivateModal();
             }
