@@ -1,6 +1,7 @@
 class Modal {
     constructor(modalSelector,) {
         this.$modal = $(modalSelector);
+        this.activity = false;
         this.$modalBodyContainer = this.$modal.find('.modal-body-container');
         this.$modalBody = this.$modal.find('.modal-body');
         this.$modalContentContainer = this.$modal.find('.modal-content-container');
@@ -83,34 +84,65 @@ class ModalPortfolioPreview extends Modal {
     }
     activateButtons() {
         var self = this;
-        var anim = 'fade';
-        var animOut, animIn;
         this.$btn.click(function () {
             var $self = $(this);
-            var num = self.number;
+            var boolean = $self.hasClass('btn-back');
+            self.modalChanger(boolean);
+        });
+    }
+    activateSwipe(pixels) {
+        var $mbody = this.$modalBody;
+        var self = this;
 
-            if ($self.hasClass('btn-back')) {
-                num--;
-                animOut = anim + 'OutLeft';
-                animIn = anim + 'InRight';
-                if (num <= 0) {
-                    num = self.launchersLength;
+        self.$modalBody.mousedown(function (e) {
+            var shiftX = e.pageX;
+            var zeroLeft = 0;
+            var newLeft;
+
+            $(document).mousemove(function (e) {
+                newLeft = e.pageX - shiftX;
+                self.$modalBody.css('left', newLeft + 'px');
+            }).mouseup(function () {
+                if (newLeft > pixels) {
+                    self.modalChanger(true);
+                } else if (newLeft < -pixels) {
+                    self.modalChanger(false);
+                } else {
+                    self.$modalBody.css('left', zeroLeft + 'px');
                 }
-            } else if ($self.hasClass('btn-forward')) {
-                num++;
-                animOut = anim + 'OutRight';
-                animIn = anim + 'InLeft';
-                if (num >= self.launchersLength + 1) {
-                    num = 1;
-                }
-            }
-            if (num < 1 || num > self.launchersLength) {
-                return false;
-            }
-            self.$modalBody.animateCss(animOut, function () {
-                self.setSpecialContent(self.$launchers.filter(self.launchersSelector + '[data-number="' + num + '"]'));
-                self.$modalBody.animateCss(animIn);
+                $(this).off('mousemove mouseup');
             });
+            return false;
+        }).on('dragstart', function() {return false;});
+    }
+    modalChanger(boolean) {
+        var self = this;
+        var anim = 'fade';
+        var animOut, animIn;
+
+        var num = self.number;
+
+        if (boolean) {
+            num--;
+            animOut = anim + 'OutRight';
+            animIn = anim + 'InLeft';
+            if (num <= 0) {
+                num = self.launchersLength;
+            }
+        } else if (!boolean) {
+            num++;
+            animOut = anim + 'OutLeft';
+            animIn = anim + 'InRight';
+            if (num >= self.launchersLength + 1) {
+                num = 1;
+            }
+        }
+        if (num < 1 || num > self.launchersLength) {
+            return false;
+        }
+        self.$modalBody.animateCss(animOut, function () {
+            self.setSpecialContent(self.$launchers.filter(self.launchersSelector + '[data-number="' + num + '"]'));
+            self.$modalBody.css('left', '0').animateCss(animIn);
         });
     }
     setSpecialContent($launcher) {
@@ -202,5 +234,7 @@ var topNavMenu = new Menu('.top-nav-menu');
 
 
 modalPortfolioPreview.activate();
+modalPortfolioPreview.activateSwipe(100);
 topNavMenu.activate();
 topNavMenu.test();
+
