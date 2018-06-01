@@ -122,7 +122,7 @@ class ModalPortfolioPreview extends Modal {
             $(document).on('touchmove', function (e) {
                 newLeft = e.pageX - shiftX;
                 self.$modalBody.css('left', newLeft + 'px');
-            }).touchend(function () {
+            }).on('touchend', function () {
                 if (newLeft > pixels) {
                     self.modalChanger(true);
                 } else if (newLeft < -pixels) {
@@ -255,5 +255,5 @@ var topNavMenu = new Menu('.top-nav-menu');
 modalPortfolioPreview.activate();
 modalPortfolioPreview.activateSwipe(100);
 topNavMenu.activate();
-topNavMenu.test();
+// topNavMenu.test();
 
