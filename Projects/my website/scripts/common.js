@@ -32,24 +32,24 @@ class Modal {
         this.$modalBodyContainer.click(function (e) {
             if (e.target === this) {
                 self.deactivateModal();
-                history.back();
+                self.historyBack();
             }
         });
         this.$modal.click(function (e) {
             if (e.target === this) {
                 self.deactivateModal();
-                history.back();
+                self.historyBack();
             }
         });
         this.$close.click(function () {
             self.deactivateModal();
-            history.back();
+            self.historyBack();
         });
         $(window).keydown(function (e) {
             if (e.which == 27 || e.keyCode == 27){
                 if (self.$modal.hasClass('active')) {
                     self.deactivateModal();
-                    history.back();
+                    self.historyBack();
                 }
             }
         });
@@ -58,6 +58,12 @@ class Modal {
                 self.deactivateModal();
             }
         });
+    }
+    historyBack() {
+        // history.pushState('', null, 'http://localhost:63342/RenasAkBars.github.io/Projects/my%20website/index.html?_ijt=uo73jqpsk7l2c6mjhtqprb00t6');
+
+        // console.log(history.state);
+        history.back();
     }
     setContent(content) {
         this.$modalContentContainer.html(content);
