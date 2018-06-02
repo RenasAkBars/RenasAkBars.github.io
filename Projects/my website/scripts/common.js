@@ -1,6 +1,7 @@
 class Modal {
     constructor(modalSelector,) {
         this.$modal = $(modalSelector);
+        this.idSelector = '#' + this.$modal.attr('id');
         this.activity = false;
         this.$modalBodyContainer = this.$modal.find('.modal-body-container');
         this.$modalBody = this.$modal.find('.modal-body');
@@ -31,27 +32,30 @@ class Modal {
         this.$modalBodyContainer.click(function (e) {
             if (e.target === this) {
                 self.deactivateModal();
+                history.back();
             }
         });
         this.$modal.click(function (e) {
             if (e.target === this) {
                 self.deactivateModal();
+                history.back();
             }
         });
         this.$close.click(function () {
             self.deactivateModal();
+            history.back();
         });
         $(window).keydown(function (e) {
             if (e.which == 27 || e.keyCode == 27){
                 if (self.$modal.hasClass('active')) {
                     self.deactivateModal();
+                    history.back();
                 }
             }
         });
-        $(document).on('backbutton', function () {
-            if (self.$modal.hasClass('active')) {
+        $(window).on('hashchange', function () {
+            if (self.$modal.hasClass('active') && location.hash !== self.idSelector) {
                 self.deactivateModal();
-                return false;
             }
         });
     }
@@ -87,6 +91,7 @@ class ModalPortfolioPreview extends Modal {
         this.$launchers.click(function () {
             self.setSpecialContent($(this));
             self.openAnimation();
+            location.hash = self.idSelector;
         });
     }
     activateButtons() {
@@ -245,4 +250,10 @@ modalPortfolioPreview.activate();
 modalPortfolioPreview.activateSwipe(60);
 topNavMenu.activate();
 topNavMenu.test();
+
+/*
+$(window).on('popstate', function () {
+    alert('history!');
+});
+*/
 
