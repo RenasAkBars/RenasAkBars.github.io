@@ -132,6 +132,7 @@ class ModalPortfolioPreview extends Modal {
                         self.$modalBody.css('left', zeroLeft + 'px');
                     }
                 }
+                self.$modalBody.css('left', zeroLeft + 'px');
                 $(this).off('touchmove touchend');
             });
             // return false;
