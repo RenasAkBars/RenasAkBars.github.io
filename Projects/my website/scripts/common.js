@@ -108,6 +108,41 @@ class ModalPortfolioPreview extends Modal {
         self.$modalBody.on('touchstart', function (e) {
             // var shiftX = e.pageX;
             var shiftX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
+            var shiftY = e.originalEvent.touches[0].pageY || e.originalEvent.changedTouches[0].pageY;
+            var zeroLeft = 0;
+            var newLeft;
+            var direction;
+
+            $(document).on('touchmove', function (e) {
+                var x = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
+                var y = e.originalEvent.touches[0].pageY || e.originalEvent.changedTouches[0].pageY;
+                direction = Math.abs(shiftX - x) >= Math.abs(shiftY - y);
+
+                if (direction) {
+                    newLeft = x - shiftX;
+                    self.$modalBody.css('left', newLeft + 'px');
+                }
+            }).on('touchend', function () {
+                if (direction) {
+                    if (newLeft > pixels) {
+                        self.modalChanger(true);
+                    } else if (newLeft < -pixels) {
+                        self.modalChanger(false);
+                    } else {
+                        self.$modalBody.css('left', zeroLeft + 'px');
+                    }
+                }
+                $(this).off('touchmove touchend');
+            });
+            // return false;
+        }).on('dragstart', function() {return false;});
+    }
+    REactivateSwipe(pixels) {
+        var self = this;
+
+        self.$modalBody.on('touchstart', function (e) {
+            // var shiftX = e.pageX;
+            var shiftX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
             var zeroLeft = 0;
             var newLeft;
 
