@@ -32,24 +32,24 @@ class Modal {
         this.$modalBodyContainer.click(function (e) {
             if (e.target === this) {
                 self.deactivateModal();
-                self.historyBack();
+                history.back();
             }
         });
         this.$modal.click(function (e) {
             if (e.target === this) {
                 self.deactivateModal();
-                self.historyBack();
+                history.back();
             }
         });
         this.$close.click(function () {
             self.deactivateModal();
-            self.historyBack();
+            history.back();
         });
         $(window).keydown(function (e) {
             if (e.which == 27 || e.keyCode == 27){
                 if (self.$modal.hasClass('active')) {
                     self.deactivateModal();
-                    self.historyBack();
+                    history.back();
                 }
             }
         });
@@ -58,12 +58,6 @@ class Modal {
                 self.deactivateModal();
             }
         });
-    }
-    historyBack() {
-        // history.pushState('', null, 'http://localhost:63342/RenasAkBars.github.io/Projects/my%20website/index.html?_ijt=uo73jqpsk7l2c6mjhtqprb00t6');
-
-        // console.log(history.state);
-        history.back();
     }
     setContent(content) {
         this.$modalContentContainer.html(content);
@@ -266,6 +260,12 @@ class Menu {
     }
 }
 
+if (location.hash) {
+    var reg = new RegExp(location.hash, 'gi');
+    var url = location.href.replace(reg, '');
+    history.replaceState('', null, url);
+}
+
 
 var $body = $('body');
 var modalPortfolioPreview = new ModalPortfolioPreview('.modal', '.portfolio-preview-thumbnail');
@@ -275,10 +275,3 @@ modalPortfolioPreview.activate();
 modalPortfolioPreview.activateSwipe(60);
 topNavMenu.activate();
 topNavMenu.test();
-
-/*
-$(window).on('popstate', function () {
-    alert('history!');
-});
-*/
-
