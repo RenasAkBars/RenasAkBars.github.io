@@ -101,12 +101,22 @@ class ModalPortfolioPreview extends Modal {
             var boolean = $self.hasClass('btn-back');
             self.modalChanger(boolean);
         });
+        $(window).keydown(function (e) {
+            if (e.which == 37 || e.keyCode == 37){
+                self.modalChanger(true);
+            } else if (e.which == 39 || e.keyCode == 39){
+                self.modalChanger(false);
+            } else if (e.which == 40 || e.keyCode == 40){
+                self.$modal.get(0).scrollTop += 60;
+            } else if (e.which == 38 || e.keyCode == 38){
+                self.$modal.get(0).scrollTop -= 60;
+            }
+        });
     }
     activateSwipe(pixels) {
         var self = this;
 
         self.$modalBody.on('touchstart', function (e) {
-            // var shiftX = e.pageX;
             var shiftX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
             var shiftY = e.originalEvent.touches[0].pageY || e.originalEvent.changedTouches[0].pageY;
             var zeroLeft = 0;
@@ -136,34 +146,6 @@ class ModalPortfolioPreview extends Modal {
                 }
                 $(this).off('touchmove touchend');
             });
-            // return false;
-        }).on('dragstart', function() {return false;});
-    }
-    REactivateSwipe(pixels) {
-        var self = this;
-
-        self.$modalBody.on('touchstart', function (e) {
-            // var shiftX = e.pageX;
-            var shiftX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
-            var zeroLeft = 0;
-            var newLeft;
-
-            $(document).on('touchmove', function (e) {
-                var x = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
-                // newLeft = e.pageX - shiftX;
-                newLeft = x - shiftX;
-                self.$modalBody.css('left', newLeft + 'px');
-            }).on('touchend', function () {
-                if (newLeft > pixels) {
-                    self.modalChanger(true);
-                } else if (newLeft < -pixels) {
-                    self.modalChanger(false);
-                } else {
-                    self.$modalBody.css('left', zeroLeft + 'px');
-                }
-                $(this).off('touchmove touchend');
-            });
-            // return false;
         }).on('dragstart', function() {return false;});
     }
     modalChanger(boolean) {
