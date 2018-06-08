@@ -55,6 +55,7 @@ body
   background-color: $bgColor
   position: relative
   overflow: auto
+  color: $mainColor
   &.modal-open
     overflow: hidden
 
@@ -80,10 +81,13 @@ h6
   font-size: $baseFS * 1
 a.link
   color: $mainColor
+  transition: all $nvSpd * 1.3
   &:hover
     color: $thmColor
 .td-none
   text-decoration: none
+a
+  transition: all $nvSpd * 2
 
 //before SM
 @media screen and (max-width: 575.9999px)
@@ -143,6 +147,40 @@ a.link
   grid-template-areas: "pp_tit" "pp_a" "pp_b" "pp_c" "pp_d" "pp_e" "pp_ft"
   .portfolio-preview-thumbnail-mask
     filter: grayscale(0.2)
+.services-preview-container
+  grid-template-columns: 1fr
+  grid-template-rows: 100px auto auto auto 100px
+  grid-template-areas: "sp_tit" "sp_a" "sp_b" "sp_c" "sp_ft"
+.about-preview-container
+  grid-template-columns: 1fr
+  grid-template-rows: 100px auto auto 100px
+  grid-template-areas: "ap_tit" "ap_a" "ap_b" "ap_ft"
+.testimonials-preview
+  .container
+    grid-template-columns: 1fr
+    grid-template-rows: 100px 250px 100px
+    grid-template-areas: "tp_tit" "tp_a" "tp_ft"
+  .testimonial-preview.active
+    p
+      font-size: $baseFS
+      //max-height: 170px
+    h6
+      font-size: $baseFS * 0.8
+      margin-top: $baseFS
+.contact-preview
+  .container
+    grid-template-columns: 1fr
+    grid-template-rows: auto auto auto auto
+    grid-template-areas: "cp_tit" "cp_a" "cp_b" "cp_c"
+
+.footer-menu-list
+  display: none
+
+.big-footer
+  .container
+    grid-template-columns: 1fr
+    grid-template-rows: auto auto auto
+    grid-template-areas: "bf_b" "bf_c" "bf_f"
 
 //from SM
 @media screen and (min-width: 576px)
@@ -163,6 +201,23 @@ a.link
     grid-template-columns: 1fr 1fr
     grid-template-rows: 100px 200px 200px 200px 100px
     grid-template-areas: "pp_tit pp_tit" "pp_b pp_c" "pp_a pp_a" "pp_d pp_e" "pp_ft pp_ft"
+  .testimonials-preview
+    .container
+      grid-template-rows: 100px 170px 100px
+
+  .contact-preview
+    .container
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: auto auto auto
+      grid-template-areas: "cp_tit cp_tit" "cp_a cp_a" "cp_b cp_c"
+
+  .big-footer
+    .container
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: auto auto
+      grid-template-areas: "bf_b bf_c" "bf_f bf_f"
+      //grid-column-gap: 1rem
+      //grid-row-gap: 1rem
 
 //from MD
 @media screen and (min-width: 768px)
@@ -180,7 +235,30 @@ a.link
   .portfolio-preview-container
     grid-template-columns: 1fr 1fr 1fr
     grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_c" "pp_a pp_a pp_d" "pp_e pp_b pp_b" "pp_ft pp_ft pp_ft"
+  .services-preview-container
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 100px auto auto 100px
+    grid-template-areas: "sp_tit sp_tit" "sp_a sp_a" "sp_b sp_c" "sp_ft sp_ft"
+  .about-preview-container
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 100px auto 100px
+    grid-template-areas: "ap_tit ap_tit" "ap_a ap_b" "ap_ft ap_ft"
+  .testimonials-preview
+    .testimonial-preview.active
+      p
+        font-size: $baseFS * 1.8
+        //max-height: 290px
+      h6
+        margin-top: $baseFS * 1.8
+        font-size: $baseFS * 1.2
+    .container
+      grid-template-rows: 100px 350px 100px
 
+  .big-footer
+    .container
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: auto auto
+      grid-template-areas: "bf_b bf_c" "bf_f bf_f"
 //from LG
 @media screen and (min-width: 992px)
   .container
@@ -205,12 +283,26 @@ a.link
       a
         padding: 10px
   .nav-menu ul.active
-    width: 800px
+    width: 730px
   .portfolio-preview-container
     grid-template-columns: 1fr 1fr 2fr
     grid-template-areas: "pp_tit pp_tit pp_tit" "pp_a pp_a pp_b" "pp_a pp_a pp_c" "pp_d pp_e pp_c" "pp_ft pp_ft pp_ft"
     .portfolio-preview-thumbnail-mask
       filter: grayscale(0.4) blur(1.2px)
+
+  .services-preview-container
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 100px auto 100px
+    grid-template-areas: "sp_tit sp_tit sp_tit" "sp_a sp_b sp_c" "sp_ft sp_ft sp_ft"
+
+  .big-footer
+    .container
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: auto auto auto
+      grid-template-areas: "bf_b bf_c" "bf_a bf_a" "bf_f bf_f"
+
+  .footer-menu-list
+    display: block
 
 //from XL
 @media screen and (min-width: 1200px)
@@ -304,27 +396,35 @@ a.link
     text-shadow: 1px 0 1px $thmColor
     font-weight: bold
 
-.portfolio-preview
+section, footer
   display: flex
   justify-content: center
+.section-title
+  display: flex
+  align-items: center
+  justify-content: center
+  color: $thmColor
+  font-weight: bold
+.link-more
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  a
+    display: block
+
+
+
+
+
+.portfolio-preview
   .portfolio-preview-container
     display: grid
-    grid-column-gap: 10px
-    grid-row-gap: 10px
+    grid-column-gap: 1rem
+    grid-row-gap: 1rem
     .portfolio-preview-title
       grid-area: pp_tit
-      display: flex
-      align-items: center
-      justify-content: center
-      color: $thmColor
-      font-weight: bold
     .portfolio-preview-more
       grid-area: pp_ft
-      display: flex
-      align-items: center
-      justify-content: flex-end
-      a
-        display: block
     .portfolio-preview-thumbnail
       background-size: cover
       background-position: center center
@@ -350,7 +450,244 @@ a.link
       .portfolio-preview-thumbnail-mask
         background-size: cover
         background-position: center center
-        transition: all 0.3s
+        transition: all $nvSpd * 2
+
+$thmbIcnSize: 7rem
+.services-preview
+  .services-preview-container
+    display: grid
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+    .services-preview-title
+      grid-area: sp_tit
+    .services-preview-more
+      grid-area: sp_ft
+    .services-preview-block
+      //padding: 1rem
+      &[data-number="1"]
+        grid-area: sp_a
+      &[data-number="2"]
+        grid-area: sp_b
+      &[data-number="3"]
+        grid-area: sp_c
+      .services-preview-thumbnail
+        font-size: $thmbIcnSize
+        text-align: center
+        color: $thmColor
+        margin-bottom: 1rem
+        .half-size
+          font-size: $thmbIcnSize / 1.5
+          margin-left: $thmbIcnSize / 7
+      .services-preview-content
+        h5
+          text-align: center
+          margin-bottom: 1rem
+        p
+          text-align: justify
+
+.about-preview
+  .container
+    display: grid
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+  .about-preview-title
+    grid-area: ap_tit
+  .about-preview-more
+    grid-area: ap_ft
+  .about-preview-thumbnail
+    grid-area: ap_a
+    img
+      width: 100%
+      height: auto
+  .about-preview-content
+    grid-area: ap_b
+    h5
+      margin-bottom: 1rem
+
+.testimonials-preview
+  position: relative
+  .background
+    background-position: center center
+    background-size: cover
+    filter: blur(4px)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  .container
+    z-index: 1
+    display: grid
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+  .testimonials-preview-title
+    grid-area: tp_tit
+    text-align: center
+  .testimonials-preview-more
+    grid-area: tp_ft
+  .testimonials-preview-content
+    grid-area: tp_a
+    display: flex
+    justify-content: center
+    align-items: center
+    .testimonial-preview
+      display: none
+    .testimonial-preview.active
+      display: block
+      p
+        text-align: justify
+        &:before
+          content: "\""
+        &:after
+          content: "\""
+      h6
+        text-align: right
+        &:before
+          content: "- "
+
+
+form
+  width: 100%
+  input, textarea, button
+    box-sizing: border-box
+    display: block
+    background-color: transparent
+    border: 1px $mainColorTp solid
+    border-radius: 3px
+    width: 100%
+    transition: all $nvSpd * 2
+  textarea
+    resize: vertical
+  button
+    cursor: pointer
+    border-width: 1px
+    border-style: solid
+  input.invalid, textarea.invalid
+    box-shadow: 0 0 2px 1px red inset
+  label.invalid-feedback
+    opacity: 0
+    color: red
+    transition: all $nvSpd * 2
+    font-size: $baseFS * 0.7
+    &.active
+      opacity: 1
+
+.contact-preview
+  margin: 1rem 0 2rem
+  .container
+    display: grid
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+    .section-title
+      grid-area: cp_tit
+    .section-caption
+      grid-area: cp_a
+      text-align: center
+    .contacts
+      grid-area: cp_b
+      .contact-line
+        font-size: $baseFS
+        margin-top: 1rem
+        .icon
+          font-size: $baseFS * 2
+          width: $baseFS * 4
+          color: $thmColor
+        a.icon:hover
+          text-shadow: 0 0 2px $mainColorTp
+        .line
+          color: $mainColor
+    .form
+      grid-area: cp_c
+      input, textarea, button
+        margin-bottom: 0.5rem
+        padding: 0.5rem 1rem
+      input
+        height: 3rem
+      textarea
+        height: 8rem
+      button
+        border-color: $thmColor
+        background-color: $thmColorTp
+        color: $mainColor
+        margin-top: 1.5rem
+        &:hover
+          background-color: $thmColor
+
+
+.contact-line
+  width: 100%
+  font-size: $baseFS
+  text-decoration: none
+  display: flex
+  align-items: center
+  .icon
+    text-align: center
+
+footer
+  background-color: $thmColor
+  a
+    color: $mainColor
+    &:hover
+      color: $bgColor
+
+.footer-menu-list
+  padding: 2rem 0 0
+  ul
+    display: flex
+    justify-content: center
+    li a
+      padding: 0 0.5rem
+      text-decoration: none
+      font-size: $baseFS * 0.8
+
+.developer-line
+  display: flex
+  justify-content: center
+  margin: 1rem 0
+  span
+    display: inline-block
+  span, a
+    font-size: $baseFS * 0.8
+  p
+    text-align: center
+.big-footer
+  padding: 2rem 0 0
+  .container
+    display: grid
+  .footer-menu-list
+    grid-area: bf_a
+  .footer-contacts
+    grid-area: bf_b
+    .contact-line
+      margin-top: 1rem
+      font-size: $baseFS
+    .icon
+      font-size: $baseFS
+      width: $baseFS * 2
+      color: $mainColor
+    a.icon:hover
+      color: $bgColor
+      text-shadow: 0 0 2px $mainColorTp
+    .line
+      color: $mainColor
+      font-size: $baseFS * 0.8
+  .footer-form
+    grid-area: bf_c
+    input, textarea, button
+      margin-bottom: 0.1rem
+      padding: 0.5rem 1rem
+      background-color: $bgColorTp
+    button
+      margin-top: 1.1rem
+      color: $mainColor
+      &:hover
+        background-color: $mainColor
+        color: $bgColor
+  .developer-line
+    grid-area: bf_f
+
+
+
 .modal
   display: none
   background-color: rgba(0, 0, 0, 0.5)
@@ -385,7 +722,7 @@ a.link
     overflow: hidden
     .angle
       color: $whiteTp
-      transition: color 0.2s
+      transition: color $nvSpd * 1.3
     &:hover
       .angle
         color: white
@@ -405,7 +742,7 @@ a.link
       background-color: $bgColor
     .modal-content
       padding: 1.5rem
-      color: $mainColor
+      //color: $mainColor
       h6
         margin-bottom: 0.5rem
         font-size: 0.9rem
@@ -433,12 +770,14 @@ a.link
       top: 0
       right: 0
       background-color: $mainColorTp
+      transition: all $nvSpd * 1.3
       .cl
         width: $swWw
         height: $swH
         left: $swL
         background-color: white
         position: absolute
+        transition: all $nvSpd
       .cl-topper
         top: $swTopAct
         transform: rotate(320deg)
@@ -447,10 +786,14 @@ a.link
         transform: rotate(-320deg)
       &:hover
         background-color: $thmColorTp
-        &.cl
-          background-color: $thmColor
+        .cl-topper
+          top: $swTopAct
+          transform: rotate(140deg)
+        .cl-footer
+          top: $swTopAct
+          transform: rotate(-140deg)
   &.active
     display: flex
 
 .modal-body.animated, .modal.animated
-  animation-duration: 200ms
+  animation-duration: $nvSpd * 1.3

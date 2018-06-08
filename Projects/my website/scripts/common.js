@@ -249,7 +249,14 @@ class Menu {
     }
     test() {
         this.$brandLogo.click(function () {
-            alert('Width: ' + window.innerWidth + '; Height: ' + $(window).height());
+            var type;
+            var width = window.innerWidth;
+            if (width < 576) type = 'XS';
+            else if (width >= 576 && width < 768) type = 'SM';
+            else if (width >= 768 && width < 992) type = 'MD';
+            else if (width >= 992 && width < 1200) type = 'LG';
+            else if (width >= 1200) type = 'XL';
+            alert(type + ' Width: ' + width + '; Height: ' + $(window).height());
             return false;
         });
     }
@@ -275,3 +282,86 @@ modalPortfolioPreview.activate();
 modalPortfolioPreview.activateSwipe(60);
 topNavMenu.activate();
 topNavMenu.test();
+
+$('.testimonial-preview p').each(function () {
+   var $self = $(this);
+   var text = $self.html();
+   var symbols = text.length;
+   if (symbols > 300) {
+       var newText = text.substr(0, 290);
+       $self.html(newText + '...');
+   }
+});
+
+var $tp = $('.testimonial-preview');
+
+window.setInterval(testimonials, 20000);
+
+function testimonials() {
+    var $current = $tp.filter('.active');
+    var $next = $current.next();
+    if ($next.length === 0) {
+        $next = $tp.first();
+    }
+    $current.animateCss('fadeOut', function () {
+        $current.toggleClass('active');
+        $next.toggleClass('active').animateCss('fadeIn');
+    });
+}
+
+
+validateForm($('#contactForm'));
+validateForm($('#footerContactForm'));
+
+function validateForm($form) {
+
+    var matches = {
+        name: /.+/,
+        tel: /.+/,
+        email: /^\w+@[a-zA-z]+\.[a-z]{2,3}$/,
+        text: /.+/
+    };
+    var valids;
+
+    $form.submit(function () {
+        valids = [];
+
+        $form.find('input, textarea').each(function () {
+            var $self = $(this);
+            if ($self.prop('required')) {
+                check($(this));
+            }
+        });
+        console.log(valids);
+        if (!checkValids()) {
+            return false;
+        }
+        
+    });
+
+    function check($elem) {
+        var id = $elem.attr('id');
+        if (checkValid($elem)) {
+            valids.push(true);
+            $elem.removeClass('invalid').prev('label[for="' + id + '"]').removeClass('active');
+        } else {
+            $elem.addClass('invalid').prev('label[for="' + id + '"]').addClass('active');
+            valids.push(false);
+        }
+    }
+
+    function checkValids() {
+        return valids.every(function (elem) {
+            return elem;
+        });
+    }
+
+    function checkValid(elem) {
+        var type = elem.attr('type');
+        var match = matches[type];
+        if (match.test(elem.val())) {
+            return true;
+        }
+        return false;
+    }
+}
