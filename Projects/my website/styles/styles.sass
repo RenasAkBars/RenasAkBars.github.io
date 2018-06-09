@@ -179,8 +179,8 @@ a
 .big-footer
   .container
     grid-template-columns: 1fr
-    grid-template-rows: auto auto auto
-    grid-template-areas: "bf_b" "bf_c" "bf_f"
+    grid-template-rows: auto auto auto auto auto
+    grid-template-areas: "bf_tit" "bf_d" "bf_b" "bf_c" "bf_f"
 
 //from SM
 @media screen and (min-width: 576px)
@@ -214,8 +214,8 @@ a
   .big-footer
     .container
       grid-template-columns: 1fr 1fr
-      grid-template-rows: auto auto
-      grid-template-areas: "bf_b bf_c" "bf_f bf_f"
+      grid-template-rows: auto auto auto auto
+      grid-template-areas: "bf_tit bf_tit" "bf_d bf_d" "bf_b bf_c" "bf_f bf_f"
       //grid-column-gap: 1rem
       //grid-row-gap: 1rem
 
@@ -254,11 +254,11 @@ a
     .container
       grid-template-rows: 100px 350px 100px
 
-  .big-footer
+  //.big-footer
     .container
       grid-template-columns: 1fr 1fr
       grid-template-rows: auto auto
-      grid-template-areas: "bf_b bf_c" "bf_f bf_f"
+      grid-template-areas: "bf_tit bf_tit" "bf_d bf_d" "bf_b bf_c" "bf_f bf_f"
 //from LG
 @media screen and (min-width: 992px)
   .container
@@ -298,11 +298,14 @@ a
   .big-footer
     .container
       grid-template-columns: 1fr 1fr
-      grid-template-rows: auto auto auto
-      grid-template-areas: "bf_b bf_c" "bf_a bf_a" "bf_f bf_f"
+      grid-template-rows: auto auto auto auto auto
+      grid-template-areas: "bf_tit bf_tit" "bf_d bf_d" "bf_b bf_c" "bf_a bf_a" "bf_f bf_f"
 
   .footer-menu-list
     display: block
+
+  .section-caption p
+    padding: 0 3rem
 
 //from XL
 @media screen and (min-width: 1200px)
@@ -327,6 +330,8 @@ a
   left: 0
   transition: background-color $nvSpd
   &:hover
+    background-color: $bgColorTp
+  &.hovered
     background-color: $bgColorTp
   a
     text-decoration: none
@@ -405,6 +410,7 @@ section, footer
   justify-content: center
   color: $thmColor
   font-weight: bold
+  text-align: center
 .link-more
   display: flex
   align-items: center
@@ -582,7 +588,7 @@ form
       grid-area: cp_tit
     .section-caption
       grid-area: cp_a
-      text-align: center
+      //text-align: center
     .contacts
       grid-area: cp_b
       .contact-line
@@ -613,6 +619,8 @@ form
         &:hover
           background-color: $thmColor
 
+.section-caption
+  text-align: justify
 
 .contact-line
   width: 100%
@@ -654,6 +662,13 @@ footer
   padding: 2rem 0 0
   .container
     display: grid
+  .section-title
+    grid-area: bf_tit
+    color: $mainColor
+    margin-bottom: 1rem
+  .section-caption
+    grid-area: bf_d
+    //text-align: justify
   .footer-menu-list
     grid-area: bf_a
   .footer-contacts
@@ -685,6 +700,30 @@ footer
         color: $bgColor
   .developer-line
     grid-area: bf_f
+
+.scrollButton
+  display: none
+  position: fixed
+  bottom: 1rem
+  right: 1rem
+  height: 2rem
+  width: 2rem
+  font-size: 2rem
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  transition: all $nvSpd
+  border-radius: 2px
+  border: 1px solid $thmColorTp
+  background-color: $bgColorTp
+  color: $thmColor
+  &.active
+    display: flex
+    &:hover
+      background-color: $thmColor
+      color: $bgColorTp
+  &.animated
+    animation-duration: $nvSpd * 1.3
 
 
 

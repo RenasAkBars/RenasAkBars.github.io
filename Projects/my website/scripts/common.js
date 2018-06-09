@@ -264,6 +264,72 @@ class Menu {
         this.activateToggler();
         this.activateBodyOff();
         this.brandLogoAnimation();
+        this.smartHover();
+    }
+    smartHover() {
+        var self = this;
+
+        $(window).scroll(function () {
+            if (window.pageYOffset > $(window).height() && !self.$topNavMenu.hasClass('hovered')) {
+                self.$topNavMenu.addClass('hovered');
+            } else if (window.pageYOffset <= $(window).height() && self.$topNavMenu.hasClass('hovered')) {
+                self.$topNavMenu.removeClass('hovered');
+            }
+        });
+
+    }
+}
+class ScrollButton {
+    constructor(selector, duration) {
+        this.selector = selector;
+        this.$btn = $(selector);
+        this.height = $(window).height();
+        this.y = 0;
+        this.duration = duration;
+    }
+    activate() {
+        this.conditions();
+        this.positionWatcher();
+        this.btnEvents(this.duration);
+    }
+    positionWatcher() {
+        var self = this;
+        $(window).scroll(function () {
+            self.conditions();
+        });
+    }
+    conditions() {
+        var $btn = this.$btn;
+        if (window.pageYOffset > $(window).height() * 0 && !this.$btn.hasClass('active')) {
+            $btn.addClass('active').animateCss('fadeInUp');
+        } else if (window.pageYOffset <= $(window).height() * 0 && this.$btn.hasClass('active')) {
+            $btn.animateCss('fadeOutDown', function () {
+                $btn.removeClass('active');
+            });
+        }
+    }
+    btnEvents(duration) {
+        var step = 10;
+        var steps = duration / step;
+        var $btn = this.$btn;
+        $btn.click(function () {
+            var distance = window.pageYOffset;
+            var speed = distance / steps;
+
+            start();
+            function start() {
+                window.timerId = window.setInterval(scroller, step);
+            }
+            function stop() {
+                window.clearInterval(window.timerId);
+            }
+            function scroller() {
+                if (window.pageYOffset == 0) {
+                    stop();
+                }
+                window.scrollBy(0, -speed);
+            }
+        });
     }
 }
 
@@ -365,3 +431,7 @@ function validateForm($form) {
         return false;
     }
 }
+
+var scrlBtn = new ScrollButton('.scrollButton', 300);
+scrlBtn.activate();
+
